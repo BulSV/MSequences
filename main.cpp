@@ -66,17 +66,12 @@ bool isEqual(const QVector<bool> &source1, const QString &source2) {
         return false;
     }
 
-    QString tempStr = "1";
-
-    qDebug() << "tempStr.at(0):" << tempStr.at(0);
+    QString tempStr = "0";
 
     qDebug() << "source1:";
     print(source1);
     qDebug() << "source2:";
     qDebug() << source2;
-//    qDebug() << source2.at(0) << source2.at(1) << source2.at(2) << source2.at(3)
-//                 << source2.at(4) << source2.at(5) << source2.at(6) << source2.at(7)
-//                     << source2.at(8);
 
     bool stringSymbol = false;
 
@@ -107,99 +102,112 @@ void counter(QVector<QVector<bool> > &results)
     bool isWasUpperLimit = false;
 
     while(true) {
-        if(tempResult.at(8) && tempResult.at(7) && tempResult.at(6) && tempResult.at(5)
-                && tempResult.at(4) && tempResult.at(3) && tempResult.at(2) && tempResult.at(1)
-                && tempResult.at(0)) {
+        if(tempResult.at(0) && tempResult.at(1) && tempResult.at(2) && tempResult.at(3)
+                && tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
+                && tempResult.at(8)) {
             break;
         }
-        if(tempResult.at(7) && tempResult.at(6) && tempResult.at(5) && tempResult.at(4)
-                && tempResult.at(3) && tempResult.at(2) && tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
-            tempResult.replace(2, false);
-            tempResult.replace(3, false);
-            tempResult.replace(4, false);
-            tempResult.replace(5, false);
-            tempResult.replace(6, false);
+        if(tempResult.at(1) && tempResult.at(2) && tempResult.at(3) && tempResult.at(4)
+                && tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
             tempResult.replace(7, false);
-            tempResult.replace(8, true);
-        }
-        if(tempResult.at(6) && tempResult.at(5) && tempResult.at(4) && tempResult.at(3)
-                && tempResult.at(2) && tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
-            tempResult.replace(2, false);
-            tempResult.replace(3, false);
-            tempResult.replace(4, false);
-            tempResult.replace(5, false);
             tempResult.replace(6, false);
-            tempResult.replace(7, true);
-        }
-        if(tempResult.at(5) && tempResult.at(4) && tempResult.at(3) && tempResult.at(2)
-                && tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
-            tempResult.replace(2, false);
-            tempResult.replace(3, false);
-            tempResult.replace(4, false);
             tempResult.replace(5, false);
-            tempResult.replace(6, true);
-        }
-        if(tempResult.at(4) && tempResult.at(3) && tempResult.at(2) && tempResult.at(1)
-                && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
-            tempResult.replace(2, false);
-            tempResult.replace(3, false);
             tempResult.replace(4, false);
-            tempResult.replace(5, true);
-        }
-        if(tempResult.at(3) && tempResult.at(2) && tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
-            tempResult.replace(2, false);
             tempResult.replace(3, false);
-            tempResult.replace(4, true);
-        }
-        if(tempResult.at(2) && tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, false);
             tempResult.replace(2, false);
-            tempResult.replace(3, true);
-        }
-        if(tempResult.at(1) && tempResult.at(0)) {
-            tempResult.replace(0, false);
             tempResult.replace(1, false);
+            tempResult.replace(0, true);
+        }
+        if(tempResult.at(2) && tempResult.at(3) && tempResult.at(4) && tempResult.at(5)
+                && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, false);
+            tempResult.replace(5, false);
+            tempResult.replace(4, false);
+            tempResult.replace(3, false);
+            tempResult.replace(2, false);
+            tempResult.replace(1, true);
+        }
+        if(tempResult.at(3) && tempResult.at(4) && tempResult.at(5) && tempResult.at(6)
+                && tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, false);
+            tempResult.replace(5, false);
+            tempResult.replace(4, false);
+            tempResult.replace(3, false);
             tempResult.replace(2, true);
         }
-        if(tempResult.at(0)) {
-            tempResult.replace(0, false);
-            tempResult.replace(1, true);
+        if(tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
+                && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, false);
+            tempResult.replace(5, false);
+            tempResult.replace(4, false);
+            tempResult.replace(3, true);
+        }
+        if(tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, false);
+            tempResult.replace(5, false);
+            tempResult.replace(4, true);
+        }
+        if(tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, false);
+            tempResult.replace(5, true);
+        }
+        if(tempResult.at(7) && tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, false);
+            tempResult.replace(6, true);
+        }
+        if(tempResult.at(8)) {
+            tempResult.replace(8, false);
+            tempResult.replace(7, true);
         }
 
         qDebug() << "==========>";
         print(tempResult);
-        qDebug() << "<==========";
 
-        if(isEqual(tempResult, "111100000")) {
-            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
+        if(isEqual(tempResult, "000001111")) {
             isWasLowerLimit = true;
+            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
         }
 
-        if(isEqual(tempResult, "100011111")) {
-            qDebug() << "isWasUpperLimit" << isWasUpperLimit;
+        if(isEqual(tempResult, "111111000")) {
             isWasUpperLimit = true;
+            qDebug() << "isWasUpperLimit" << isWasUpperLimit;
+            return;
         }
 
-        if(/*isWasLowerLimit && !isWasUpperLimit && */isValid(tempResult)) {
+        if(isWasLowerLimit && !isWasUpperLimit && isValid(tempResult)) {
             results.push_back(tempResult);
         }
 
-        tempResult.replace(0, true);
+        tempResult.replace(8, true);
 
-        if(/*isWasLowerLimit && !isWasUpperLimit && */isValid(tempResult)) {
+        if(isEqual(tempResult, "000001111")) {
+            isWasLowerLimit = true;
+            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
+        }
+
+        if(isEqual(tempResult, "111111000")) {
+            isWasUpperLimit = true;
+            qDebug() << "isWasUpperLimit" << isWasUpperLimit;
+            return;
+        }
+
+        if(isWasLowerLimit && !isWasUpperLimit && isValid(tempResult)) {
             results.push_back(tempResult);
         }
+        print(tempResult);
+        qDebug() << "<==========";
     }
 }
 
@@ -210,7 +218,7 @@ void fromBinToHex(const QVector<QVector<bool> > &results)
     QString strHex;
 
     for(int i = 0; i < results.size(); ++i) {
-        for(int j = 8; j > -1; --j) {
+        for(int j = 0; j < 9; ++j) {
             if(results.at(i).at(j)) {
                 tempStr.append("1");
             } else {
