@@ -2,7 +2,9 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
-#include <QRegExp>
+
+#define UPPER_LIMIT "111111000"
+#define LOWER_LIMIT "000001111"
 
 void print(const QVector<bool> &result)
 {
@@ -99,7 +101,6 @@ void counter(QVector<QVector<bool> > &results)
     tempResult.fill(false, 9);
 
     bool isWasLowerLimit = false;
-    bool isWasUpperLimit = false;
 
     while(true) {
         if(tempResult.at(0) && tempResult.at(1) && tempResult.at(2) && tempResult.at(3)
@@ -175,35 +176,33 @@ void counter(QVector<QVector<bool> > &results)
         qDebug() << "==========>";
         print(tempResult);
 
-        if(isEqual(tempResult, "000001111")) {
+        if(isEqual(tempResult, LOWER_LIMIT)) {
             isWasLowerLimit = true;
             qDebug() << "isWasLowerLimit" << isWasLowerLimit;
         }
 
-        if(isEqual(tempResult, "111111000")) {
-            isWasUpperLimit = true;
-            qDebug() << "isWasUpperLimit" << isWasUpperLimit;
+        if(isEqual(tempResult, UPPER_LIMIT)) {
+            qDebug() << "isWasUpperLimit";
             return;
         }
 
-        if(isWasLowerLimit && !isWasUpperLimit && isValid(tempResult)) {
+        if(isWasLowerLimit && isValid(tempResult)) {
             results.push_back(tempResult);
         }
 
         tempResult.replace(8, true);
 
-        if(isEqual(tempResult, "000001111")) {
+        if(isEqual(tempResult, LOWER_LIMIT)) {
             isWasLowerLimit = true;
             qDebug() << "isWasLowerLimit" << isWasLowerLimit;
         }
 
-        if(isEqual(tempResult, "111111000")) {
-            isWasUpperLimit = true;
-            qDebug() << "isWasUpperLimit" << isWasUpperLimit;
+        if(isEqual(tempResult, UPPER_LIMIT)) {
+            qDebug() << "isWasUpperLimit";
             return;
         }
 
-        if(isWasLowerLimit && !isWasUpperLimit && isValid(tempResult)) {
+        if(isWasLowerLimit && isValid(tempResult)) {
             results.push_back(tempResult);
         }
         print(tempResult);
