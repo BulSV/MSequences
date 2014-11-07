@@ -2,7 +2,6 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
-#include <QThread>
 
 #define UPPER_LIMIT "111111000"
 #define LOWER_LIMIT "000001111"
@@ -11,7 +10,7 @@ void print(const QVector<bool> &result)
 {
     QString tempStr;
 
-    for(int i = 0; i < 9; ++i) {
+    for(int i = 0; i < result.size(); ++i) {
         if(result.at(i)) {
             tempStr.append("1");
         } else {
@@ -27,7 +26,7 @@ void print(const QVector<QVector<bool> > &results)
     QString tempStr;
 
     for(int i = 0; i < results.size(); ++i) {
-        for(int j = 0; j < 9; ++j) {
+        for(int j = 0; j < results.at(i).size(); ++j) {
             if(results.at(i).at(j)) {
                 tempStr.append("1");
             } else {
@@ -95,11 +94,11 @@ bool isEqual(const QVector<bool> &source1, const QString &source2) {
     return true;
 }
 
-void counter(QVector<QVector<bool> > &results)
+void counter(QVector<QVector<bool> > &results, const int &digits)
 {
     QVector<bool> tempResult;
 
-    tempResult.fill(false, 9);
+    tempResult.fill(false, digits);
 
 //    bool isWasLowerLimit = false;
     int k = 0;
@@ -110,8 +109,6 @@ void counter(QVector<QVector<bool> > &results)
                 ++k;
             }
         }
-
-        qDebug() << "K =" << k;
 
         if(k == tempResult.size()) {
             break;
@@ -142,83 +139,6 @@ void counter(QVector<QVector<bool> > &results)
         tempResult.replace(tempResult.size() - 1, true);
         results.push_back(tempResult);
         print(tempResult);
-//        QThread::usleep(500000);
-
-
-//            results.push_back(tempResult);
-
-//        if(tempResult.at(0) && tempResult.at(1) && tempResult.at(2) && tempResult.at(3)
-//                && tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
-//                && tempResult.at(8)) {
-//            break;
-//        }
-//        if(tempResult.at(1) && tempResult.at(2) && tempResult.at(3) && tempResult.at(4)
-//                && tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, false);
-//            tempResult.replace(4, false);
-//            tempResult.replace(3, false);
-//            tempResult.replace(2, false);
-//            tempResult.replace(1, false);
-//            tempResult.replace(0, true);
-//        }
-//        if(tempResult.at(2) && tempResult.at(3) && tempResult.at(4) && tempResult.at(5)
-//                && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, false);
-//            tempResult.replace(4, false);
-//            tempResult.replace(3, false);
-//            tempResult.replace(2, false);
-//            tempResult.replace(1, true);
-//        }
-//        if(tempResult.at(3) && tempResult.at(4) && tempResult.at(5) && tempResult.at(6)
-//                && tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, false);
-//            tempResult.replace(4, false);
-//            tempResult.replace(3, false);
-//            tempResult.replace(2, true);
-//        }
-//        if(tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
-//                && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, false);
-//            tempResult.replace(4, false);
-//            tempResult.replace(3, true);
-//        }
-//        if(tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, false);
-//            tempResult.replace(4, true);
-//        }
-//        if(tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, false);
-//            tempResult.replace(5, true);
-//        }
-//        if(tempResult.at(7) && tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, false);
-//            tempResult.replace(6, true);
-//        }
-//        if(tempResult.at(8)) {
-//            tempResult.replace(8, false);
-//            tempResult.replace(7, true);
-//        }
-
-//        qDebug() << "==========>";
-//        print(tempResult);
 
 //        if(isEqual(tempResult, LOWER_LIMIT)) {
 //            isWasLowerLimit = true;
@@ -234,8 +154,6 @@ void counter(QVector<QVector<bool> > &results)
 //            results.push_back(tempResult);
 //        }
 
-//        tempResult.replace(8, true);
-
 //        if(isEqual(tempResult, LOWER_LIMIT)) {
 //            isWasLowerLimit = true;
 //            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
@@ -249,8 +167,6 @@ void counter(QVector<QVector<bool> > &results)
 //        if(isWasLowerLimit && isValid(tempResult)) {
 //            results.push_back(tempResult);
 //        }
-//        print(tempResult);
-//        qDebug() << "<==========";
     }
 }
 
@@ -261,7 +177,7 @@ void fromBinToHex(const QVector<QVector<bool> > &results)
     QString strHex;
 
     for(int i = 0; i < results.size(); ++i) {
-        for(int j = 0; j < 9; ++j) {
+        for(int j = 0; j < results.at(i).size(); ++j) {
             if(results.at(i).at(j)) {
                 tempStr.append("1");
             } else {
@@ -269,7 +185,7 @@ void fromBinToHex(const QVector<QVector<bool> > &results)
             }
         }
 
-        for(int j = 1; j < 9; ++j) {
+        for(int j = 1; j < tempStr.size(); ++j) {
             tempStrHex += tempStr.at(j);
             if(!(j % 4)) {
                 if(tempStrHex == "0000") {
@@ -337,12 +253,14 @@ int main(int argc, char *argv[])
 
     QVector<QVector<bool> > vec;
 
-    counter(vec);
+    counter(vec, 63);
     print(vec);
 
     qDebug() << "Size" << vec.size();
 
     fromBinToHex(vec);
+
+    qDebug() << "Size" << vec.size();
 
     return a.exec();
 }
