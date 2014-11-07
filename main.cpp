@@ -2,6 +2,7 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
+#include <QThread>
 
 #define UPPER_LIMIT "111111000"
 #define LOWER_LIMIT "000001111"
@@ -100,113 +101,156 @@ void counter(QVector<QVector<bool> > &results)
 
     tempResult.fill(false, 9);
 
-    bool isWasLowerLimit = false;
+//    bool isWasLowerLimit = false;
+    int k = 0;
 
     while(true) {
-        if(tempResult.at(0) && tempResult.at(1) && tempResult.at(2) && tempResult.at(3)
-                && tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
-                && tempResult.at(8)) {
+        for(int i = 0; i < tempResult.size(); ++i) {
+            if(tempResult.at(i)) {
+                ++k;
+            }
+        }
+
+        qDebug() << "K =" << k;
+
+        if(k == tempResult.size()) {
             break;
         }
-        if(tempResult.at(1) && tempResult.at(2) && tempResult.at(3) && tempResult.at(4)
-                && tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, false);
-            tempResult.replace(4, false);
-            tempResult.replace(3, false);
-            tempResult.replace(2, false);
-            tempResult.replace(1, false);
-            tempResult.replace(0, true);
-        }
-        if(tempResult.at(2) && tempResult.at(3) && tempResult.at(4) && tempResult.at(5)
-                && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, false);
-            tempResult.replace(4, false);
-            tempResult.replace(3, false);
-            tempResult.replace(2, false);
-            tempResult.replace(1, true);
-        }
-        if(tempResult.at(3) && tempResult.at(4) && tempResult.at(5) && tempResult.at(6)
-                && tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, false);
-            tempResult.replace(4, false);
-            tempResult.replace(3, false);
-            tempResult.replace(2, true);
-        }
-        if(tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
-                && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, false);
-            tempResult.replace(4, false);
-            tempResult.replace(3, true);
-        }
-        if(tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, false);
-            tempResult.replace(4, true);
-        }
-        if(tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, false);
-            tempResult.replace(5, true);
-        }
-        if(tempResult.at(7) && tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, false);
-            tempResult.replace(6, true);
-        }
-        if(tempResult.at(8)) {
-            tempResult.replace(8, false);
-            tempResult.replace(7, true);
+
+        k = 0;
+
+        for(int m = 1; m < tempResult.size(); ++m) {
+            for(int i = m; i < tempResult.size(); ++i) {
+                if(tempResult.at(i)) {
+                    ++k;
+                }
+            }
+
+            if(k == tempResult.size() - m) {
+                for(int i = m; i < tempResult.size(); ++i) {
+                    tempResult.replace(i, false);
+                }
+
+                tempResult.replace(m - 1, true);
+            }
+
+            k = 0;
         }
 
-        qDebug() << "==========>";
+        results.push_back(tempResult);
         print(tempResult);
-
-        if(isEqual(tempResult, LOWER_LIMIT)) {
-            isWasLowerLimit = true;
-            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
-        }
-
-        if(isEqual(tempResult, UPPER_LIMIT)) {
-            qDebug() << "isWasUpperLimit";
-            return;
-        }
-
-        if(isWasLowerLimit && isValid(tempResult)) {
-            results.push_back(tempResult);
-        }
-
-        tempResult.replace(8, true);
-
-        if(isEqual(tempResult, LOWER_LIMIT)) {
-            isWasLowerLimit = true;
-            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
-        }
-
-        if(isEqual(tempResult, UPPER_LIMIT)) {
-            qDebug() << "isWasUpperLimit";
-            return;
-        }
-
-        if(isWasLowerLimit && isValid(tempResult)) {
-            results.push_back(tempResult);
-        }
+        tempResult.replace(tempResult.size() - 1, true);
+        results.push_back(tempResult);
         print(tempResult);
-        qDebug() << "<==========";
+//        QThread::usleep(500000);
+
+
+//            results.push_back(tempResult);
+
+//        if(tempResult.at(0) && tempResult.at(1) && tempResult.at(2) && tempResult.at(3)
+//                && tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
+//                && tempResult.at(8)) {
+//            break;
+//        }
+//        if(tempResult.at(1) && tempResult.at(2) && tempResult.at(3) && tempResult.at(4)
+//                && tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, false);
+//            tempResult.replace(4, false);
+//            tempResult.replace(3, false);
+//            tempResult.replace(2, false);
+//            tempResult.replace(1, false);
+//            tempResult.replace(0, true);
+//        }
+//        if(tempResult.at(2) && tempResult.at(3) && tempResult.at(4) && tempResult.at(5)
+//                && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, false);
+//            tempResult.replace(4, false);
+//            tempResult.replace(3, false);
+//            tempResult.replace(2, false);
+//            tempResult.replace(1, true);
+//        }
+//        if(tempResult.at(3) && tempResult.at(4) && tempResult.at(5) && tempResult.at(6)
+//                && tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, false);
+//            tempResult.replace(4, false);
+//            tempResult.replace(3, false);
+//            tempResult.replace(2, true);
+//        }
+//        if(tempResult.at(4) && tempResult.at(5) && tempResult.at(6) && tempResult.at(7)
+//                && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, false);
+//            tempResult.replace(4, false);
+//            tempResult.replace(3, true);
+//        }
+//        if(tempResult.at(5) && tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, false);
+//            tempResult.replace(4, true);
+//        }
+//        if(tempResult.at(6) && tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, false);
+//            tempResult.replace(5, true);
+//        }
+//        if(tempResult.at(7) && tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, false);
+//            tempResult.replace(6, true);
+//        }
+//        if(tempResult.at(8)) {
+//            tempResult.replace(8, false);
+//            tempResult.replace(7, true);
+//        }
+
+//        qDebug() << "==========>";
+//        print(tempResult);
+
+//        if(isEqual(tempResult, LOWER_LIMIT)) {
+//            isWasLowerLimit = true;
+//            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
+//        }
+
+//        if(isEqual(tempResult, UPPER_LIMIT)) {
+//            qDebug() << "isWasUpperLimit";
+//            return;
+//        }
+
+//        if(isWasLowerLimit && isValid(tempResult)) {
+//            results.push_back(tempResult);
+//        }
+
+//        tempResult.replace(8, true);
+
+//        if(isEqual(tempResult, LOWER_LIMIT)) {
+//            isWasLowerLimit = true;
+//            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
+//        }
+
+//        if(isEqual(tempResult, UPPER_LIMIT)) {
+//            qDebug() << "isWasUpperLimit";
+//            return;
+//        }
+
+//        if(isWasLowerLimit && isValid(tempResult)) {
+//            results.push_back(tempResult);
+//        }
+//        print(tempResult);
+//        qDebug() << "<==========";
     }
 }
 
