@@ -134,11 +134,15 @@ void counter(QVector<QVector<bool> > &results, const int &digits)
             k = 0;
         }
 
-        results.push_back(tempResult);
-        print(tempResult);
+        if(/*isWasLowerLimit && */isValid(tempResult)) {
+            results.push_back(tempResult);
+            print(tempResult);
+        }
+//        results.push_back(tempResult);
+//        print(tempResult);
         tempResult.replace(tempResult.size() - 1, true);
-        results.push_back(tempResult);
-        print(tempResult);
+//        results.push_back(tempResult);
+//        print(tempResult);
 
 //        if(isEqual(tempResult, LOWER_LIMIT)) {
 //            isWasLowerLimit = true;
@@ -164,9 +168,10 @@ void counter(QVector<QVector<bool> > &results, const int &digits)
 //            return;
 //        }
 
-//        if(isWasLowerLimit && isValid(tempResult)) {
-//            results.push_back(tempResult);
-//        }
+        if(/*isWasLowerLimit && */isValid(tempResult)) {
+            results.push_back(tempResult);
+            print(tempResult);
+        }
     }
 }
 
@@ -253,8 +258,8 @@ int main(int argc, char *argv[])
 
     QVector<QVector<bool> > vec;
 
-    counter(vec, 63);
-    print(vec);
+    counter(vec, 9);
+//    print(vec);
 
     qDebug() << "Size" << vec.size();
 

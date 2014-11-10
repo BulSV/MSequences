@@ -8,7 +8,7 @@ QT       += core
 
 QT       -= gui
 
-TARGET = MSequences
+TARGET = MSequencesPro
 CONFIG   += console
 CONFIG   -= app_bundle
 

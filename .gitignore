@@ -15,8 +15,8 @@ object_script.*
 
 # Binary files
 *.exe
-MSequencesd
-MSequences
+MSequencesProd
+MSequencesPro
 
 # Don't needed CodeBlocks files
 *.depend
