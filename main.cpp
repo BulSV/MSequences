@@ -55,10 +55,18 @@ bool isValid(const QVector<bool>  &result)
         }
     }
 
-    if((zeros + 1 == units) || (zeros == units + 1)) {
-        return true;
+    if(result.size() % 2) {
+        if((zeros + 1 == units) || (zeros == units + 1)) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
-        return false;
+        if(zeros == units) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
@@ -104,6 +112,7 @@ void counter(QVector<QVector<bool> > &results, const int &digits)
     int k = 0;
 
     while(true) {
+        qDebug() << "digits =" << digits;
         for(int i = 0; i < tempResult.size(); ++i) {
             if(tempResult.at(i)) {
                 ++k;
@@ -252,20 +261,59 @@ void fromBinToHex(const QVector<QVector<bool> > &results)
     }
 }
 
+int correlation(const QVector<bool> &source1, const QVector<bool> &source2)
+{
+    int tempI = 0;
+    int summa = 0;
+
+//    qDebug() << "In correlation function";
+    for(int i = 0; i < source1.size() + source2.size() - 1; ++i) {
+//        qDebug() << "In first cicle";
+        for(int j = 0; j < source2.size(); ++j) {
+//            qDebug() << "In second cicle";
+            if(i < source1.size()) {
+                tempI = i;
+            } else {
+                tempI = source1.size() - 1;
+            }
+
+//            qDebug() << "tempI =" << tempI;
+            summa += source1.at(tempI)*source2.at(source2.size() - 1 - j);
+            --tempI;
+
+            if(tempI < 0 || (source2.size() - 1 - j < 0)) {
+                break;
+            }
+        }
+    }
+
+    return summa;
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QVector<QVector<bool> > vec;
+    QVector<QVector<bool> > vec1;
+    QVector<QVector<bool> > vec2;
 
-    counter(vec, 9);
+    counter(vec1, 11);
+    print(vec1);
+    counter(vec2, 4);
+    print(vec2);
 //    print(vec);
 
-    qDebug() << "Size" << vec.size();
+//    qDebug() << "Size" << vec.size();
 
-    fromBinToHex(vec);
+//    fromBinToHex(vec);
 
-    qDebug() << "Size" << vec.size();
+//    qDebug() << "Size" << vec.size();
+
+    for(int i = 0; i < vec1.size(); ++i) {
+        for(int j = 0; j < vec2.size(); ++j) {
+            qDebug() << correlation(vec1.at(i), vec2.at(j));
+        }
+    }
 
     return a.exec();
 }
