@@ -261,24 +261,29 @@ void fromBinToHex(const QVector<QVector<bool> > &results)
     }
 }
 
+int fromBoolToInt(const bool &boolValue)
+{
+    if(boolValue) {
+        return 1;
+    } else {
+        return -1;
+    }
+}
+
 int correlation(const QVector<bool> &source1, const QVector<bool> &source2)
 {
     int tempI = 0;
     int summa = 0;
 
-//    qDebug() << "In correlation function";
     for(int i = 0; i < source1.size() + source2.size() - 1; ++i) {
-//        qDebug() << "In first cicle";
         for(int j = 0; j < source2.size(); ++j) {
-//            qDebug() << "In second cicle";
             if(i < source1.size()) {
                 tempI = i;
             } else {
                 tempI = source1.size() - 1;
             }
 
-//            qDebug() << "tempI =" << tempI;
-            summa += source1.at(tempI)*source2.at(source2.size() - 1 - j);
+            summa += fromBoolToInt(source1.at(tempI))*fromBoolToInt(source2.at(source2.size() - 1 - j));
             --tempI;
 
             if(tempI < 0 || (source2.size() - 1 - j < 0)) {
@@ -290,6 +295,21 @@ int correlation(const QVector<bool> &source1, const QVector<bool> &source2)
     return summa;
 }
 
+QVector<bool> subSequence(const QVector<bool> &source, const int &offset, const int &digits)
+{
+    if(offset + digits > source.size()) {
+        qDebug() << "exception";
+    }
+
+    QVector<bool> result;
+
+    for(int i = offset; i < offset + digits; ++i) {
+        result.append(source.at(i));
+    }
+
+    return result;
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -299,7 +319,7 @@ int main(int argc, char *argv[])
 
     counter(vec1, 11);
     print(vec1);
-    counter(vec2, 4);
+    counter(vec2, 5);
     print(vec2);
 //    print(vec);
 
@@ -314,6 +334,10 @@ int main(int argc, char *argv[])
             qDebug() << correlation(vec1.at(i), vec2.at(j));
         }
     }
+
+    print(vec1.at(0));
+    qDebug() << "Sub Sequence";
+    print(subSequence(vec1.at(0), 2, 6));
 
     return a.exec();
 }
