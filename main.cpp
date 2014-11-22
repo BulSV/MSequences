@@ -365,41 +365,65 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 
 void ACFSmax()
 {
+    QFile resultsOutputFile("Output.txt");
+    if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qErrnoWarning("ERROR!\nCan't create file: \"Output.txt\"");
+    }
+
+    QTextStream out(&resultsOutputFile);
+
     qDebug() << "==========START_TEST==========";
+    out << "==========START_TEST==========\n";
 
     QVector<bool> vec;
     int pos = 0;
     QFile file("MSequences.txt");
     bool isWasSpace = false;
 
-    if(!file.open(QIODevice::ReadOnly)) {
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
     }
 
     while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
             isWasSpace = false;
+
             qDebug() << "===========SUB_TEST===========";
+            out << "===========SUB_TEST===========\n";
+
             print(vec);
+
             qDebug() << "Size of sequence:" << vec.size();
+            out << "Size of sequence: " << vec.size() << "\n";
+
             QVector<int> acfs_phases;
+
             for(int i = 1; i < vec.size(); ++i) {
                 acfs_phases.push_back(ACFphase(vec, i));
+
                 qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
+                out << "ACF(" << i << ") = " << acfs_phases.at(i - 1) << "\n";
             }
-            qDebug() << "MAX ACF(phase) =" << ACFmax(acfs_phases);
+
+            qDebug() << "MAX ACF(phase) = " << ACFmax(acfs_phases);
+            out << "MAX ACF(phase) = " << ACFmax(acfs_phases) << "\n";
+
             vec.clear();
         } else {
             if(!isWasSpace) {
                 isWasSpace = true;
+
                 qDebug() << "*******NEXT_GROUP_TESTS*******";
+                out << "*******NEXT_GROUP_TESTS*******\n";
             }
         }
     }
 
-    file.close();
-
     qDebug() << "===========END_TEST===========";
+    out << "===========END_TEST===========\n";
+
+    file.close();
+    resultsOutputFile.close();
 }
 
 int main(int argc, char *argv[])
