@@ -2,6 +2,7 @@
 #include <QVector>
 #include <QString>
 #include <QDebug>
+#include <QFile>
 
 #define UPPER_LIMIT "111111000"
 #define LOWER_LIMIT "000001111"
@@ -270,6 +271,11 @@ int fromBoolToInt(const bool &boolValue)
     }
 }
 
+bool fromIntToBool(const int &intValue)
+{
+    return intValue ? true : false;
+}
+
 int correlation(const QVector<bool> &source1, const QVector<bool> &source2)
 {
     int tempI = 0;
@@ -310,34 +316,88 @@ QVector<bool> subSequence(const QVector<bool> &source, const int &offset, const 
     return result;
 }
 
+int ACFphase(const QVector<bool> &source, const int &phase)
+{
+    int result = 0;
+
+    for(int i = 0; i < source.size(); ++i) {
+        if(i >= phase) {
+            result += fromBoolToInt(source.at(i))*fromBoolToInt(source.at(i - phase));
+        }
+    }
+
+    return result;
+}
+
+int ACFmax(const QVector<int> &acfs_phases)
+{
+    int result = 0;
+
+    for(int i = 0; i < acfs_phases.size(); ++i) {
+        if(qAbs(result) < qAbs(acfs_phases.at(i))) {
+            result = acfs_phases.at(i);
+        }
+    }
+
+    return result;
+}
+
+bool mSequenceReader(const QString &fileName, QVector<bool> &vec, const int &lineNumber = 1)
+{
+    QFile file(fileName);
+
+    if(!file.open(QIODevice::ReadOnly)) {
+        return false;
+    }
+
+    QByteArray ba;
+
+    for(int i = 0; i < lineNumber; ++i) {
+        ba = file.readLine();
+    }
+
+    file.close();
+
+    if(ba.isNull()) {
+        return false;
+    }
+
+    for(int i = 0; i < ba.size(); ++i) {
+        if(ba.at(i) != '\n') {
+            vec.push_back(fromIntToBool(ba.at(i) - '0'));
+        }
+    }
+
+    return true;
+}
+
+void ACFSmax()
+{
+    qDebug() << "==========START_TEST==========";
+
+    QVector<bool> vec;
+    int line = 1;
+
+    while(mSequenceReader("MSequence.txt", vec, line++)) {
+        qDebug() << "===========SUB_TEST===========";
+        print(vec);
+        QVector<int> acfs_phases;
+        for(int i = 1; i < vec.size(); ++i) {
+            acfs_phases.push_back(ACFphase(vec, i));
+            qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
+        }
+        qDebug() << "MAX ACF(phase) =" << ACFmax(acfs_phases);
+        vec.clear();
+    }
+
+    qDebug() << "===========END_TEST===========";
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    QVector<QVector<bool> > vec1;
-    QVector<QVector<bool> > vec2;
-
-    counter(vec1, 11);
-    print(vec1);
-    counter(vec2, 5);
-    print(vec2);
-//    print(vec);
-
-//    qDebug() << "Size" << vec.size();
-
-//    fromBinToHex(vec);
-
-//    qDebug() << "Size" << vec.size();
-
-    for(int i = 0; i < vec1.size(); ++i) {
-        for(int j = 0; j < vec2.size(); ++j) {
-            qDebug() << correlation(vec1.at(i), vec2.at(j));
-        }
-    }
-
-    print(vec1.at(0));
-    qDebug() << "Sub Sequence";
-    print(subSequence(vec1.at(0), 2, 6));
+    ACFSmax();
 
     return a.exec();
 }
