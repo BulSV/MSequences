@@ -342,30 +342,20 @@ int ACFmax(const QVector<int> &acfs_phases)
     return result;
 }
 
-bool mSequenceReader(const QString &fileName, QVector<bool> &vec, const int &lineNumber = 1)
+bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 {
-    QFile file(fileName);
+    QByteArray ba;
 
-    if(!file.open(QIODevice::ReadOnly)) {
+    if(!file.atEnd()) {
+        file.seek(pos);
+        ba = file.readLine();
+        pos = file.pos();
+    } else {
         return false;
     }
 
-    QByteArray ba;
-
-    for(int i = 0; i < lineNumber; ++i) {
-        if(!file.atEnd()) {
-            ba = file.readLine();
-        } else {
-            file.close();
-
-            return false;
-        }
-    }
-
-    file.close();
-
     for(int i = 0; i < ba.size(); ++i) {
-        if(ba.at(i) != '\n') {
+        if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
             vec.push_back(fromIntToBool(ba.at(i) - '0'));
         }
     }
@@ -378,12 +368,20 @@ void ACFSmax()
     qDebug() << "==========START_TEST==========";
 
     QVector<bool> vec;
-    int line = 1;
+    int pos = 0;
+    QFile file("MSequences.txt");
+    bool isWasSpace = false;
 
-    while(mSequenceReader("MSequence.txt", vec, line++)) {
+    if(!file.open(QIODevice::ReadOnly)) {
+        qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
+    }
+
+    while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
+            isWasSpace = false;
             qDebug() << "===========SUB_TEST===========";
             print(vec);
+            qDebug() << "Size of sequence:" << vec.size();
             QVector<int> acfs_phases;
             for(int i = 1; i < vec.size(); ++i) {
                 acfs_phases.push_back(ACFphase(vec, i));
@@ -392,9 +390,14 @@ void ACFSmax()
             qDebug() << "MAX ACF(phase) =" << ACFmax(acfs_phases);
             vec.clear();
         } else {
-            qDebug() << "******************************";
+            if(!isWasSpace) {
+                isWasSpace = true;
+                qDebug() << "*******NEXT_GROUP_TESTS*******";
+            }
         }
     }
+
+    file.close();
 
     qDebug() << "===========END_TEST===========";
 }
