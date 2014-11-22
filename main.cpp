@@ -353,14 +353,16 @@ bool mSequenceReader(const QString &fileName, QVector<bool> &vec, const int &lin
     QByteArray ba;
 
     for(int i = 0; i < lineNumber; ++i) {
-        ba = file.readLine();
+        if(!file.atEnd()) {
+            ba = file.readLine();
+        } else {
+            file.close();
+
+            return false;
+        }
     }
 
     file.close();
-
-    if(ba.isNull()) {
-        return false;
-    }
 
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n') {
@@ -379,15 +381,19 @@ void ACFSmax()
     int line = 1;
 
     while(mSequenceReader("MSequence.txt", vec, line++)) {
-        qDebug() << "===========SUB_TEST===========";
-        print(vec);
-        QVector<int> acfs_phases;
-        for(int i = 1; i < vec.size(); ++i) {
-            acfs_phases.push_back(ACFphase(vec, i));
-            qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
+        if(!vec.isEmpty()) {
+            qDebug() << "===========SUB_TEST===========";
+            print(vec);
+            QVector<int> acfs_phases;
+            for(int i = 1; i < vec.size(); ++i) {
+                acfs_phases.push_back(ACFphase(vec, i));
+                qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
+            }
+            qDebug() << "MAX ACF(phase) =" << ACFmax(acfs_phases);
+            vec.clear();
+        } else {
+            qDebug() << "******************************";
         }
-        qDebug() << "MAX ACF(phase) =" << ACFmax(acfs_phases);
-        vec.clear();
     }
 
     qDebug() << "===========END_TEST===========";
