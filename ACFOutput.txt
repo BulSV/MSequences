@@ -1,0 +1,726 @@
+==========START_TEST==========
+===========SUB_TEST===========
+101010110011000
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+010101011001100
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = -1
+ACF(3) = -4
+ACF(4) = 7
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = 1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+001010101100110
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 0
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+000101010110011
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+100010101011001
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = -4
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -4
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+110001010101100
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 4
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+011000101010110
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 4
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+001100010101011
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+100110001010101
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 7
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+110011000101010
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -1
+ACF(3) = -6
+ACF(4) = 7
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+011001100010101
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -4
+ACF(4) = 7
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+101100110001010
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+010110011000101
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 4
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = -4
+===========SUB_TEST===========
+101011001100010
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+010101100110001
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+010101001100111
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+101010100110011
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = -1
+ACF(3) = -4
+ACF(4) = 7
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = 1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+110101010011001
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 0
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+111010101001100
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+011101010100110
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = -4
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -4
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+001110101010011
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 4
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+100111010101001
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -4
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 4
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+110011101010100
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = -1
+MAX ACF(phase) = -6
+===========SUB_TEST===========
+011001110101010
+Size of sequence: 15
+ACF(1) = -6
+ACF(2) = 1
+ACF(3) = -6
+ACF(4) = 7
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+001100111010101
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -1
+ACF(3) = -6
+ACF(4) = 7
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+100110011101010
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -4
+ACF(4) = 7
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 7
+===========SUB_TEST===========
+010011001110101
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+101001100111010
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 4
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = -4
+===========SUB_TEST===========
+010100110011101
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 5
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -3
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+101010011001110
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -3
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = 2
+ACF(14) = -1
+MAX ACF(phase) = 5
+===========SUB_TEST===========
+010101001100111
+Size of sequence: 15
+ACF(1) = -4
+ACF(2) = -1
+ACF(3) = -4
+ACF(4) = 5
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 5
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+101110010110000
+Size of sequence: 15
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 4
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+ACF(13) = 0
+ACF(14) = -1
+MAX ACF(phase) = 4
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+10111
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+1010111011000111110011010010000
+Size of sequence: 31
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = 1
+ACF(13) = -4
+ACF(14) = -5
+ACF(15) = 2
+ACF(16) = -3
+ACF(17) = 4
+ACF(18) = 3
+ACF(19) = -2
+ACF(20) = -3
+ACF(21) = 2
+ACF(22) = -3
+ACF(23) = -2
+ACF(24) = -1
+ACF(25) = -4
+ACF(26) = 1
+ACF(27) = 0
+ACF(28) = -1
+ACF(29) = 0
+ACF(30) = -1
+MAX ACF(phase) = -5
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+10111
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+===========SUB_TEST===========
+11011
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+MAX ACF(phase) = 2
+===========SUB_TEST===========
+11101
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+===========SUB_TEST===========
+11110
+Size of sequence: 5
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = 2
+===========SUB_TEST===========
+01111
+Size of sequence: 5
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = 2
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+11101
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+00010
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+01000
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+01011
+Size of sequence: 5
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = -2
+===========SUB_TEST===========
+01111
+Size of sequence: 5
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = 2
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+00001
+Size of sequence: 5
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = 2
+===========SUB_TEST===========
+00101
+Size of sequence: 5
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+MAX ACF(phase) = -2
+===========END_TEST===========

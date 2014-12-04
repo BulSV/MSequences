@@ -3,6 +3,7 @@
 #include <QString>
 #include <QDebug>
 #include <QFile>
+//#include <iostream>
 
 #define UPPER_LIMIT "111111000"
 #define LOWER_LIMIT "000001111"
@@ -20,6 +21,57 @@ void print(const QVector<bool> &result)
     }
 
     qDebug() << tempStr;
+}
+
+void printToFile(QFile &file, const QVector<bool> &result)
+{   
+    file.close();
+
+//    std::cin.get();
+    if(!file.open(QIODevice::Append | QIODevice::Text)) {
+        qErrnoWarning(QString(QString("void printToFile(): ERROR!\nCan't create file: ") +
+                              QString("\"") +
+                              file.fileName() +
+                              QString("\"")).toStdString().c_str());
+    }
+
+    QTextStream out(&file);
+
+    for(int i = 0; i < result.size(); ++i) {
+        if(result.at(i)) {
+            out << "1";
+        } else {
+            out << "0";
+        }
+    }
+
+    out << "\n";
+}
+
+void printToFile(QFile &file, const QVector<QVector<bool> > &results)
+{
+    file.close();
+
+    if(!file.open(QIODevice::Append | QIODevice::Text)) {
+        qErrnoWarning(QString(QString("void printToFile(): ERROR!\nCan't create file: ") +
+                              QString("\"") +
+                              file.fileName() +
+                              QString("\"")).toStdString().c_str());
+    }
+
+    QTextStream out(&file);
+
+    for(int i = 0; i < results.size(); ++i) {
+        for(int j = 0; j < results.at(i).size(); ++j) {
+            if(results.at(i).at(j)) {
+                out << "1";
+            } else {
+                out << "0";
+            }
+        }
+
+        out << "\n";
+    }
 }
 
 void print(const QVector<QVector<bool> > &results)
@@ -276,31 +328,6 @@ bool fromIntToBool(const int &intValue)
     return intValue ? true : false;
 }
 
-int correlation(const QVector<bool> &source1, const QVector<bool> &source2)
-{
-    int tempI = 0;
-    int summa = 0;
-
-    for(int i = 0; i < source1.size() + source2.size() - 1; ++i) {
-        for(int j = 0; j < source2.size(); ++j) {
-            if(i < source1.size()) {
-                tempI = i;
-            } else {
-                tempI = source1.size() - 1;
-            }
-
-            summa += fromBoolToInt(source1.at(tempI))*fromBoolToInt(source2.at(source2.size() - 1 - j));
-            --tempI;
-
-            if(tempI < 0 || (source2.size() - 1 - j < 0)) {
-                break;
-            }
-        }
-    }
-
-    return summa;
-}
-
 QVector<bool> subSequence(const QVector<bool> &source, const int &offset, const int &digits)
 {
     if(offset + digits > source.size()) {
@@ -329,6 +356,7 @@ int ACFphase(const QVector<bool> &source, const int &phase)
     return result;
 }
 
+// #2
 int ACFmax(const QVector<int> &acfs_phases)
 {
     int result = 0;
@@ -336,6 +364,20 @@ int ACFmax(const QVector<int> &acfs_phases)
     for(int i = 0; i < acfs_phases.size(); ++i) {
         if(qAbs(result) < qAbs(acfs_phases.at(i))) {
             result = acfs_phases.at(i);
+        }
+    }
+
+    return result;
+}
+
+// #3
+int ACFmin_max(const QVector<int> &acfs_maxs)
+{
+    int result = 0;
+
+    for(int i = 0; i < acfs_maxs.size(); ++i) {
+        if(qAbs(result) > qAbs(acfs_maxs.at(i))) {
+            result += acfs_maxs.at(i);
         }
     }
 
@@ -365,9 +407,9 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 
 void ACFSmax()
 {
-    QFile resultsOutputFile("Output.txt");
+    QFile resultsOutputFile("ACFOutput.txt");
     if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        qErrnoWarning("ERROR!\nCan't create file: \"Output.txt\"");
+        qErrnoWarning("ERROR!\nCan't create file: \"ACFOutput.txt\"");
     }
 
     QTextStream out(&resultsOutputFile);
@@ -392,6 +434,7 @@ void ACFSmax()
             out << "===========SUB_TEST===========\n";
 
             print(vec);
+            printToFile(resultsOutputFile, vec);
 
             qDebug() << "Size of sequence:" << vec.size();
             out << "Size of sequence: " << vec.size() << "\n";
@@ -426,11 +469,91 @@ void ACFSmax()
     resultsOutputFile.close();
 }
 
+int CCFphase(const QVector<bool> &origin, const QVector<bool> &part, const int &phase)
+{
+    int result = 0;
+    for(int i = 0; i < origin.size() - phase; ++i) {
+        result += fromBoolToInt(origin.at(i))*fromBoolToInt(part.at(i));
+    }
+
+    return result;
+}
+
+int CCFmax(const QVector<int> &ccfs_phases)
+{
+    return ACFmax(ccfs_phases);
+}
+
+void CCFSmax(const int &offset, const int &lenght)
+{
+    QFile resultsOutputFile("CCFOutput.txt");
+    if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qErrnoWarning("ERROR!\nCan't create file: \"CCFOutput.txt\"");
+    }
+
+    QTextStream out(&resultsOutputFile);
+
+    qDebug() << "==========START_TEST==========";
+    out << "==========START_TEST==========\n";
+
+    QVector<bool> vec;
+    int pos = 0;
+    QFile file("MSequences.txt");
+    bool isWasSpace = false;
+
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
+    }
+
+    while(mSequenceReader(file, vec, pos)) {
+        if(!vec.isEmpty()) {
+            isWasSpace = false;
+
+            qDebug() << "===========SUB_TEST===========";
+            out << "===========SUB_TEST===========\n";
+
+            print(vec);
+
+            qDebug() << "Size of sequence:" << vec.size();
+            out << "Size of sequence: " << vec.size() << "\n";
+
+            QVector<int> ccfs_phases;
+
+            for(int i = 1; i < vec.size(); ++i) {
+                ccfs_phases.push_back(CCFphase(vec, subSequence(vec, 0, 6), i));
+
+                qDebug() << "ACF(" << i << ") =" << ccfs_phases.at(i - 1);
+                out << "ACF(" << i << ") = " << ccfs_phases.at(i - 1) << "\n";
+            }
+
+            qDebug() << "MAX CCF(phase) = " << CCFmax(ccfs_phases);
+            out << "MAX CCF(phase) = " << CCFmax(ccfs_phases) << "\n";
+
+            vec.clear();
+        } else {
+            if(!isWasSpace) {
+                isWasSpace = true;
+
+                qDebug() << "*******NEXT_GROUP_TESTS*******";
+                out << "*******NEXT_GROUP_TESTS*******\n";
+            }
+        }
+    }
+
+    qDebug() << "===========END_TEST===========";
+    out << "===========END_TEST===========\n";
+
+    file.close();
+    resultsOutputFile.close();
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
     ACFSmax();
+
+//    CCFSmax();
 
     return a.exec();
 }
