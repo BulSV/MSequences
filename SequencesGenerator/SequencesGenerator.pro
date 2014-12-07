@@ -8,7 +8,7 @@ QT       += core
 
 QT       -= gui
 
-TARGET = SequencesGenerator
+TARGET = SequencesGeneratorPro
 CONFIG   += console
 CONFIG   -= app_bundle
 

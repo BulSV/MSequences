@@ -723,4 +723,46 @@ ACF(2) = 1
 ACF(3) = 0
 ACF(4) = -1
 MAX ACF(phase) = -2
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+11111111111111100000000000001
+Size of sequence: 29
+ACF(1) = 24
+ACF(2) = 21
+ACF(3) = 18
+ACF(4) = 15
+ACF(5) = 12
+ACF(6) = 9
+ACF(7) = 6
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -6
+ACF(12) = -9
+ACF(13) = -12
+ACF(14) = -11
+ACF(15) = -12
+ACF(16) = -11
+ACF(17) = -10
+ACF(18) = -9
+ACF(19) = -8
+ACF(20) = -7
+ACF(21) = -6
+ACF(22) = -5
+ACF(23) = -4
+ACF(24) = -3
+ACF(25) = -2
+ACF(26) = -1
+ACF(27) = 0
+ACF(28) = 1
+MAX ACF(phase) = 24
+*******NEXT_GROUP_TESTS*******
+===========SUB_TEST===========
+11101
+Size of sequence: 5
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+MAX ACF(phase) = 1
 ===========END_TEST===========
