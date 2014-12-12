@@ -75,14 +75,52 @@ void print(const QVector<int> &v)
     }
     out << "\n";
 }
+int indexGenIn = 0;
+int indexGenOut = 0;
+void generator2(const int &scatter, int phase, int summa)
+{
+    QTextStream out(stdout);
+
+    if(!phase) {
+        return;
+    }
+    for(int m = 0; m < 29 - phase; ++m) {
+        if(m == 29 - 1 - phase) {
+            for(int i = 0; i < 4; ++i) {
+                for(int j = 0; j < 2; ++j) {
+                    summa += v[i][j]*v[i][j+1];
+
+                    if(qAbs(summa) <= scatter) {
+                        ia[m] = v[i][j]; // convert v[j] to bool before assignment
+                        ia[m+phase] = v[i][j+1]; // convert v[j+1] to bool before assignment
+qDebug() << ++indexGenIn;
+                        generator2(scatter, summa, --phase);
+qDebug() << --indexGenOut;
+                    } else {
+                        summa -= v[i][j]*v[i][j+1];
+                    }
+                }
+            }
+        }
+        qDebug() << "ia[" << m << "] =" << ia[m] << "| ia[" << m+phase << "] =" << ia[m + phase];
+//        summa += ia.at(m)*ia.at(m+phase);
+        qDebug() << "qAbs(summa):" << qAbs(summa);
+    }
+
+    out.flush(); // to set visible output in console
+}
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    generator(2, 5);
+//    generator(1, 29);
+    ia.fill(0, 29);
+    generator2(1, 28, 0);
 
     print(ia);
+
+    qDebug() << "What's all folks!";
 
     return a.exec();
 }
