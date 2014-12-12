@@ -16,7 +16,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    Generator.cpp
+    Generator.cpp \
+    IView.cpp \
+    ConsoleView.cpp
 
 HEADERS += \
-    Generator.h
+    Generator.h \
+    IView.h \
+    ConsoleView.h

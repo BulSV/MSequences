@@ -8,7 +8,7 @@ class Generator : public QObject
 {
     Q_OBJECT
 public:
-    Generator(const int &seqSize, const int &absScatter = 1);
+    explicit Generator(const int &seqSize, const int &absScatter = 1, QObject *parent = 0);
     ~Generator();
     void setAbsScatter(const int &absScatter);
     int getAbsScatter() const;
