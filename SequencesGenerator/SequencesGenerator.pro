@@ -6,7 +6,7 @@
 
 QT       += core
 
-QT       -= gui
+QT       += gui
 
 TARGET = SequencesGeneratorPro
 CONFIG   += console
@@ -15,4 +15,8 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    Generator.cpp
+
+HEADERS += \
+    Generator.h
