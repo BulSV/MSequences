@@ -43,6 +43,7 @@ int Generator::getSequenceSize() const
 void Generator::generate()
 {
     if(!m_phase) {
+        emit sequenceGenerated(m_sequence);
         return;
     }
     for(int m = 0; m < m_seqSize - m_phase; ++m) {

@@ -405,6 +405,130 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
     return true;
 }
 
+bool mSequenceReaderHEX(QFile &file, QVector<bool> &vec, int &pos)
+{
+    QByteArray ba;
+
+    if(!file.atEnd()) {
+        file.seek(pos);
+        ba = file.readLine();
+        pos = file.pos();
+    } else {
+        return false;
+    }
+
+    for(int i = 0; i < ba.size(); ++i) {
+        if(ba.at(i) != '\n' && ((ba.at(i) >= '0' && ba.at(i) <= '9') || (ba.at(i) >= 'A' && ba.at(i) <= 'F'))) {
+            switch(ba.at(i)) {
+            case '0':
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                break;
+            case '1':
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(true);
+                break;
+            case '2':
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(false);
+                break;
+            case '3':
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(true);
+                break;
+            case '4':
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(false);
+                break;
+            case '5':
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(true);
+                break;
+            case '6':
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(false);
+                break;
+            case '7':
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(true);
+                break;
+            case '8':
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                break;
+            case '9':
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(true);
+                break;
+            case 'A':
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(false);
+                break;
+            case 'B':
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(true);
+                vec.push_back(true);
+                break;
+            case 'C':
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(false);
+                break;
+            case 'D':
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(false);
+                vec.push_back(true);
+                break;
+            case 'E':
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(false);
+                break;
+            case 'F':
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(true);
+                vec.push_back(true);
+                break;
+            default:
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                vec.push_back(false);
+                break;
+            }
+        }
+    }
+
+    return true;
+}
+
 void ACFSmax()
 {
     QFile resultsOutputFile("ACFOutput.txt");
@@ -426,7 +550,7 @@ void ACFSmax()
         qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
     }
 
-    while(mSequenceReader(file, vec, pos)) {
+    while(mSequenceReaderHEX(file, vec, pos)) {
         if(!vec.isEmpty()) {
             isWasSpace = false;
 
