@@ -384,39 +384,8 @@ int ACFmin_max(const QVector<int> &acfs_maxs)
     return result;
 }
 
-bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
+bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
 {
-    QByteArray ba;
-
-    if(!file.atEnd()) {
-        file.seek(pos);
-        ba = file.readLine();
-        pos = file.pos();
-    } else {
-        return false;
-    }
-
-    for(int i = 0; i < ba.size(); ++i) {
-        if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
-            vec.push_back(fromIntToBool(ba.at(i) - '0'));
-        }
-    }
-
-    return true;
-}
-
-bool mSequenceReaderHEX(QFile &file, QVector<bool> &vec, int &pos)
-{
-    QByteArray ba;
-
-    if(!file.atEnd()) {
-        file.seek(pos);
-        ba = file.readLine();
-        pos = file.pos();
-    } else {
-        return false;
-    }
-
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n' && ((ba.at(i) >= '0' && ba.at(i) <= '9') || (ba.at(i) >= 'A' && ba.at(i) <= 'F'))) {
             switch(ba.at(i)) {
@@ -517,13 +486,57 @@ bool mSequenceReaderHEX(QFile &file, QVector<bool> &vec, int &pos)
                 vec.push_back(true);
                 break;
             default:
-                vec.push_back(false);
-                vec.push_back(false);
-                vec.push_back(false);
-                vec.push_back(false);
-                break;
+                qDebug() << "Error! Not HEX format!";
+                return false;
             }
+        } else {
+            qDebug() << "Error! Not HEX format!";
+            return false;
         }
+    }
+
+    return true;
+}
+
+bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
+{    
+    for(int i = 0; i < ba.size(); ++i) {
+        if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
+            vec.push_back(fromIntToBool(ba.at(i) - '0'));
+        } else {
+            qDebug() << "Error! Not BIN format!";
+            return false;
+        }
+    }
+
+    return true;
+}
+
+bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
+{    
+    QByteArray ba;
+
+    if(!file.atEnd()) {
+        file.seek(pos);
+        ba = file.readLine();
+        pos = file.pos();
+    } else {
+        return false;
+    }
+
+    ba.truncate(ba.size() - 1);
+
+    if(ba.contains("BIN ")) {
+        ba.remove(0, 4);
+        qDebug() << "BIN BYTE ARR =" << ba;
+        mSequenceReaderBIN(ba, vec);
+    } else if(ba.contains("HEX ")) {
+        ba.remove(0, 4);
+        qDebug() << "HEX BYTE ARR =" << ba;
+        mSequenceReaderHEX(ba, vec);
+    } else {
+        return false;
+        qDebug() << "Error! File formating no valid!";
     }
 
     return true;
@@ -550,7 +563,7 @@ void ACFSmax()
         qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
     }
 
-    while(mSequenceReaderHEX(file, vec, pos)) {
+    while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
             isWasSpace = false;
 
