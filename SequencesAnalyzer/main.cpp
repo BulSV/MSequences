@@ -3,10 +3,7 @@
 #include <QString>
 #include <QDebug>
 #include <QFile>
-//#include <iostream>
 
-#define UPPER_LIMIT "111111000"
-#define LOWER_LIMIT "000001111"
 
 void print(const QVector<bool> &result)
 {
@@ -27,7 +24,6 @@ void printToFile(QFile &file, const QVector<bool> &result)
 {   
     file.close();
 
-//    std::cin.get();
     if(!file.open(QIODevice::Append | QIODevice::Text)) {
         qErrnoWarning(QString(QString("void printToFile(): ERROR!\nCan't create file: ") +
                               QString("\"") +
@@ -89,151 +85,6 @@ void print(const QVector<QVector<bool> > &results)
 
         qDebug() << tempStr;
         tempStr.clear();
-    }
-}
-
-bool isValid(const QVector<bool>  &result)
-{
-    bool temp;
-    int zeros = 0;
-    int units = 0;
-
-    for(int i = 0; i < result.size(); ++i) {
-        temp = result.value(i);
-
-        if(temp) {
-            ++units;
-        } else {
-            ++zeros;
-        }
-    }
-
-    if(result.size() % 2) {
-        if((zeros + 1 == units) || (zeros == units + 1)) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-        if(zeros == units) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-
-bool isEqual(const QVector<bool> &source1, const QString &source2) {
-    if(source1.size() != source2.size()) {
-        qDebug() << "don't match";
-        return false;
-    }
-
-    QString tempStr = "0";
-
-    qDebug() << "source1:";
-    print(source1);
-    qDebug() << "source2:";
-    qDebug() << source2;
-
-    bool stringSymbol = false;
-
-    for(int i = 0; i < source1.size(); ++i) {
-        if(source2.at(i) == tempStr.at(0)) {
-            stringSymbol = false;
-        } else {
-            stringSymbol = true;
-        }
-
-        if(source1.at(i) != stringSymbol) {
-            return false;
-        }
-    }
-
-    qDebug() << "TRUE!!!";
-
-    return true;
-}
-
-void counter(QVector<QVector<bool> > &results, const int &digits)
-{
-    QVector<bool> tempResult;
-
-    tempResult.fill(false, digits);
-
-//    bool isWasLowerLimit = false;
-    int k = 0;
-
-    while(true) {
-        qDebug() << "digits =" << digits;
-        for(int i = 0; i < tempResult.size(); ++i) {
-            if(tempResult.at(i)) {
-                ++k;
-            }
-        }
-
-        if(k == tempResult.size()) {
-            break;
-        }
-
-        k = 0;
-
-        for(int m = 1; m < tempResult.size(); ++m) {
-            for(int i = m; i < tempResult.size(); ++i) {
-                if(tempResult.at(i)) {
-                    ++k;
-                }
-            }
-
-            if(k == tempResult.size() - m) {
-                for(int i = m; i < tempResult.size(); ++i) {
-                    tempResult.replace(i, false);
-                }
-
-                tempResult.replace(m - 1, true);
-            }
-
-            k = 0;
-        }
-
-        if(/*isWasLowerLimit && */isValid(tempResult)) {
-            results.push_back(tempResult);
-            print(tempResult);
-        }
-//        results.push_back(tempResult);
-//        print(tempResult);
-        tempResult.replace(tempResult.size() - 1, true);
-//        results.push_back(tempResult);
-//        print(tempResult);
-
-//        if(isEqual(tempResult, LOWER_LIMIT)) {
-//            isWasLowerLimit = true;
-//            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
-//        }
-
-//        if(isEqual(tempResult, UPPER_LIMIT)) {
-//            qDebug() << "isWasUpperLimit";
-//            return;
-//        }
-
-//        if(isWasLowerLimit && isValid(tempResult)) {
-//            results.push_back(tempResult);
-//        }
-
-//        if(isEqual(tempResult, LOWER_LIMIT)) {
-//            isWasLowerLimit = true;
-//            qDebug() << "isWasLowerLimit" << isWasLowerLimit;
-//        }
-
-//        if(isEqual(tempResult, UPPER_LIMIT)) {
-//            qDebug() << "isWasUpperLimit";
-//            return;
-//        }
-
-        if(/*isWasLowerLimit && */isValid(tempResult)) {
-            results.push_back(tempResult);
-            print(tempResult);
-        }
     }
 }
 
