@@ -282,5 +282,4 @@ ACF(4) = 3
 ACF(5) = -2
 ACF(6) = 1
 MAX ACF(phase) = -6
-*******NEXT_GROUP_TESTS*******
 ===========END_TEST===========

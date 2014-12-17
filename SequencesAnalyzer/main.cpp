@@ -341,7 +341,7 @@ bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
                 return false;
             }
         } else {
-            qDebug() << "Error! Not HEX format!";
+            qDebug() << "Error! The sequence" << ba << "has not HEX format!";
             return false;
         }
     }
@@ -355,7 +355,7 @@ bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
         if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
             vec.push_back(fromIntToBool(ba.at(i) - '0'));
         } else {
-            qDebug() << "Error! Not BIN format!";
+            qDebug() << "Error! The sequence" << ba << "has not BIN format!";
             return false;
         }
     }
@@ -386,10 +386,10 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
     } else if(ba.contains("HEX ")) {
         ba.remove(0, 4);        
         mSequenceReaderHEX(ba, vec);
-    } else {        
-        qDebug() << "Error! File formating no valid!";
-        qDebug() << "For HEX-format sequence write in file at the begin line: HEX";
-        qDebug() << "For BIN-format sequence write in file at the begin line: BIN";
+    } else {
+        qDebug() << "Error! The sequence" << ba << "is not valid!";
+        qDebug() << "For HEX-format sequence write in file at the begin of line: HEX";
+        qDebug() << "For BIN-format sequence write in file at the begin of line: BIN";
 
         return false;
     }
@@ -444,13 +444,6 @@ void ACFSmax()
             out << "MAX ACF(phase) = " << ACFmax(acfs_phases) << "\n";
 
             vec.clear();
-        } else {
-            if(!isWasSpace) {
-                isWasSpace = true;
-
-                qDebug() << "*******NEXT_GROUP_TESTS*******";
-                out << "*******NEXT_GROUP_TESTS*******\n";
-            }
         }
     }
 
