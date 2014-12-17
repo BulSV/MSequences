@@ -524,19 +524,23 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
         return false;
     }
 
-    ba.truncate(ba.size() - 1);
+    // Without empty line at the end of file
+    if(ba.at(ba.size() - 1) == '\n') {
+        ba.truncate(ba.size() - 1);
+    }
 
     if(ba.contains("BIN ")) {
-        ba.remove(0, 4);
-        qDebug() << "BIN BYTE ARR =" << ba;
+        ba.remove(0, 4);        
         mSequenceReaderBIN(ba, vec);
     } else if(ba.contains("HEX ")) {
-        ba.remove(0, 4);
-        qDebug() << "HEX BYTE ARR =" << ba;
+        ba.remove(0, 4);        
         mSequenceReaderHEX(ba, vec);
-    } else {
-        return false;
+    } else {        
         qDebug() << "Error! File formating no valid!";
+        qDebug() << "For HEX-format sequence write in file at the begin line: HEX";
+        qDebug() << "For BIN-format sequence write in file at the begin line: BIN";
+
+        return false;
     }
 
     return true;
