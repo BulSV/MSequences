@@ -3,6 +3,7 @@
 #include <QString>
 #include <QDebug>
 #include <QFile>
+#include <QtMath>
 
 
 void print(const QVector<bool> &result)
@@ -483,6 +484,11 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
     return true;
 }
 
+float ProtectRate(const int &ACF_0, const int &ACF_max)
+{
+    return (20.0*qLn(qAbs((float)ACF_0/(float)ACF_max)))/qLn(10.0);
+}
+
 void ACFSmax()
 {
     QFile resultsOutputFile("ACFOutput.txt");
@@ -512,10 +518,9 @@ void ACFSmax()
             print(vec);
             printToFile(resultsOutputFile, vec);
 
-
             qDebug() << "HEX format:" << fromBinToHex(vec);
             qDebug() << "Size of sequence:" << vec.size();
-            out << "HEX format:" << fromBinToHex(vec) << "\n";
+            out << "HEX format: " << fromBinToHex(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
 
             QVector<int> acfs_phases;
@@ -527,8 +532,11 @@ void ACFSmax()
                 out << "ACF(" << i << ") = " << acfs_phases.at(i - 1) << "\n";
             }
 
-            qDebug() << "MAX ACF(phase) = " << ACFmax(acfs_phases);
-            out << "MAX ACF(phase) = " << ACFmax(acfs_phases) << "\n";
+            int ACF_max = ACFmax(acfs_phases);
+            qDebug() << "MAX ACF(phase) = " << ACF_max;
+            qDebug() << "Protection rate:" << ProtectRate(vec.size(), ACF_max);
+            out << "MAX ACF(phase) = " << ACF_max << "\n";
+            out << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
 
             vec.clear();
         }
@@ -583,8 +591,11 @@ void CCFSmax(const int &offset, const int &lenght)
             out << "===========SUB_TEST===========\n";
 
             print(vec);
+            printToFile(resultsOutputFile, vec);
 
+            qDebug() << "HEX format:" << fromBinToHex(vec);
             qDebug() << "Size of sequence:" << vec.size();
+            out << "HEX format:" << fromBinToHex(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
 
             QVector<int> ccfs_phases;
