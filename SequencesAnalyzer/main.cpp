@@ -21,7 +21,7 @@ void print(const QVector<bool> &result)
 }
 
 void printToFile(QFile &file, const QVector<bool> &result)
-{   
+{
     file.close();
 
     if(!file.open(QIODevice::Append | QIODevice::Text)) {
@@ -86,6 +86,92 @@ void print(const QVector<QVector<bool> > &results)
         qDebug() << tempStr;
         tempStr.clear();
     }
+}
+
+QByteArray fromBoolToBinByteArray(const QVector<bool> &result)
+{
+    QByteArray arr;
+
+    for(int i = 0; i < result.size(); ++i) {
+        if(result.at(i)) {
+            arr.append("1");
+        } else {
+            arr.append("0");
+        }
+    }
+
+    return arr;
+}
+
+QByteArray fromBinToHex(const QVector<bool> &result)
+{
+    QByteArray binBa = fromBoolToBinByteArray(result);
+    QByteArray tempBinBa;
+    QByteArray hexBa;
+
+    // Complements the bits with zeros
+    if(binBa.size() % 4) {
+        for(int i = 0; i < binBa.size() % 4; ++i) {
+            binBa.push_front("0");
+        }
+    }
+
+    for(int i = 0; i < binBa.size(); ++i) {
+        tempBinBa += binBa.at(i);
+        if(!((i + 1) % 4)) {
+            if(tempBinBa == "0000") {
+                hexBa += "0";
+            }
+            if(tempBinBa == "0001") {
+                hexBa += "1";
+            }
+            if(tempBinBa == "0010") {
+                hexBa += "2";
+            }
+            if(tempBinBa == "0011") {
+                hexBa += "3";
+            }
+            if(tempBinBa == "0100") {
+                hexBa += "4";
+            }
+            if(tempBinBa == "0101") {
+                hexBa += "5";
+            }
+            if(tempBinBa == "0110") {
+                hexBa += "6";
+            }
+            if(tempBinBa == "0111") {
+                hexBa += "7";
+            }
+            if(tempBinBa == "1000") {
+                hexBa += "8";
+            }
+            if(tempBinBa == "1001") {
+                hexBa += "9";
+            }
+            if(tempBinBa == "1010") {
+                hexBa += "A";
+            }
+            if(tempBinBa == "1011") {
+                hexBa += "B";
+            }
+            if(tempBinBa == "1100") {
+                hexBa += "C";
+            }
+            if(tempBinBa == "1101") {
+                hexBa += "D";
+            }
+            if(tempBinBa == "1110") {
+                hexBa += "E";
+            }
+            if(tempBinBa == "1111") {
+                hexBa += "F";
+            }
+            tempBinBa.clear();
+        }
+    }
+
+    return hexBa;
 }
 
 void fromBinToHex(const QVector<QVector<bool> > &results)
@@ -350,7 +436,7 @@ bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
 }
 
 bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
-{    
+{
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
             vec.push_back(fromIntToBool(ba.at(i) - '0'));
@@ -364,7 +450,7 @@ bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
 }
 
 bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
-{    
+{
     QByteArray ba;
 
     if(!file.atEnd()) {
@@ -381,10 +467,10 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
     }
 
     if(ba.contains("BIN ")) {
-        ba.remove(0, 4);        
+        ba.remove(0, 4);
         mSequenceReaderBIN(ba, vec);
     } else if(ba.contains("HEX ")) {
-        ba.remove(0, 4);        
+        ba.remove(0, 4);
         mSequenceReaderHEX(ba, vec);
     } else {
         qDebug() << "Error! The sequence" << ba << "is not valid!";
@@ -412,7 +498,6 @@ void ACFSmax()
     QVector<bool> vec;
     int pos = 0;
     QFile file("MSequences.txt");
-    bool isWasSpace = false;
 
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
@@ -420,7 +505,6 @@ void ACFSmax()
 
     while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
-            isWasSpace = false;
 
             qDebug() << "===========SUB_TEST===========";
             out << "===========SUB_TEST===========\n";
@@ -428,7 +512,10 @@ void ACFSmax()
             print(vec);
             printToFile(resultsOutputFile, vec);
 
+
+            qDebug() << "HEX format:" << fromBinToHex(vec);
             qDebug() << "Size of sequence:" << vec.size();
+            out << "HEX format:" << fromBinToHex(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
 
             QVector<int> acfs_phases;
@@ -484,7 +571,6 @@ void CCFSmax(const int &offset, const int &lenght)
     QVector<bool> vec;
     int pos = 0;
     QFile file("MSequences.txt");
-    bool isWasSpace = false;
 
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
@@ -492,7 +578,6 @@ void CCFSmax(const int &offset, const int &lenght)
 
     while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
-            isWasSpace = false;
 
             qDebug() << "===========SUB_TEST===========";
             out << "===========SUB_TEST===========\n";
@@ -515,13 +600,6 @@ void CCFSmax(const int &offset, const int &lenght)
             out << "MAX CCF(phase) = " << CCFmax(ccfs_phases) << "\n";
 
             vec.clear();
-        } else {
-            if(!isWasSpace) {
-                isWasSpace = true;
-
-                qDebug() << "*******NEXT_GROUP_TESTS*******";
-                out << "*******NEXT_GROUP_TESTS*******\n";
-            }
         }
     }
 

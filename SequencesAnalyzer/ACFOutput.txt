@@ -1,6 +1,7 @@
 ==========START_TEST==========
 ===========SUB_TEST===========
 010100010111100010011101010011011011010110101111111110110000011000111100
+HEX format:51789D4DB5AFFB063C
 Size of sequence: 72
 ACF(1) = -1
 ACF(2) = 4
@@ -76,6 +77,7 @@ ACF(71) = 1
 MAX ACF(phase) = 6
 ===========SUB_TEST===========
 101100100110110101001101010101011010100111001100011110001111111111110000
+HEX format:B26D4D55A9CC78FFF0
 Size of sequence: 72
 ACF(1) = -3
 ACF(2) = 4
@@ -151,6 +153,7 @@ ACF(71) = -1
 MAX ACF(phase) = -5
 ===========SUB_TEST===========
 1110101
+HEX format:75
 Size of sequence: 7
 ACF(1) = -2
 ACF(2) = 3
@@ -161,6 +164,7 @@ ACF(6) = 1
 MAX ACF(phase) = 3
 ===========SUB_TEST===========
 0010101010001001111101101110110000000110000110110001111000110111011010010110111110101100011110111100
+HEX format:2A89F6EC061B1E37696FAC7BC
 Size of sequence: 100
 ACF(1) = 3
 ACF(2) = -2
@@ -264,6 +268,7 @@ ACF(99) = 1
 MAX ACF(phase) = -6
 ===========SUB_TEST===========
 0001010
+HEX format:0A
 Size of sequence: 7
 ACF(1) = -2
 ACF(2) = 3
@@ -274,6 +279,7 @@ ACF(6) = 1
 MAX ACF(phase) = 3
 ===========SUB_TEST===========
 1010101
+HEX format:55
 Size of sequence: 7
 ACF(1) = -6
 ACF(2) = 5
