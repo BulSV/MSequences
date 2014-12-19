@@ -498,22 +498,22 @@ void ACFSmax()
 
     QTextStream out(&resultsOutputFile);
 
-    qDebug() << "==========START_TEST==========";
-    out << "==========START_TEST==========\n";
+    qDebug() << "==========START_ACF_TEST==========";
+    out << "==========START_ACF_TEST==========\n";
 
     QVector<bool> vec;
     int pos = 0;
-    QFile file("MSequences.txt");
+    QFile file("ACFInput.txt");
 
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
+        qErrnoWarning("ERROR!\nCan't open file: \"ACFInput.txt\"");
     }
 
     while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
 
-            qDebug() << "===========SUB_TEST===========";
-            out << "===========SUB_TEST===========\n";
+            qDebug() << "===========SUB_ACF_TEST===========";
+            out << "===========SUB_ACF_TEST===========\n";
 
             print(vec);
             printToFile(resultsOutputFile, vec);
@@ -542,18 +542,25 @@ void ACFSmax()
         }
     }
 
-    qDebug() << "===========END_TEST===========";
-    out << "===========END_TEST===========\n";
+    qDebug() << "===========END_ACF_TEST===========";
+    out << "===========END_ACF_TEST===========\n";
 
     file.close();
     resultsOutputFile.close();
 }
 
-int CCFphase(const QVector<bool> &origin, const QVector<bool> &part, const int &phase)
+int CCFphase(const QVector<bool> &sequence1, const QVector<bool> &sequence2, const int &phase)
 {
     int result = 0;
-    for(int i = 0; i < origin.size() - phase; ++i) {
-        result += fromBoolToInt(origin.at(i))*fromBoolToInt(part.at(i));
+
+    if((phase < 0 && sequence1.size() >= sequence2.size()) || (phase >= 0 && sequence2.size() > sequence1.size())){
+        for(int i = 0; i < sequence1.size() - qAbs(phase); ++i) {
+            result += fromBoolToInt(sequence1.at(i))*fromBoolToInt(sequence2.at(i + qAbs(phase)));
+        }
+    } else {
+        for(int i = 0; i < sequence2.size() - qAbs(phase); ++i) {
+            result += fromBoolToInt(sequence1.at(i + qAbs(phase)))*fromBoolToInt(sequence2.at(i));
+        }
     }
 
     return result;
@@ -564,7 +571,7 @@ int CCFmax(const QVector<int> &ccfs_phases)
     return ACFmax(ccfs_phases);
 }
 
-void CCFSmax(const int &offset, const int &lenght)
+void CCFSmax()
 {
     QFile resultsOutputFile("CCFOutput.txt");
     if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
@@ -573,23 +580,24 @@ void CCFSmax(const int &offset, const int &lenght)
 
     QTextStream out(&resultsOutputFile);
 
-    qDebug() << "==========START_TEST==========";
-    out << "==========START_TEST==========\n";
+    qDebug() << "==========START_CCF_TEST==========";
+    out << "==========START_CCF_TEST==========\n";
 
     QVector<bool> vec;
+    QVector<bool> vec1;
+    QVector<bool> vec2;
     int pos = 0;
-    QFile file("MSequences.txt");
+    QFile file("CCFInput.txt");
 
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qErrnoWarning("ERROR!\nCan't open file: \"MSequences.txt\"");
+        qErrnoWarning("ERROR!\nCan't open file: \"CCFInput.txt\"");
     }
+
+    qDebug() << "===========SUB_CCF_TEST===========";
+    out << "===========SUB_CCF_TEST===========\n";
 
     while(mSequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
-
-            qDebug() << "===========SUB_TEST===========";
-            out << "===========SUB_TEST===========\n";
-
             print(vec);
             printToFile(resultsOutputFile, vec);
 
@@ -598,24 +606,37 @@ void CCFSmax(const int &offset, const int &lenght)
             out << "HEX format:" << fromBinToHex(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
 
-            QVector<int> ccfs_phases;
-
-            for(int i = 1; i < vec.size(); ++i) {
-                ccfs_phases.push_back(CCFphase(vec, subSequence(vec, 0, 6), i));
-
-                qDebug() << "ACF(" << i << ") =" << ccfs_phases.at(i - 1);
-                out << "ACF(" << i << ") = " << ccfs_phases.at(i - 1) << "\n";
+            if(vec1.isEmpty()) {
+                vec1 = vec;
+            } else {
+                vec2 = vec;
             }
-
-            qDebug() << "MAX CCF(phase) = " << CCFmax(ccfs_phases);
-            out << "MAX CCF(phase) = " << CCFmax(ccfs_phases) << "\n";
-
             vec.clear();
         }
     }
 
-    qDebug() << "===========END_TEST===========";
-    out << "===========END_TEST===========\n";
+    QVector<int> ccfs_phases;
+
+    for(int i = 1 - vec1.size(); i <  vec2.size(); ++i) {
+        ccfs_phases.push_back(CCFphase(vec1, vec2, i));
+
+        qDebug() << "CCF(" << i << ") =" << ccfs_phases.last();
+        out << "CCF(" << i << ") = " << ccfs_phases.last() << "\n";
+    }
+
+    int CCF_max = CCFmax(ccfs_phases);
+    int CCF_0 = 0;
+    vec1.size() > vec2.size() ? CCF_0 = vec2.size() : CCF_0 = vec1.size();
+    qDebug() << "MAX CCF(phase) = " << CCFmax(ccfs_phases);
+    qDebug() << "Protection rate:" << ProtectRate(CCF_0, CCF_max);
+    out << "MAX CCF(phase) = " << CCFmax(ccfs_phases) << "\n";
+    out << "Protection rate: " << ProtectRate(CCF_0, CCF_max) << "\n";
+
+    vec1.clear();
+    vec2.clear();
+
+    qDebug() << "===========END_CCF_TEST===========";
+    out << "===========END_CCF_TEST===========\n";
 
     file.close();
     resultsOutputFile.close();
@@ -627,7 +648,7 @@ int main(int argc, char *argv[])
 
     ACFSmax();
 
-//    CCFSmax();
+    CCFSmax();
 
     return a.exec();
 }

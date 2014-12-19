@@ -1,5 +1,5 @@
-==========START_TEST==========
-===========SUB_TEST===========
+==========START_ACF_TEST==========
+===========SUB_ACF_TEST===========
 010100010111100010011101010011011011010110101111111110110000011000111100
 HEX format: 51789D4DB5AFFB063C
 Size of sequence: 72
@@ -76,7 +76,7 @@ ACF(70) = 0
 ACF(71) = 1
 MAX ACF(phase) = 6
 Protection rate: 21.5836
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 101100100110110101001101010101011010100111001100011110001111111111110000
 HEX format: B26D4D55A9CC78FFF0
 Size of sequence: 72
@@ -153,7 +153,7 @@ ACF(70) = 0
 ACF(71) = -1
 MAX ACF(phase) = -5
 Protection rate: 23.1672
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 1110101
 HEX format: 75
 Size of sequence: 7
@@ -165,7 +165,7 @@ ACF(5) = 0
 ACF(6) = 1
 MAX ACF(phase) = 3
 Protection rate: 7.35954
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 0010101010001001111101101110110000000110000110110001111000110111011010010110111110101100011110111100
 HEX format: 2A89F6EC061B1E37696FAC7BC
 Size of sequence: 100
@@ -270,7 +270,7 @@ ACF(98) = 2
 ACF(99) = 1
 MAX ACF(phase) = -6
 Protection rate: 24.437
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 0001010
 HEX format: 0A
 Size of sequence: 7
@@ -282,7 +282,7 @@ ACF(5) = 0
 ACF(6) = 1
 MAX ACF(phase) = 3
 Protection rate: 7.35954
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 1010101
 HEX format: 55
 Size of sequence: 7
@@ -294,7 +294,7 @@ ACF(5) = -2
 ACF(6) = 1
 MAX ACF(phase) = -6
 Protection rate: 1.33894
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 0100101101110111011100001110
 HEX format: 4B7770E
 Size of sequence: 28
@@ -327,7 +327,7 @@ ACF(26) = -2
 ACF(27) = 1
 MAX ACF(phase) = -2
 Protection rate: 22.9226
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 1000111100010001000100101101
 HEX format: 8F1112D
 Size of sequence: 28
@@ -360,7 +360,7 @@ ACF(26) = -2
 ACF(27) = 1
 MAX ACF(phase) = -2
 Protection rate: 22.9226
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 1001001001010100000011100111
 HEX format: 92540E7
 Size of sequence: 28
@@ -393,7 +393,7 @@ ACF(26) = 0
 ACF(27) = 1
 MAX ACF(phase) = -2
 Protection rate: 22.9226
-===========SUB_TEST===========
+===========SUB_ACF_TEST===========
 1110000111011101110110100100
 HEX format: E1DDDA4
 Size of sequence: 28
@@ -426,4 +426,4 @@ ACF(26) = -2
 ACF(27) = -1
 MAX ACF(phase) = -2
 Protection rate: 22.9226
-===========END_TEST===========
+===========END_ACF_TEST===========
