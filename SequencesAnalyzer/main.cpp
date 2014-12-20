@@ -428,7 +428,7 @@ bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
                 return false;
             }
         } else {
-            qDebug() << "Error! The sequence" << ba << "has not HEX format!";
+            qDebug() << "\nError! The sequence" << ba << "has not HEX format!\n";
             return false;
         }
     }
@@ -442,7 +442,7 @@ bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
         if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
             vec.push_back(fromIntToBool(ba.at(i) - '0'));
         } else {
-            qDebug() << "Error! The sequence" << ba << "has not BIN format!";
+            qDebug() << "\nError! The sequence" << ba << "has not BIN format!\n";
             return false;
         }
     }
@@ -466,19 +466,21 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
     if(ba.at(ba.size() - 1) == '\n') {
         ba.truncate(ba.size() - 1);
     }
+    // For independence from lower or upper cases
+    ba = ba.toUpper();
+    // Remove all spaces
+    ba = ba.replace(" ", "");
 
-    if(ba.contains("BIN ")) {
-        ba.remove(0, 4);
+    if(ba.contains("BIN")) {
+        ba.remove(0, 3);
         mSequenceReaderBIN(ba, vec);
-    } else if(ba.contains("HEX ")) {
-        ba.remove(0, 4);
+    } else if(ba.contains("HEX")) {
+        ba.remove(0, 3);
         mSequenceReaderHEX(ba, vec);
-    } else {
-        qDebug() << "Error! The sequence" << ba << "is not valid!";
+    } else if(!ba.isEmpty()){
+        qDebug() << "\nError! The sequence" << ba << "is not valid!";
         qDebug() << "For HEX-format sequence write in file at the begin of line: HEX";
-        qDebug() << "For BIN-format sequence write in file at the begin of line: BIN";
-
-        return false;
+        qDebug() << "For BIN-format sequence write in file at the begin of line: BIN\n";
     }
 
     return true;
@@ -542,8 +544,8 @@ void ACFSmax()
         }
     }
 
-    qDebug() << "===========END_ACF_TEST===========";
-    out << "===========END_ACF_TEST===========\n";
+    qDebug() << "===========END_ACF_TEST===========\n";
+    out << "===========END_ACF_TEST===========\n\n";
 
     file.close();
     resultsOutputFile.close();
@@ -635,8 +637,8 @@ void CCFSmax()
     vec1.clear();
     vec2.clear();
 
-    qDebug() << "===========END_CCF_TEST===========";
-    out << "===========END_CCF_TEST===========\n";
+    qDebug() << "===========END_CCF_TEST===========\n";
+    out << "===========END_CCF_TEST===========\n\n";
 
     file.close();
     resultsOutputFile.close();
