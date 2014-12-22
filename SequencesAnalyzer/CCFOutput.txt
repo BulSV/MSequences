@@ -1,219 +1,35 @@
 ==========START_CCF_TEST==========
 ===========SUB_CCF_TEST===========
-1001001001010100000011100111
-HEX format:92540E7
-Size of sequence: 28
-1110000111011101110110100100
-HEX format:E1DDDA4
-Size of sequence: 28
-CCF(-27) = -1
-CCF(-26) = 0
-CCF(-25) = 3
-CCF(-24) = -2
-CCF(-23) = -1
-CCF(-22) = 6
-CCF(-21) = -3
-CCF(-20) = 0
-CCF(-19) = 7
-CCF(-18) = -6
-CCF(-17) = 1
-CCF(-16) = 6
-CCF(-15) = -7
-CCF(-14) = 0
-CCF(-13) = 3
-CCF(-12) = -2
-CCF(-11) = 1
-CCF(-10) = -2
-CCF(-9) = 5
-CCF(-8) = 0
-CCF(-7) = -3
-CCF(-6) = 0
-CCF(-5) = -5
-CCF(-4) = 0
-CCF(-3) = -3
-CCF(-2) = 2
-CCF(-1) = -9
-CCF(0) = 0
-CCF(1) = -3
-CCF(2) = 0
-CCF(3) = -7
-CCF(4) = -2
-CCF(5) = 1
-CCF(6) = -2
-CCF(7) = -5
-CCF(8) = -4
-CCF(9) = 5
-CCF(10) = 2
-CCF(11) = 3
-CCF(12) = 2
-CCF(13) = 7
-CCF(14) = 4
-CCF(15) = -3
-CCF(16) = -6
-CCF(17) = -5
-CCF(18) = 2
-CCF(19) = 3
-CCF(20) = 4
-CCF(21) = -1
-CCF(22) = -4
-CCF(23) = -3
-CCF(24) = 0
-CCF(25) = 3
-CCF(26) = 2
-CCF(27) = 1
-MAX CCF(phase) = -9
-Protection rate: 9.85831
-===========SUB_CCF_TEST===========
-010100010111100010011101010011011011010110101111111110110000011000111100
-HEX format:51789D4DB5AFFB063C
-Size of sequence: 72
-101100100110110101001101010101011010100111001100011110001111111111110000
-HEX format:B26D4D55A9CC78FFF0
-Size of sequence: 72
-CCF(-71) = 1
-CCF(-70) = 0
-CCF(-69) = 1
-CCF(-68) = 0
-CCF(-67) = -1
-CCF(-66) = 2
-CCF(-65) = 1
-CCF(-64) = 2
-CCF(-63) = 1
-CCF(-62) = -2
-CCF(-61) = -5
-CCF(-60) = -4
-CCF(-59) = -7
-CCF(-58) = -4
-CCF(-57) = -1
-CCF(-56) = 2
-CCF(-55) = 5
-CCF(-54) = 2
-CCF(-53) = 3
-CCF(-52) = -4
-CCF(-51) = 1
-CCF(-50) = -2
-CCF(-49) = 1
-CCF(-48) = 0
-CCF(-47) = 1
-CCF(-46) = 0
-CCF(-45) = -5
-CCF(-44) = -2
-CCF(-43) = -3
-CCF(-42) = 4
-CCF(-41) = 3
-CCF(-40) = 4
-CCF(-39) = -3
-CCF(-38) = 6
-CCF(-37) = -3
-CCF(-36) = -6
-CCF(-35) = -1
-CCF(-34) = -8
-CCF(-33) = 9
-CCF(-32) = -2
-CCF(-31) = 3
-CCF(-30) = 4
-CCF(-29) = 9
-CCF(-28) = 6
-CCF(-27) = -5
-CCF(-26) = -6
-CCF(-25) = -1
-CCF(-24) = 6
-CCF(-23) = -13
-CCF(-22) = 6
-CCF(-21) = -5
-CCF(-20) = 16
-CCF(-19) = -5
-CCF(-18) = 4
-CCF(-17) = 1
-CCF(-16) = 12
-CCF(-15) = 3
-CCF(-14) = 4
-CCF(-13) = 11
-CCF(-12) = 14
-CCF(-11) = 19
-CCF(-10) = 8
-CCF(-9) = 1
-CCF(-8) = -2
-CCF(-7) = -9
-CCF(-6) = 2
-CCF(-5) = 5
-CCF(-4) = 0
-CCF(-3) = -11
-CCF(-2) = -2
-CCF(-1) = -5
-CCF(0) = 6
-CCF(1) = 1
-CCF(2) = -10
-CCF(3) = 9
-CCF(4) = -2
-CCF(5) = -1
-CCF(6) = 4
-CCF(7) = -11
-CCF(8) = 8
-CCF(9) = -7
-CCF(10) = 20
-CCF(11) = 7
-CCF(12) = -6
-CCF(13) = -7
-CCF(14) = -6
-CCF(15) = -5
-CCF(16) = 4
-CCF(17) = 13
-CCF(18) = -4
-CCF(19) = 7
-CCF(20) = -6
-CCF(21) = -7
-CCF(22) = 12
-CCF(23) = 5
-CCF(24) = -14
-CCF(25) = 9
-CCF(26) = -6
-CCF(27) = 3
-CCF(28) = 0
-CCF(29) = 5
-CCF(30) = -2
-CCF(31) = -5
-CCF(32) = 2
-CCF(33) = -3
-CCF(34) = 4
-CCF(35) = 5
-CCF(36) = -4
-CCF(37) = 7
-CCF(38) = -2
-CCF(39) = 1
-CCF(40) = 0
-CCF(41) = -1
-CCF(42) = 6
-CCF(43) = -7
-CCF(44) = -4
-CCF(45) = 3
-CCF(46) = 4
-CCF(47) = -5
-CCF(48) = 0
-CCF(49) = 7
-CCF(50) = -8
-CCF(51) = -1
-CCF(52) = 10
-CCF(53) = -1
-CCF(54) = -2
-CCF(55) = 1
-CCF(56) = 2
-CCF(57) = -1
-CCF(58) = -2
-CCF(59) = 3
-CCF(60) = 0
-CCF(61) = -5
-CCF(62) = -2
-CCF(63) = 1
-CCF(64) = 0
-CCF(65) = -1
-CCF(66) = 4
-CCF(67) = 1
-CCF(68) = -2
-CCF(69) = 1
-CCF(70) = 0
-CCF(71) = -1
-MAX CCF(phase) = 20
-Protection rate: 11.126
+1111100110101
+HEX format: 1F35
+Size of sequence: 13
+11100010010
+HEX format: 712
+Size of sequence: 11
+CCF(-10) = -1
+CCF(-9) = 0
+CCF(-8) = -1
+CCF(-7) = -2
+CCF(-6) = -1
+CCF(-5) = 0
+CCF(-4) = -3
+CCF(-3) = -4
+CCF(-2) = 1
+CCF(-1) = 0
+CCF(0) = -3
+CCF(1) = 7
+CCF(2) = 3
+CCF(3) = 0
+CCF(4) = -1
+CCF(5) = -4
+CCF(6) = 3
+CCF(7) = 0
+CCF(8) = 1
+CCF(9) = -2
+CCF(10) = 1
+CCF(11) = 0
+CCF(12) = 1
+MAX CCF(phase) = 7
+Protection rate: 3.92589
 ===========END_CCF_TEST===========
 
