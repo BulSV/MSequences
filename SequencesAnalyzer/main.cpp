@@ -292,7 +292,7 @@ int ACFmax(const QVector<int> &acfs_phases)
     return result;
 }
 
-int ACFmin_max(const QVector<int> &acfs_maxs)
+int ACFminOfmax(const QVector<int> &acfs_maxs)
 {
     int result = 0;
 
