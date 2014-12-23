@@ -642,11 +642,14 @@ void CCFSmax()
         }
 
         int CCF_max = CCFmax(ccfs_phases);
+        ccfs_phases.clear();
+
         int CCF_0 = 0;
         (*it1).size() > (*it2).size() ? CCF_0 = (*it2).size() : CCF_0 = (*it1).size();
-        qDebug() << "MAX CCF(phase) = " << CCFmax(ccfs_phases);
+
+        qDebug() << "MAX CCF(phase) = " << CCF_max;
         qDebug() << "Protection rate:" << ProtectRate(CCF_0, CCF_max);
-        out << "MAX CCF(phase) = " << CCFmax(ccfs_phases) << "\n";
+        out << "MAX CCF(phase) = " << CCF_max << "\n";
         out << "Protection rate: " << ProtectRate(CCF_0, CCF_max) << "\n";
     }
 
