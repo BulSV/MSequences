@@ -1,5 +1,79 @@
 ==========START_ACF_TEST==========
 ===========SUB_ACF_TEST===========
+010011100010000
+HEX format: 2710
+Size of sequence: 15
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 4
+ACF(6) = 1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+ACF(13) = 0
+ACF(14) = 1
+MAX ACF(phase) = 4
+Protection rate: 11.4806
+===========SUB_ACF_TEST===========
+100111011110001
+HEX format: 4EF1
+Size of sequence: 15
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -4
+ACF(4) = 1
+ACF(5) = 4
+ACF(6) = -1
+ACF(7) = 0
+ACF(8) = -5
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = -1
+ACF(13) = -2
+ACF(14) = 1
+MAX ACF(phase) = -5
+Protection rate: 9.54243
+===========SUB_ACF_TEST===========
+110100111100
+HEX format: D3C
+Size of sequence: 12
+ACF(1) = 1
+ACF(2) = -2
+ACF(3) = -1
+ACF(4) = -6
+ACF(5) = -1
+ACF(6) = 4
+ACF(7) = 1
+ACF(8) = 2
+ACF(9) = 1
+ACF(10) = -2
+ACF(11) = -1
+MAX ACF(phase) = -6
+Protection rate: 6.0206
+===========SUB_ACF_TEST===========
+000000000000
+HEX format: 000
+Size of sequence: 12
+ACF(1) = 11
+ACF(2) = 10
+ACF(3) = 9
+ACF(4) = 8
+ACF(5) = 7
+ACF(6) = 6
+ACF(7) = 5
+ACF(8) = 4
+ACF(9) = 3
+ACF(10) = 2
+ACF(11) = 1
+MAX ACF(phase) = 11
+Protection rate: 0.755771
+===========SUB_ACF_TEST===========
 1111100110101
 HEX format: 1F35
 Size of sequence: 13
@@ -17,49 +91,5 @@ ACF(11) = 0
 ACF(12) = 1
 MAX ACF(phase) = 1
 Protection rate: 22.2789
-===========SUB_ACF_TEST===========
-0011100110110
-HEX format: 0736
-Size of sequence: 13
-ACF(1) = 0
-ACF(2) = -7
-ACF(3) = 0
-ACF(4) = 1
-ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -3
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -7
-Protection rate: 5.37691
-===========SUB_ACF_TEST===========
-11100010010
-HEX format: 712
-Size of sequence: 11
-ACF(1) = 0
-ACF(2) = -1
-ACF(3) = 0
-ACF(4) = -1
-ACF(5) = 0
-ACF(6) = -1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-MAX ACF(phase) = -1
-Protection rate: 20.8279
-===========SUB_ACF_TEST===========
-11101
-HEX format: 1D
-Size of sequence: 5
-ACF(1) = 0
-ACF(2) = 1
-ACF(3) = 0
-ACF(4) = 1
-MAX ACF(phase) = 1
-Protection rate: 13.9794
 ===========END_ACF_TEST===========
 

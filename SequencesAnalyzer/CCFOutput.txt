@@ -1,35 +1,75 @@
 ==========START_CCF_TEST==========
 ===========SUB_CCF_TEST===========
-1111100110101
-HEX format: 1F35
-Size of sequence: 13
-11100010010
-HEX format: 712
-Size of sequence: 11
-CCF(-10) = -1
-CCF(-9) = 0
+010011100010000
+HEX format: 2710
+Size of sequence: 15
+100111011110001
+HEX format: 4EF1
+Size of sequence: 15
+CCF(-14) = -1
+CCF(-13) = 2
+CCF(-12) = -1
+CCF(-11) = 0
+CCF(-10) = 1
+CCF(-9) = 2
 CCF(-8) = -1
-CCF(-7) = -2
+CCF(-7) = -6
 CCF(-6) = -1
-CCF(-5) = 0
-CCF(-4) = -3
-CCF(-3) = -4
-CCF(-2) = 1
-CCF(-1) = 0
-CCF(0) = -3
-CCF(1) = 7
-CCF(2) = 3
-CCF(3) = 0
-CCF(4) = -1
-CCF(5) = -4
-CCF(6) = 3
+CCF(-5) = -2
+CCF(-4) = 7
+CCF(-3) = 2
+CCF(-2) = -1
+CCF(-1) = -4
+CCF(0) = -1
+CCF(1) = 8
+CCF(2) = 1
+CCF(3) = -4
+CCF(4) = -9
+CCF(5) = -2
+CCF(6) = 1
 CCF(7) = 0
-CCF(8) = 1
-CCF(9) = -2
+CCF(8) = -3
+CCF(9) = -4
 CCF(10) = 1
 CCF(11) = 0
 CCF(12) = 1
-MAX CCF(phase) = 7
-Protection rate: 3.92589
+CCF(13) = 0
+CCF(14) = -1
+MAX CCF(phase) = -9
+Protection rate: 4.43698
+===========SUB_CCF_TEST===========
+1111100110101
+HEX format: 1F35
+Size of sequence: 13
+0000000000011
+HEX format: 0003
+Size of sequence: 13
+CCF(-12) = 1
+CCF(-11) = 2
+CCF(-10) = 1
+CCF(-9) = 0
+CCF(-8) = -1
+CCF(-7) = -4
+CCF(-6) = -7
+CCF(-5) = -4
+CCF(-4) = -1
+CCF(-3) = -4
+CCF(-2) = -5
+CCF(-1) = -4
+CCF(0) = -5
+CCF(1) = -2
+CCF(2) = -3
+CCF(3) = -2
+CCF(4) = -1
+CCF(5) = 0
+CCF(6) = -1
+CCF(7) = -2
+CCF(8) = -1
+CCF(9) = 0
+CCF(10) = -1
+CCF(11) = 0
+CCF(12) = -1
+MAX CCF(phase) = -9
+Protection rate: 3.19402
 ===========END_CCF_TEST===========
 

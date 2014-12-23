@@ -538,7 +538,7 @@ int CCFphase(const QVector<bool> &sequence1, const QVector<bool> &sequence2, con
 {
     int result = 0;
 
-    if(phase >= 0 && sequence1.size() > sequence2.size()) {
+    if(phase >= 0 && sequence1.size() >= sequence2.size()) {
         for(int i = 0; i < sequence2.size() && i + qAbs(phase) < sequence1.size(); ++i) {
             result += fromBoolToInt(sequence1.at(i + qAbs(phase)))*fromBoolToInt(sequence2.at(i));
         }
@@ -546,7 +546,7 @@ int CCFphase(const QVector<bool> &sequence1, const QVector<bool> &sequence2, con
         for(int i = 0; i < sequence1.size() && i + qAbs(phase) < sequence2.size(); ++i) {
             result += fromBoolToInt(sequence1.at(i))*fromBoolToInt(sequence2.at(i + qAbs(phase)));
         }
-    } else if(phase < 0 && sequence1.size() > sequence2.size()) {
+    } else if(phase < 0 && sequence1.size() >= sequence2.size()) {
         for(int i = 0; i < sequence1.size() && i + qAbs(phase) < sequence2.size(); ++i) {
             result += fromBoolToInt(sequence1.at(i))*fromBoolToInt(sequence2.at(i + qAbs(phase)));
         }
