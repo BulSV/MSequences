@@ -266,21 +266,6 @@ bool fromIntToBool(const int &intValue)
     return intValue ? true : false;
 }
 
-QVector<bool> subSequence(const QVector<bool> &source, const int &offset, const int &digits)
-{
-    if(offset + digits > source.size()) {
-        qDebug() << "exception";
-    }
-
-    QVector<bool> result;
-
-    for(int i = offset; i < offset + digits; ++i) {
-        result.append(source.at(i));
-    }
-
-    return result;
-}
-
 int ACFphase(const QVector<bool> &source, const int &phase)
 {
     int result = 0;
@@ -294,7 +279,6 @@ int ACFphase(const QVector<bool> &source, const int &phase)
     return result;
 }
 
-// #2
 int ACFmax(const QVector<int> &acfs_phases)
 {
     int result = 0;
@@ -308,7 +292,6 @@ int ACFmax(const QVector<int> &acfs_phases)
     return result;
 }
 
-// #3
 int ACFmin_max(const QVector<int> &acfs_maxs)
 {
     int result = 0;
@@ -553,7 +536,7 @@ void ACFSmax()
 
 int CCFphase(const QVector<bool> &sequence1, const QVector<bool> &sequence2, const int &phase)
 {
-    int result = 0;    
+    int result = 0;
 
     if(phase >= 0 && sequence1.size() > sequence2.size()) {
         for(int i = 0; i < sequence2.size() && i + qAbs(phase) < sequence1.size(); ++i) {
@@ -651,7 +634,7 @@ void CCFSmax()
             bigSeqSize = (*it2).size();
         }
 
-        for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {            
+        for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {
             ccfs_phases.push_back(CCFphase(*it1, *it2, i));
 
             qDebug() << "CCF(" << i << ") =" << ccfs_phases.last();
