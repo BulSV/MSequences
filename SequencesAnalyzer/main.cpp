@@ -4,6 +4,8 @@
 #include <QDebug>
 #include <QFile>
 #include <QtMath>
+#include <cstdlib>
+#include <time.h>
 
 
 void print(const QVector<bool> &result)
@@ -658,6 +660,87 @@ void CCFSmax()
 
     file.close();
     resultsOutputFile.close();
+}
+
+QVector<bool> noiseGenerator(const int &seqSize)
+{
+    QVector<bool> resultSeq;
+
+    for(int i = 0; i < seqSize; ++i) {
+        srand(time(0));
+        resultSeq.push_back(rand()%2);
+    }
+
+    return resultSeq;
+}
+
+QVector<float> sequencesAdder(const QVector<bool> &seq1, const float &atten1,
+                        const QVector<bool> &seq2, const float &atten2,
+                        const int &offsetFrom1to2)
+{
+    int seqSize = 0;
+    QVector<float> resultSeq;
+
+    if(offsetFrom1to2 > 0) {
+        if(seq2.size() + offsetFrom1to2 >= seq1.size()) {
+            seqSize = offsetFrom1to2 + seq2.size();
+        } else {
+            seqSize = seq1.size();
+        }
+
+        for(int i = 0; i < seqSize; ++i) {
+            if(i < offsetFrom1to2) {
+                resultSeq.push_back(fromBoolToInt(seq1.at(i))*atten1);
+            } else if(i >= seq1.size()){
+                resultSeq.push_back(fromBoolToInt(seq2.at(i - offsetFrom1to2))*atten2);
+            } else {
+                resultSeq.push_back(fromBoolToInt(seq1.at(i))*atten1 + fromBoolToInt(seq2.at(i - offsetFrom1to2))*atten2);
+            }
+        }
+    } else {
+        if(seq1.size() + offsetFrom1to2 >= seq2.size()) {
+            seqSize = seq1.size() - offsetFrom1to2;
+        } else {
+            seqSize = seq2.size();
+        }
+
+        for(int i = 0; i < seqSize; ++i) {
+            if(i < -offsetFrom1to2) {
+                resultSeq.push_back(fromBoolToInt(seq2.at(i))*atten2);
+            } else if(i >= seq2.size()){
+                resultSeq.push_back(fromBoolToInt(seq1.at(i + offsetFrom1to2))*atten1);
+            } else {
+                resultSeq.push_back(fromBoolToInt(seq1.at(i + offsetFrom1to2))*atten1 + fromBoolToInt(seq2.at(i))*atten2);
+            }
+        }
+    }
+
+    return resultSeq;
+}
+
+float realACFphase(const QVector<bool> &originSequence, const QVector<float> &receivedSequence, const int &phase)
+{
+    float result = 0.0;
+
+    if(phase >= 0 && originSequence.size() >= receivedSequence.size()) {
+        for(int i = 0; i < receivedSequence.size() && i + qAbs(phase) < originSequence.size(); ++i) {
+            result += fromBoolToInt(originSequence.at(i + qAbs(phase)))*receivedSequence.at(i);
+        }
+    } else if(phase >= 0 && originSequence.size() < receivedSequence.size()) {
+        for(int i = 0; i < originSequence.size() && i + qAbs(phase) < receivedSequence.size(); ++i) {
+            result += fromBoolToInt(originSequence.at(i))*receivedSequence.at(i + qAbs(phase));
+        }
+    } else if(phase < 0 && originSequence.size() >= receivedSequence.size()) {
+        for(int i = 0; i < originSequence.size() && i + qAbs(phase) < receivedSequence.size(); ++i) {
+            result += fromBoolToInt(originSequence.at(i))*receivedSequence.at(i + qAbs(phase));
+        }
+    } else if(phase < 0 && originSequence.size() < receivedSequence.size()) {
+        for(int i = 0; i < receivedSequence.size() && i + qAbs(phase) < originSequence.size(); ++i) {
+            result += fromBoolToInt(originSequence.at(i + qAbs(phase)))*receivedSequence.at(i);
+        }
+    }
+
+    return result;
 }
 
 int main(int argc, char *argv[])
