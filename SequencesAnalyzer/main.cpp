@@ -294,6 +294,19 @@ int ACFmax(const QVector<int> &acfs_phases)
     return result;
 }
 
+float attenACFmax(const QVector<float> &atten_acfs_phases)
+{
+    float result = 0.0;
+
+    for(int i = 0; i < atten_acfs_phases.size(); ++i) {
+        if(qAbs(result) < qAbs(atten_acfs_phases.at(i))) {
+            result = atten_acfs_phases.at(i);
+        }
+    }
+
+    return result;
+}
+
 int ACFminOfmax(const QVector<int> &acfs_maxs)
 {
     int result = 0;
@@ -474,6 +487,11 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 float ProtectRate(const int &ACF_0, const int &ACF_max)
 {
     return (20.0*qLn(qAbs((float)ACF_0/(float)ACF_max)))/qLn(10.0);
+}
+
+float ProtectRate(const float &ACF_0, const float &ACF_max)
+{
+    return (20.0*qLn(qAbs(ACF_0/ACF_max)))/qLn(10.0);
 }
 
 void ACFSmax()
@@ -718,7 +736,7 @@ QVector<float> sequencesAdder(const QVector<bool> &seq1, const float &atten1,
     return resultSeq;
 }
 
-float realACFphase(const QVector<bool> &originSequence, const QVector<float> &receivedSequence, const int &phase)
+float attenACFphase(const QVector<bool> &originSequence, const QVector<float> &receivedSequence, const int &phase)
 {
     float result = 0.0;
 
@@ -743,6 +761,99 @@ float realACFphase(const QVector<bool> &originSequence, const QVector<float> &re
     return result;
 }
 
+void attenACFSmax()
+{
+    QFile resultsOutputFile("attenACFOutput.txt");
+    if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qErrnoWarning("ERROR!\nCan't create file: \"attenACFOutput.txt\"");
+    }
+
+    QTextStream out(&resultsOutputFile);
+
+    qDebug() << "==========START_ATTENUATED_ACF_TEST==========";
+    out << "==========START_ATTENUATED_ACF_TEST==========\n";
+
+    QVector<bool> vec;
+
+    // Readed from file attenACFInput.txt
+    QVector<QVector<bool> > vec1;
+    QVector<QVector<bool> > vec2;
+    float atten1 = 0.0;
+    float atten2 = 0.0;
+    int offsetFrom1to2 = 0;
+
+    int pos = 0;
+    QFile file("attenACFInput.txt");
+
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qErrnoWarning("ERROR!\nCan't open file: \"attenACFInput.txt\"");
+    }
+
+    bool isVec1 = true;
+
+    while(mSequenceReader(file, vec, pos)) {
+        if(!vec.isEmpty()) {
+
+            if(isVec1) {
+                vec1.push_back(vec);
+                isVec1 = false;
+            } else {
+                vec2.push_back(vec);
+                isVec1 = true;
+            }
+            vec.clear();
+        }
+    }
+
+    sequencesAdder(vec1, atten1, vec2, atten2, offsetFrom1to2);
+
+    QVector<float> atten_acfs_phases;
+
+    QVector<QVector<bool> >::iterator it1 = vec1.begin();
+    QVector<QVector<bool> >::iterator it2 = vec2.begin();
+    int smallSeqSize = 0;
+    int bigSeqSize = 0;
+
+    for(; it1 != vec1.end(), it2 != vec2.end(); ++it1, ++it2) {
+        qDebug() << "===========SUB_ATTENUATED_ACF_TEST===========";
+        out << "===========SUB_ATTENUATED_ACF_TEST===========\n";
+        SequenceProperties(*it1, out, resultsOutputFile);
+        SequenceProperties(*it2, out, resultsOutputFile);
+
+        if((*it1).size() > (*it2).size()) {
+            smallSeqSize = (*it2).size();
+            bigSeqSize = (*it1).size();
+        } else {
+            smallSeqSize = (*it1).size();
+            bigSeqSize = (*it2).size();
+        }
+
+        for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {
+            atten_acfs_phases.push_back(attenACFphase(*it1, *it2, i));
+
+            qDebug() << "Attenuated ACF(" << i << ") =" << atten_acfs_phases.last();
+            out << "Attenuated ACF(" << i << ") = " << atten_acfs_phases.last() << "\n";
+        }
+
+        float atten_ACF_max = attenACFmax(atten_acfs_phases);
+        atten_acfs_phases.clear();
+
+        float attenACF_0 = 0.0;
+        (*it1).size() > (*it2).size() ? attenACF_0 = (*it2).size() : attenACF_0 = (*it1).size();
+
+        qDebug() << "MAX Attenuated ACF(phase) = " << atten_ACF_max;
+        qDebug() << "Protection rate:" << ProtectRate(attenACF_0, atten_ACF_max);
+        out << "MAX Attenuated ACF(phase) = " << atten_ACF_max << "\n";
+        out << "Protection rate: " << ProtectRate(attenACF_0, atten_ACF_max) << "\n";
+    }
+
+    qDebug() << "===========END_ATTENUATED_ACF_TEST===========\n";
+    out << "===========END_ATTENUATED_ACF_TEST===========\n\n";
+
+    file.close();
+    resultsOutputFile.close();
+}
+
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
@@ -755,7 +866,7 @@ int main(int argc, char *argv[])
 
     while(choice) {
         output << "\nSelect the type of calculation:\n";
-        output << "\t1 - ACF\n\t2 - CCF\n\t3 - TODO\n\t0 - exit\n";
+        output << "\t1 - ACF\n\t2 - CCF\n\t3 - Attenuated ACF\n\t0 - exit\n";
         output.flush();
         choice = input.readLine().toInt();
 
@@ -764,7 +875,7 @@ int main(int argc, char *argv[])
             break;
         case 2: CCFSmax();
             break;
-        case 3: output << "Not yet ready...\n\n";
+        case 3: attenACFSmax();
             break;
         default: if(choice) {
                 output << "Wrong choice! Choose from these: \"0\", \"1\", \"2\", \"3\"\n\n";
