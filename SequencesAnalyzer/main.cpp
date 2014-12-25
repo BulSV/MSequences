@@ -747,9 +747,34 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    ACFSmax();
+    int choice = -1;
+    QTextStream output(stdout, QIODevice::WriteOnly);
+    QTextStream input(stdin, QIODevice::ReadOnly);
 
-    CCFSmax();
+    output << "SEQUENCE ANALYZER\n";
+
+    while(choice) {
+        output << "\nSelect the type of calculation:\n";
+        output << "\t1 - ACF\n\t2 - CCF\n\t3 - TODO\n\t0 - exit\n";
+        output.flush();
+        choice = input.readLine().toInt();
+
+        switch(choice) {
+        case 1: ACFSmax();
+            break;
+        case 2: CCFSmax();
+            break;
+        case 3: output << "Not yet ready...\n\n";
+            break;
+        default: if(choice) {
+                output << "Wrong choice! Choose from these: \"0\", \"1\", \"2\", \"3\"\n\n";
+            } else {
+                output << "Program is closing...\n";
+                output.flush();
+            }
+            break;
+        }
+    }
 
     return a.exec();
 }
