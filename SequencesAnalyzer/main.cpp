@@ -320,7 +320,7 @@ int ACFminOfmax(const QVector<int> &acfs_maxs)
     return result;
 }
 
-bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
+bool sequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
 {
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n' && ((ba.at(i) >= '0' && ba.at(i) <= '9') || (ba.at(i) >= 'A' && ba.at(i) <= 'F'))) {
@@ -434,7 +434,7 @@ bool mSequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
     return true;
 }
 
-bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
+bool sequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
 {
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n' && (ba.at(i) == '0' || ba.at(i) == '1')) {
@@ -448,7 +448,7 @@ bool mSequenceReaderBIN(const QByteArray &ba, QVector<bool> &vec)
     return true;
 }
 
-bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
+bool sequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 {
     QByteArray ba;
 
@@ -471,10 +471,10 @@ bool mSequenceReader(QFile &file, QVector<bool> &vec, int &pos)
 
     if(ba.contains("BIN")) {
         ba.remove(0, 3);
-        mSequenceReaderBIN(ba, vec);
+        sequenceReaderBIN(ba, vec);
     } else if(ba.contains("HEX")) {
         ba.remove(0, 3);
-        mSequenceReaderHEX(ba, vec);
+        sequenceReaderHEX(ba, vec);
     } else if(!ba.isEmpty()){
         qDebug() << "\nError! The sequence" << ba << "is not valid!";
         qDebug() << "For HEX-format sequence write in file at the begin of line: HEX";
@@ -514,7 +514,7 @@ void ACFSmax()
         qErrnoWarning("ERROR!\nCan't open file: \"ACFInput.txt\"");
     }
 
-    while(mSequenceReader(file, vec, pos)) {
+    while(sequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
 
             qDebug() << "===========SUB_ACF_TEST===========";
@@ -584,7 +584,7 @@ int CCFmax(const QVector<int> &ccfs_phases)
     return ACFmax(ccfs_phases);
 }
 
-void SequenceProperties(QVector<bool> vec, QTextStream &out, QFile &resultsOutputFile)
+void SequenceProperties(const QVector<bool> &vec, QTextStream &out, QFile &resultsOutputFile)
 {
     print(vec);
     printToFile(resultsOutputFile, vec);
@@ -619,7 +619,7 @@ void CCFSmax()
 
     bool isVec1 = true;
 
-    while(mSequenceReader(file, vec, pos)) {
+    while(sequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
 
             if(isVec1) {
@@ -640,7 +640,7 @@ void CCFSmax()
     int smallSeqSize = 0;
     int bigSeqSize = 0;
 
-    for(; it1 != vec1.end(), it2 != vec2.end(); ++it1, ++it2) {
+    for(; it1 != vec1.end(); ++it1, ++it2) {
         qDebug() << "===========SUB_CCF_TEST===========";
         out << "===========SUB_CCF_TEST===========\n";
         SequenceProperties(*it1, out, resultsOutputFile);
@@ -678,6 +678,64 @@ void CCFSmax()
 
     file.close();
     resultsOutputFile.close();
+}
+
+bool attenSequenceReader(QFile &file,
+                         QVector<bool> &seq,
+                         float &atten1,
+                         float &atten2,
+                         int &offsetFrom1to2,
+                         float &atten,
+                         int &pos)
+{
+    QByteArray ba;
+
+    if(!file.atEnd()) {
+        file.seek(pos);
+        ba = file.readLine();
+        pos = file.pos();
+    } else {
+        return false;
+    }
+
+    // Without empty line at the end of file
+    if(ba.at(ba.size() - 1) == '\n') {
+        ba.truncate(ba.size() - 1);
+    }
+    // For independence from lower or upper cases
+    ba = ba.toUpper();
+    // Remove all spaces
+    ba = ba.replace(" ", "");
+
+    if(ba.contains("BIN")) {
+        ba.remove(0, 3);
+        sequenceReaderBIN(ba, seq);
+    } else if(ba.contains("HEX")) {
+        ba.remove(0, 3);
+        sequenceReaderHEX(ba, seq);
+    } else if(ba.contains("AT1")) {
+        ba.remove(0, 3);
+        atten1 = ba.toFloat();
+    } else if(ba.contains("AT2")) {
+        ba.remove(0, 3);
+        atten2 = ba.toFloat();
+    } else if(ba.contains("OFFSET")) {
+        ba.remove(0, 6);
+        offsetFrom1to2 = ba.toInt();
+    } else if(ba.contains("ATT")) {
+        ba.remove(0, 3);
+        atten = ba.toFloat();
+    } else if(ba.contains("END")) {
+        return true;
+    } else if(!ba.isEmpty()){
+        qDebug() << "\nError! The sequence" << ba << "is not valid!";
+        qDebug() << "For HEX-format sequence write in file at the begin of line: HEX";
+        qDebug() << "For BIN-format sequence write in file at the begin of line: BIN\n";
+    }
+
+    attenSequenceReader(file, seq, atten1, atten2, offsetFrom1to2, atten, pos);
+
+    return true;
 }
 
 QVector<bool> noiseGenerator(const int &seqSize)
@@ -736,7 +794,24 @@ QVector<float> sequencesAdder(const QVector<bool> &seq1, const float &atten1,
     return resultSeq;
 }
 
-float attenACFphase(const QVector<bool> &originSequence, const QVector<float> &receivedSequence, const int &phase)
+QVector<float> sequencesNoiseAdder(const QVector<float> &seq,
+                                   const QVector<bool> &noiseSeq,
+                                   const float &noiseAtten)
+{
+    QVector<float> resultSeq;
+
+    if(noiseSeq.size() == seq.size()) {
+        for(int i = 0; i < seq.size(); ++i) {
+            resultSeq.push_back(seq.at(i) + fromBoolToInt(noiseSeq.at(i))*noiseAtten);
+        }
+    }
+
+    return resultSeq;
+}
+
+float attenACFphase(const QVector<bool> &originSequence,
+                    const QVector<float> &receivedSequence,
+                    const int &phase)
 {
     float result = 0.0;
 
@@ -761,6 +836,32 @@ float attenACFphase(const QVector<bool> &originSequence, const QVector<float> &r
     return result;
 }
 
+void attenSequenceProperties(const QVector<bool> seq,
+                             const float &atten1,
+                             const float &atten2,
+                             const int &offsetFrom1to2,
+                             const QVector<bool> &noiseSeq,
+                             const float &atten,
+                             QTextStream &out,
+                             QFile &resultsOutputFile)
+{
+    print(seq);
+    printToFile(resultsOutputFile, seq);
+
+    qDebug() << "HEX format:" << fromBinToHex(seq);
+    qDebug() << "Size of sequence:" << seq.size();
+    qDebug() << "Attenuation of 1st sequence:" << atten1;
+    qDebug() << "Attenuation of 2nd sequence:" << atten2;
+    qDebug() << "Offset from 1st to 2st sequence:" << offsetFrom1to2;
+    qDebug() << "Generated noise sequence:";
+    print(noiseSeq);
+    qDebug() << "HEX format:" << fromBinToHex(noiseSeq);
+    qDebug() << "Size of sequence:" << noiseSeq.size();
+    qDebug() << "Attenuation of noise sequence:" << atten;
+    out << "HEX format: " << fromBinToHex(seq) << "\n";
+    out << "Size of sequence: " << seq.size() << "\n";
+}
+
 void attenACFSmax()
 {
     QFile resultsOutputFile("attenACFOutput.txt");
@@ -773,63 +874,105 @@ void attenACFSmax()
     qDebug() << "==========START_ATTENUATED_ACF_TEST==========";
     out << "==========START_ATTENUATED_ACF_TEST==========\n";
 
-    QVector<bool> vec;
+    QVector<bool> tempSeq;
 
     // Readed from file attenACFInput.txt
-    QVector<QVector<bool> > vec1;
-    QVector<QVector<bool> > vec2;
-    float atten1 = 0.0;
-    float atten2 = 0.0;
-    int offsetFrom1to2 = 0;
+    QVector<QVector<bool> > originSeqs;
+    QVector<QVector<float> > attenSeqs;
+    QVector<QVector<bool> > attenNoiseSeqs;
+    QVector<float> attenFactors1;
+    QVector<float> attenFactors2;
+    QVector<float> attenFactorsNoise;
+    QVector<int> offsetsFrom1to2;
 
     int pos = 0;
+    float attenFactor1 = 0.0;
+    float attenFactor2 = 0.0;
+    float attenFactorNoise = 0.0;
+    int offsetFrom1to2 = 0;
+
     QFile file("attenACFInput.txt");
 
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qErrnoWarning("ERROR!\nCan't open file: \"attenACFInput.txt\"");
     }
 
-    bool isVec1 = true;
-
-    while(mSequenceReader(file, vec, pos)) {
-        if(!vec.isEmpty()) {
-
-            if(isVec1) {
-                vec1.push_back(vec);
-                isVec1 = false;
-            } else {
-                vec2.push_back(vec);
-                isVec1 = true;
-            }
-            vec.clear();
+    while(attenSequenceReader(file, tempSeq, attenFactor1, attenFactor2, offsetFrom1to2, attenFactorNoise, pos)) {
+        if(!tempSeq.isEmpty()) {
+            originSeqs.push_back(tempSeq);
+            attenFactors1.push_back(attenFactor1);
+            attenFactors2.push_back(attenFactor2);
+            attenFactorsNoise.push_back(attenFactorNoise);
+            offsetsFrom1to2.push_back(offsetFrom1to2);
         }
+        tempSeq.clear();
     }
 
-    sequencesAdder(vec1, atten1, vec2, atten2, offsetFrom1to2);
+    for(int i = 0; i < originSeqs.size(); ++i) {
+        attenSeqs.push_back(sequencesAdder(originSeqs.at(i),
+                                           attenFactors1.at(i),
+                                           originSeqs.at(i),
+                                           attenFactors2.at(i),
+                                           offsetsFrom1to2.at(i))
+                            );
+    }
+
+    // If need to generate noise in to the channel
+    for(int i = 0; i < attenSeqs.size(); ++i) {
+        attenNoiseSeqs.push_back(noiseGenerator(attenSeqs.at(i).size()));
+    }
+
+    int tempSize = attenSeqs.size();
+    for(int i = 0; i < tempSize; ++i) {
+        attenSeqs.push_back(sequencesNoiseAdder(attenSeqs.at(i),
+                                           attenNoiseSeqs.at(i),
+                                           attenFactorsNoise.at(i))
+                            );
+    }
+    attenSeqs.remove(0, tempSize);
 
     QVector<float> atten_acfs_phases;
 
-    QVector<QVector<bool> >::iterator it1 = vec1.begin();
-    QVector<QVector<bool> >::iterator it2 = vec2.begin();
+    QVector<QVector<bool> >::iterator itOriginSeqs = originSeqs.begin();
+    QVector<QVector<float> >::iterator itAttenSeqs = attenSeqs.begin();
+    QVector<float>::iterator itAttenFactors1 = attenFactors1.begin();
+    QVector<float>::iterator itAttenFactors2 = attenFactors2.begin();
+    QVector<QVector<bool> >::iterator itAttenNoiseSeqs = attenNoiseSeqs.begin();
+    QVector<float>::iterator itAttenFactorsNoise = attenFactorsNoise.begin();
+    QVector<int>::iterator itOffsetsFrom1to2 = offsetsFrom1to2.begin();
     int smallSeqSize = 0;
     int bigSeqSize = 0;
 
-    for(; it1 != vec1.end(), it2 != vec2.end(); ++it1, ++it2) {
+    for(; itOriginSeqs != originSeqs.end();
+        ++itOriginSeqs,
+        ++itAttenSeqs,
+        ++itAttenFactors1,
+        ++itAttenFactors2,
+        ++itOffsetsFrom1to2,
+        ++itAttenNoiseSeqs,
+        ++itAttenFactorsNoise) {
         qDebug() << "===========SUB_ATTENUATED_ACF_TEST===========";
         out << "===========SUB_ATTENUATED_ACF_TEST===========\n";
-        SequenceProperties(*it1, out, resultsOutputFile);
-        SequenceProperties(*it2, out, resultsOutputFile);
+        attenSequenceProperties(*itOriginSeqs,
+                                *itAttenFactors1,
+                                *itAttenFactors2,
+                                *itOffsetsFrom1to2,
+                                *itAttenNoiseSeqs,
+                                *itAttenFactorsNoise,
+                                out,
+                                resultsOutputFile);
+//        SequenceProperties(*it2, out, resultsOutputFile);
 
-        if((*it1).size() > (*it2).size()) {
-            smallSeqSize = (*it2).size();
-            bigSeqSize = (*it1).size();
+        if((*itOriginSeqs).size() > (*itAttenSeqs).size()) {
+            smallSeqSize = (*itAttenSeqs).size();
+            bigSeqSize = (*itOriginSeqs).size();
         } else {
-            smallSeqSize = (*it1).size();
-            bigSeqSize = (*it2).size();
+            smallSeqSize = (*itOriginSeqs).size();
+            bigSeqSize = (*itAttenSeqs).size();
         }
 
         for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {
-            atten_acfs_phases.push_back(attenACFphase(*it1, *it2, i));
+            atten_acfs_phases.push_back(attenACFphase(*itOriginSeqs, *itAttenSeqs, i));
 
             qDebug() << "Attenuated ACF(" << i << ") =" << atten_acfs_phases.last();
             out << "Attenuated ACF(" << i << ") = " << atten_acfs_phases.last() << "\n";
@@ -839,7 +982,7 @@ void attenACFSmax()
         atten_acfs_phases.clear();
 
         float attenACF_0 = 0.0;
-        (*it1).size() > (*it2).size() ? attenACF_0 = (*it2).size() : attenACF_0 = (*it1).size();
+        (*itOriginSeqs).size() > (*itAttenSeqs).size() ? attenACF_0 = (*itAttenSeqs).size() : attenACF_0 = (*itOriginSeqs).size();
 
         qDebug() << "MAX Attenuated ACF(phase) = " << atten_ACF_max;
         qDebug() << "Protection rate:" << ProtectRate(attenACF_0, atten_ACF_max);
