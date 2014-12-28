@@ -23,6 +23,21 @@ void print(const QVector<bool> &result)
     qDebug() << tempStr;
 }
 
+QString seqToStr(const QVector<bool> &result)
+{
+    QString tempStr;
+
+    for(int i = 0; i < result.size(); ++i) {
+        if(result.at(i)) {
+            tempStr.append("1");
+        } else {
+            tempStr.append("0");
+        }
+    }
+
+    return tempStr;
+}
+
 void printToFile(QFile &file, const QVector<bool> &result)
 {
     file.close();
@@ -89,6 +104,27 @@ void print(const QVector<QVector<bool> > &results)
         qDebug() << tempStr;
         tempStr.clear();
     }
+}
+
+QVector<QString> seqsToVecStr(const QVector<QVector<bool> > &results)
+{
+    QString tempStr;
+    QVector<QString> strResults;
+
+    for(int i = 0; i < results.size(); ++i) {
+        for(int j = 0; j < results.at(i).size(); ++j) {
+            if(results.at(i).at(j)) {
+                tempStr.append("1");
+            } else {
+                tempStr.append("0");
+            }
+        }
+
+        strResults.push_back(tempStr);
+        tempStr.clear();
+    }
+
+    return strResults;
 }
 
 QByteArray fromBoolToBinByteArray(const QVector<bool> &result)
@@ -844,22 +880,29 @@ void attenSequenceProperties(const QVector<bool> seq,
                              const float &atten,
                              QTextStream &out,
                              QFile &resultsOutputFile)
-{
+{        
+    // To console
     print(seq);
-    printToFile(resultsOutputFile, seq);
-
     qDebug() << "HEX format:" << fromBinToHex(seq);
     qDebug() << "Size of sequence:" << seq.size();
     qDebug() << "Attenuation of 1st sequence:" << atten1;
     qDebug() << "Attenuation of 2nd sequence:" << atten2;
     qDebug() << "Offset from 1st to 2st sequence:" << offsetFrom1to2;
-    qDebug() << "Generated noise sequence:";
-    print(noiseSeq);
+    qDebug() << "Generated noise sequence:" << seqToStr(noiseSeq);
     qDebug() << "HEX format:" << fromBinToHex(noiseSeq);
     qDebug() << "Size of sequence:" << noiseSeq.size();
     qDebug() << "Attenuation of noise sequence:" << atten;
+    // To file
+    printToFile(resultsOutputFile, seq);
     out << "HEX format: " << fromBinToHex(seq) << "\n";
     out << "Size of sequence: " << seq.size() << "\n";
+    out << "Attenuation of 1st sequence: " << atten1 << "\n";
+    out << "Attenuation of 2nd sequence: " << atten2 << "\n";
+    out << "Offset from 1st to 2st sequence: " << offsetFrom1to2 << "\n";
+    out << "Generated noise sequence: " << seqToStr(noiseSeq) << "\n";
+    out << "HEX format: " << fromBinToHex(noiseSeq) << "\n";
+    out << "Size of sequence: " << noiseSeq.size() << "\n";
+    out << "Attenuation of noise sequence: " << atten << "\n";
 }
 
 void attenACFSmax()
@@ -961,7 +1004,6 @@ void attenACFSmax()
                                 *itAttenFactorsNoise,
                                 out,
                                 resultsOutputFile);
-//        SequenceProperties(*it2, out, resultsOutputFile);
 
         if((*itOriginSeqs).size() > (*itAttenSeqs).size()) {
             smallSeqSize = (*itAttenSeqs).size();
