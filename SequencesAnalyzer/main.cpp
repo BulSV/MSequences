@@ -740,11 +740,11 @@ bool attenSequenceReader(QFile &file,
 
 QVector<bool> noiseGenerator(const int &seqSize)
 {
-    QVector<bool> resultSeq;
+    QVector<bool> resultSeq;    
 
+    srand(time(0));
     for(int i = 0; i < seqSize; ++i) {
-        srand(time(0));
-        resultSeq.push_back(rand()%2);
+        resultSeq.push_back(fromIntToBool(rand()%2));
     }
 
     return resultSeq;
