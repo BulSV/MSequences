@@ -776,9 +776,8 @@ bool attenSequenceReader(QFile &file,
 
 QVector<bool> noiseGenerator(const int &seqSize)
 {
-    QVector<bool> resultSeq;    
+    QVector<bool> resultSeq;
 
-    srand(time(0));
     for(int i = 0; i < seqSize; ++i) {
         resultSeq.push_back(fromIntToBool(rand()%2));
     }
@@ -834,13 +833,17 @@ QVector<float> sequencesNoiseAdder(const QVector<float> &seq,
                                    const QVector<bool> &noiseSeq,
                                    const float &noiseAtten)
 {
-    QVector<float> resultSeq;
+    QVector<float> resultSeq;    
 
     if(noiseSeq.size() == seq.size()) {
-        for(int i = 0; i < seq.size(); ++i) {
-            resultSeq.push_back(seq.at(i) + fromBoolToInt(noiseSeq.at(i))*noiseAtten);
+        for(int i = 0; i < seq.size(); ++i) {           
+            resultSeq.push_back(seq.at(i)
+                                + fromBoolToInt(noiseSeq.at(i))
+                                *static_cast <float> (rand()*fromBoolToInt(fromIntToBool(rand()%2)))
+                                / (static_cast <float> (RAND_MAX/noiseAtten))
+                                );
         }
-    }
+    }    
 
     return resultSeq;
 }
@@ -880,7 +883,7 @@ void attenSequenceProperties(const QVector<bool> seq,
                              const float &atten,
                              QTextStream &out,
                              QFile &resultsOutputFile)
-{        
+{
     // To console
     print(seq);
     qDebug() << "HEX format:" << fromBinToHex(seq);
@@ -1046,6 +1049,11 @@ int main(int argc, char *argv[])
     int choice = -1;
     QTextStream output(stdout, QIODevice::WriteOnly);
     QTextStream input(stdin, QIODevice::ReadOnly);
+
+    // Before calling rand(), you must first "seed" the random number generator
+    // by calling srand(). This should be done once during your program's run --
+    // not once every time you call rand().
+    srand(time(0));
 
     output << "SEQUENCE ANALYZER\n";
 
