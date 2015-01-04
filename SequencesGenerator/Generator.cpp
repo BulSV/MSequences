@@ -93,7 +93,8 @@ void Generator::generate()
         }
 
         if(isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
-            ++phase;
+//            ++phase;
+            phase = m_seqSize - 1;
             ++currCombIndex;
             m_sequences.push_back(sequence);
             emit sequenceGenerated(sequence);
