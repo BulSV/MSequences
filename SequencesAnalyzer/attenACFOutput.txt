@@ -1,0 +1,135 @@
+==========START_ATTENUATED_ACF_TEST==========
+===========SUB_ATTENUATED_ACF_TEST===========
+1111100110101
+HEX format: 1F35
+Size of sequence: 13
+Attenuation of 1st sequence: 1
+Attenuation of 2nd sequence: 1
+Offset from 1st to 2st sequence: 6
+Generated noise sequence: 1111010100111101111
+HEX format: 7A9EF
+Size of sequence: 19
+Attenuation of noise sequence: 0.1
+Attenuated ACF(-12) = 0.966164
+Attenuated ACF(-11) = 0.0349376
+Attenuated ACF(-10) = 0.882974
+Attenuated ACF(-9) = 0.193249
+Attenuated ACF(-8) = 0.733152
+Attenuated ACF(-7) = 0.131632
+Attenuated ACF(-6) = 1.93597
+Attenuated ACF(-5) = -0.0967498
+Attenuated ACF(-4) = 2.29026
+Attenuated ACF(-3) = -0.256389
+Attenuated ACF(-2) = 1.98961
+Attenuated ACF(-1) = -0.022373
+Attenuated ACF(0) = 13.9939
+Attenuated ACF(1) = -0.275744
+Attenuated ACF(2) = 2.27511
+Attenuated ACF(3) = -0.232917
+Attenuated ACF(4) = 1.73389
+Attenuated ACF(5) = 0.13068
+Attenuated ACF(6) = 14.1143
+Attenuated ACF(7) = 0.155543
+Attenuated ACF(8) = 2.21492
+Attenuated ACF(9) = 0.175112
+Attenuated ACF(10) = 1.98029
+Attenuated ACF(11) = -0.176196
+Attenuated ACF(12) = 2.0044
+Attenuated ACF(13) = 0.107297
+Attenuated ACF(14) = 1.12709
+Attenuated ACF(15) = 0.132478
+Attenuated ACF(16) = 1.09507
+Attenuated ACF(17) = 0.0589343
+Attenuated ACF(18) = 0.986389
+MAX Attenuated ACF(phase) = 14.1143
+Protection rate: -0.714289
+===========SUB_ATTENUATED_ACF_TEST===========
+1111100110101
+HEX format: 1F35
+Size of sequence: 13
+Attenuation of 1st sequence: 1
+Attenuation of 2nd sequence: 1
+Offset from 1st to 2st sequence: 6
+Generated noise sequence: 0010010100100111000
+HEX format: 12938
+Size of sequence: 19
+Attenuation of noise sequence: 1
+Attenuated ACF(-12) = 0.620624
+Attenuated ACF(-11) = 1.00281
+Attenuated ACF(-10) = 0.469649
+Attenuated ACF(-9) = 0.102023
+Attenuated ACF(-8) = 1.73235
+Attenuated ACF(-7) = -1.96271
+Attenuated ACF(-6) = 6.04852
+Attenuated ACF(-5) = -1.44438
+Attenuated ACF(-4) = 0.489578
+Attenuated ACF(-3) = 1.11481
+Attenuated ACF(-2) = 2.21314
+Attenuated ACF(-1) = 0.69277
+Attenuated ACF(0) = 17.5442
+Attenuated ACF(1) = -4.66301
+Attenuated ACF(2) = 6.21995
+Attenuated ACF(3) = 0.533159
+Attenuated ACF(4) = 4.60701
+Attenuated ACF(5) = -1.67785
+Attenuated ACF(6) = 15.9519
+Attenuated ACF(7) = -0.431928
+Attenuated ACF(8) = 0.771417
+Attenuated ACF(9) = 0.415327
+Attenuated ACF(10) = 3.31761
+Attenuated ACF(11) = 0.184911
+Attenuated ACF(12) = 3.4637
+Attenuated ACF(13) = -0.889401
+Attenuated ACF(14) = -0.838588
+Attenuated ACF(15) = -2.48064
+Attenuated ACF(16) = -0.659139
+Attenuated ACF(17) = -1.37437
+Attenuated ACF(18) = 0.343974
+MAX Attenuated ACF(phase) = 17.5442
+Protection rate: -2.60379
+===========SUB_ATTENUATED_ACF_TEST===========
+1111100110101
+HEX format: 1F35
+Size of sequence: 13
+Attenuation of 1st sequence: 1
+Attenuation of 2nd sequence: 1
+Offset from 1st to 2st sequence: 6
+Generated noise sequence: 0001111100101100011
+HEX format: 0F963
+Size of sequence: 19
+Attenuation of noise sequence: 13
+Attenuated ACF(-12) = 5.64504
+Attenuated ACF(-11) = 1.84961
+Attenuated ACF(-10) = 5.79699
+Attenuated ACF(-9) = 1.48579
+Attenuated ACF(-8) = -8.26667
+Attenuated ACF(-7) = 19.0344
+Attenuated ACF(-6) = -10.1609
+Attenuated ACF(-5) = 7.18576
+Attenuated ACF(-4) = -14.9281
+Attenuated ACF(-3) = -1.66829
+Attenuated ACF(-2) = 2.70183
+Attenuated ACF(-1) = 35.2266
+Attenuated ACF(0) = 0.340615
+Attenuated ACF(1) = 30.1432
+Attenuated ACF(2) = 18.6691
+Attenuated ACF(3) = -17.3653
+Attenuated ACF(4) = -38.8734
+Attenuated ACF(5) = -11.6098
+Attenuated ACF(6) = -16.8851
+Attenuated ACF(7) = 0.503064
+Attenuated ACF(8) = -20.1913
+Attenuated ACF(9) = -71.7553
+Attenuated ACF(10) = -12.5957
+Attenuated ACF(11) = 29.7377
+Attenuated ACF(12) = -5.0723
+Attenuated ACF(13) = -8.98419
+Attenuated ACF(14) = 13.1589
+Attenuated ACF(15) = 2.98706
+Attenuated ACF(16) = -7.57634
+Attenuated ACF(17) = 3.26518
+Attenuated ACF(18) = 9.05066
+MAX Attenuated ACF(phase) = -71.7553
+Protection rate: -14.8382
+===========END_ATTENUATED_ACF_TEST===========
+
