@@ -9,12 +9,15 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Generator *generator = new Generator(5);
+    qDebug() << "For 13:";
+    Generator *generator = new Generator(13);
     ConsoleView *view = new ConsoleView(generator, "output.txt");
     generator->generate();
-    qDebug() << generator->getSequences();
-
-    qDebug() << "What's all folks!";
+    for(int i = 14; i < 31; ++i) {
+        qDebug() << "For" << i << ":";
+        generator->setSequenceSize(i);
+        generator->generate();
+    }
 
     return a.exec();
 }

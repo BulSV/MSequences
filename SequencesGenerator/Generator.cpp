@@ -37,7 +37,6 @@ int Generator::getSequenceSize() const
 
 void Generator::generate()
 {
-<<<<<<< HEAD
     bool isSuccess = false;
     int phaseLimit = 0;
     int currCombIndex = 0;
@@ -51,11 +50,6 @@ void Generator::generate()
         phaseLimit = m_seqSize/2 + 1;
     } else {
         phaseLimit = m_seqSize/2;
-=======
-    if(!m_phase) {
-        emit sequenceGenerated(m_sequence);
-        return;
->>>>>>> attenuatedSequences
     }
 
     phase = m_seqSize - 1;
@@ -83,7 +77,8 @@ void Generator::generate()
 
             if(!isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
                 ++phase;
-                ++currCombIndex;
+//                ++currCombIndex;
+                currCombIndex += 2;
             } else if(phase > 1) {
                 --phase;
             }
@@ -101,7 +96,8 @@ void Generator::generate()
         if(isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
 //            ++phase;
             phase = m_seqSize - 1;
-            ++currCombIndex;
+//            ++currCombIndex;
+            currCombIndex += 2;
             m_sequences.push_back(sequence);
             emit sequenceGenerated(sequence);
         } else {
