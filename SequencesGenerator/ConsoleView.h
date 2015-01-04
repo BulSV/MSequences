@@ -22,6 +22,7 @@ private:
     QFile m_file;
 
     void setFileHandler(const QString &fileOutput);
+    QString fromIntToBoolString(const int &currentInt);
 };
 
 #endif // CONSOLEVIEW_H

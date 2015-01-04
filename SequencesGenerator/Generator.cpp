@@ -63,6 +63,7 @@ void Generator::generate()
                 for(int index = 0; index < m_seqSize - phase; ++index) {
                     summa += sequence[index]*sequence[index + phase];
                 }
+                qDebug() << "summa" << summa;
 
                 if(qAbs(summa) <= m_absScatter) {
                     isSuccess = true;
@@ -70,23 +71,28 @@ void Generator::generate()
                 } else {
                     isSuccess = false;
                 }
+
+                summa = 0;
             }
 
-            if(!isSuccess) {
+            if(!isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
                 ++phase;
                 ++currCombIndex;
-            } else {
-                if(phase > 1) {
-                    --phase;
-                }
+            } else if(phase > 1) {
+                --phase;
             }
 
-            if(phase <= phaseLimit) {
+            if(phase < phaseLimit - 1) {
+                qDebug() << "phase < phaseLimit - 1";
                 break;
             }
+
+            qDebug() << "phaseLimit" << phaseLimit;
+            qDebug() << "phase" << phase;
+            qDebug() << "currCombIndex" << currCombIndex;
         }
 
-        if(isSuccess) {
+        if(isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
             ++phase;
             ++currCombIndex;
             m_sequences.push_back(sequence);
