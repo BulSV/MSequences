@@ -1,21 +1,18 @@
 #include <QCoreApplication>
-#include <QVector>
 #include <QTextStream>
 #include <QDebug>
 
 #include "Generator.h"
 #include "ConsoleView.h"
 
-QVector<bool> a; // MSequence
-QVector<QVector<bool> > as; // MSequences
-
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Generator *generator = new Generator(29);
+    Generator *generator = new Generator(5);
     ConsoleView *view = new ConsoleView(generator, "output.txt");
     generator->generate();
+    qDebug() << generator->getSequences();
 
     qDebug() << "What's all folks!";
 

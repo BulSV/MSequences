@@ -19,17 +19,13 @@ public:
 signals:
     void sequenceGenerated(QVector<int>);
 private:
-    int m_rows;
-    int m_columns;
+    int m_combSize;
     int m_seqSize;
     int m_absScatter;
-    int m_phase;
-    int m_summa;
-    int **m_combinations;
-    QVector<int> m_sequence;
+    int *m_combs;
     QVector<QVector<int> > m_sequences;
 
-    void fillCombinations();
+    void fillCombinations();    
 };
 
 #endif // GENERATOR_H

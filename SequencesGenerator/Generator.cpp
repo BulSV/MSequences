@@ -4,19 +4,15 @@
 
 Generator::Generator(const int &seqSize, const int &absScatter, QObject *parent) :
     QObject(parent)
-    , m_summa(0)
 {
     setSequenceSize(seqSize);
     setAbsScatter(absScatter);
-    fillCombinations();
+    fillCombinations();    
 }
 
 Generator::~Generator()
 {
-    for (int i = 0; i < m_rows; ++i)
-        delete [] m_combinations[i];
-
-    delete [] m_combinations;
+    delete m_combs;
 }
 
 void Generator::setAbsScatter(const int &absScatter)
@@ -31,8 +27,7 @@ int Generator::getAbsScatter() const
 
 void Generator::setSequenceSize(const int &seqSize)
 {
-    m_seqSize = qAbs(seqSize);
-    m_phase = m_seqSize - 1;
+    m_seqSize = qAbs(seqSize);    
 }
 
 int Generator::getSequenceSize() const
@@ -42,29 +37,63 @@ int Generator::getSequenceSize() const
 
 void Generator::generate()
 {
-    if(!m_phase) {
-        return;
-    }
-    for(int m = 0; m < m_seqSize - m_phase; ++m) {
-        if(m == 29 - 1 - m_phase) {
-            for(int i = 0; i < m_rows; ++i) {
-                for(int j = 0; j < m_columns; ++j) {
-                    m_summa += m_combinations[i][j]*m_combinations[i][j+1];
+    bool isSuccess = false;
+    int phaseLimit = 0;
+    int currCombIndex = 0;
+    int phase = m_seqSize - 1;
+    int summa = 0;
+    QVector<int> sequence;
 
-                    if(qAbs(m_summa) <= m_absScatter) {
-                        m_sequence[m] = m_combinations[i][j]; // convert v[j] to bool before assignment
-                        m_sequence[m+m_phase] = m_combinations[i][j+1]; // convert v[j+1] to bool before assignment
-                        --m_phase;
-                        generate();
-                    } else {
-                        m_summa -= m_combinations[i][j]*m_combinations[i][j+1];
-                    }
+    sequence.fill(0, m_seqSize);
+
+    if(m_seqSize % 2) {
+        phaseLimit = m_seqSize/2 + 1;
+    } else {
+        phaseLimit = m_seqSize/2;
+    }
+
+    phase = m_seqSize - 1;
+
+    while(true) {
+        while(true) {
+            for(int combIndex = currCombIndex; combIndex < m_combSize - 1; ++combIndex) {
+                sequence[phase] = m_combs[combIndex];
+                sequence[m_seqSize - 1 - phase] = m_combs[combIndex + 1];
+
+                for(int index = 0; index < m_seqSize - phase; ++index) {
+                    summa += sequence[index]*sequence[index + phase];
+                }
+
+                if(qAbs(summa) <= m_absScatter) {
+                    isSuccess = true;
+                    break;
+                } else {
+                    isSuccess = false;
                 }
             }
+
+            if(!isSuccess) {
+                ++phase;
+                ++currCombIndex;
+            } else {
+                if(phase > 1) {
+                    --phase;
+                }
+            }
+
+            if(phase <= phaseLimit) {
+                break;
+            }
         }
-        qDebug() << "ia[" << m << "] =" << m_sequence[m] << "| ia[" << m + m_phase << "] =" << m_sequence[m + m_phase];
-//        m_summa += m_sequence.at(m)*m_sequence.at(m+m_phase);
-        qDebug() << "qAbs(m_summa):" << qAbs(m_summa);
+
+        if(isSuccess) {
+            ++phase;
+            ++currCombIndex;
+            m_sequences.push_back(sequence);
+            emit sequenceGenerated(sequence);
+        } else {
+            break;
+        }
     }
 }
 
@@ -75,21 +104,15 @@ QVector<QVector<int> > Generator::getSequences()
 
 void Generator::fillCombinations()
 {
-    m_rows = 4;
-    m_columns = 2;
-    int v[4][2] = {
-        {-1, -1},
-        {-1, 1},
-        {1, -1},
-        {1, 1}
-    };
-    m_combinations = new int*[m_rows];
-    for(int i = 0; i < m_rows; ++i) {
-        m_combinations[i] = new int[m_columns];
+    int v[] = {-1, -1, -1, 1, 1, -1, 1, 1};
+    m_combSize = 8;
+    m_combs = new int[m_combSize];
+
+    for(int i = 0; i < m_combSize; ++i) {
+        m_combs[i] = v[i];
     }
-    for(int i = 0; i < m_rows; ++i) {
-        for(int j = 0; j < m_columns; ++j) {
-            m_combinations[i][j] = v[i][j];
-        }
-    }
+
+//    for(int i = 0; i < m_combSize; ++i) {
+//        qDebug() << "m_comb[" << i << "]" << m_combs[i];
+//    }
 }
