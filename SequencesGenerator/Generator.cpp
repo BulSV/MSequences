@@ -56,7 +56,7 @@ void Generator::generate()
 
     while(true) {
         while(true) {
-            for(int combIndex = currCombIndex; combIndex < m_combSize - 1; ++combIndex) {
+            for(int combIndex = currCombIndex; combIndex < m_combSize - 1; combIndex += 2) {
                 sequence[phase] = m_combs[combIndex];
                 sequence[m_seqSize - 1 - phase] = m_combs[combIndex + 1];
 
@@ -66,6 +66,7 @@ void Generator::generate()
                 qDebug() << "summa" << summa;
 
                 if(qAbs(summa) <= m_absScatter) {
+                    qDebug() << "Success summa" << summa;
                     isSuccess = true;
                     break;
                 } else {
@@ -77,7 +78,6 @@ void Generator::generate()
 
             if(!isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
                 ++phase;
-//                ++currCombIndex;
                 currCombIndex += 2;
             } else if(phase > 1) {
                 --phase;
@@ -93,10 +93,8 @@ void Generator::generate()
             qDebug() << "currCombIndex" << currCombIndex;
         }
 
-        if(isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {
-//            ++phase;
+        if(isSuccess && phase < m_seqSize - 1 && currCombIndex < m_combSize - 1) {            
             phase = m_seqSize - 1;
-//            ++currCombIndex;
             currCombIndex += 2;
             m_sequences.push_back(sequence);
             emit sequenceGenerated(sequence);
@@ -120,8 +118,4 @@ void Generator::fillCombinations()
     for(int i = 0; i < m_combSize; ++i) {
         m_combs[i] = v[i];
     }
-
-//    for(int i = 0; i < m_combSize; ++i) {
-//        qDebug() << "m_comb[" << i << "]" << m_combs[i];
-//    }
 }

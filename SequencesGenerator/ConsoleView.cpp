@@ -17,6 +17,7 @@ void ConsoleView::printToFile(const QVector<int> &currentSequence)
     }
     QTextStream out(&m_file);
 
+    out << "BIN ";
     for(int i = 0; i < currentSequence.size(); ++i) {
         out << fromIntToBoolString(currentSequence.at(i));
     }
