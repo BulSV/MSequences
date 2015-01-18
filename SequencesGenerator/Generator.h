@@ -14,7 +14,7 @@ public:
     int getAbsScatter() const;
     void setSequenceSize(const int &seqSize);
     int getSequenceSize() const;
-    void generate();
+    void generate();    
     QVector<QVector<int> > getSequences();
 signals:
     void sequenceGenerated(QVector<int>);
@@ -23,9 +23,11 @@ private:
     int m_seqSize;
     int m_absScatter;
     int *m_combs;
+    QVector<int> m_sequence;
     QVector<QVector<int> > m_sequences;
 
-    void fillCombinations();    
+    void fillCombinations();
+    void gen(int phase);
 };
 
 #endif // GENERATOR_H
