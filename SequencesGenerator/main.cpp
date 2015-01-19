@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Generator *generator = new Generator(13, 1);
+    Generator *generator = new Generator(39, 1);
     ConsoleView *view = new ConsoleView(generator, "output.txt");
     generator->generate();
 

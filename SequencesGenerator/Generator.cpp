@@ -2,8 +2,9 @@
 #include <QtMath>
 #include <QDebug>
 
-Generator::Generator(const int &seqSize, const int &absScatter, QObject *parent) :
+Generator::Generator(const int &seqSize, const int &absScatter, bool isFiltered, QObject *parent) :
     QObject(parent)
+  , m_isFiltered(isFiltered)
 {
     setSequenceSize(seqSize);
     setAbsScatter(absScatter);
@@ -100,10 +101,32 @@ void Generator::gen(int phase)
             }
         }
     } else {
-        qDebug() << "emit sequenceGenerated(" << m_sequence << ")";
-        emit sequenceGenerated(m_sequence);
-        m_sequences.append(m_sequence);
+        if((m_isFiltered && filter()) || !m_isFiltered) {
+            qDebug() << "emit sequenceGenerated(" << m_sequence << ")";
+            emit sequenceGenerated(m_sequence);
+            m_sequences.append(m_sequence);
+        }
+
     }
+}
+
+bool Generator::filter()
+{
+    int summa = 0;
+
+    for(int phase = 1; phase < m_seqSize; ++phase) {
+        for(int index = 0; index < m_seqSize - phase; ++index) {
+            summa += m_sequence.at(index)*m_sequence.at(index + phase);
+        }
+        qDebug() << "bool Generator::filter():" << (qAbs(summa) <= m_absScatter);
+        qDebug() << "summa =" << summa;
+        if(qAbs(summa) > m_absScatter) {
+            return false;
+        }
+        summa = 0;
+    }
+
+    return true;
 }
 
 QVector<QVector<int> > Generator::getSequences()

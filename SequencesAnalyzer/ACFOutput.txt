@@ -1,22 +1,310 @@
 ==========START_ACF_TEST==========
 ===========SUB_ACF_TEST===========
-0000000101010
-HEX format: 002A
+0000110101000
+HEX format: 01A8
 Size of sequence: 13
 ACF(1) = 0
-ACF(2) = 9
-ACF(3) = 0
-ACF(4) = 5
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
 ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000101011000
+HEX format: 0158
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001001011000
+HEX format: 0258
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001101001000
+HEX format: 0348
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100101000
+HEX format: 0328
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001101101000
+HEX format: 0368
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101100000
+HEX format: 0560
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100110000
+HEX format: 0530
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010010111000
+HEX format: 04B8
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010100000
+HEX format: 06A0
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = 1
-ACF(11) = 0
+ACF(11) = 2
 ACF(12) = 1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011001010000
+HEX format: 0650
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0011101001000
+HEX format: 0748
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011101101000
+HEX format: 0768
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010000110100
+HEX format: 0434
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010001110100
+HEX format: 0474
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010000101100
+HEX format: 042C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101111100
+HEX format: 057C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 0000011001010
 HEX format: 00CA
@@ -36,42 +324,6 @@ ACF(12) = 1
 MAX ACF(phase) = 1
 Protection rate: 22.2789
 ===========SUB_ACF_TEST===========
-0000000011010
-HEX format: 001A
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 4
-ACF(4) = 1
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
-===========SUB_ACF_TEST===========
-0000110101010
-HEX format: 01AA
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -4
-ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
-===========SUB_ACF_TEST===========
 0001110010010
 HEX format: 0392
 Size of sequence: 13
@@ -90,149 +342,131 @@ ACF(12) = 1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0000000100110
-HEX format: 0026
+0000010100110
+HEX format: 00A6
 Size of sequence: 13
-ACF(1) = 4
+ACF(1) = 0
 ACF(2) = 1
-ACF(3) = 6
-ACF(4) = 5
-ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-0000011000110
-HEX format: 00C6
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = -3
-ACF(3) = -2
+ACF(3) = 2
 ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0000000010110
-HEX format: 0016
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 6
-ACF(4) = 1
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-0000111100110
-HEX format: 01E6
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = -3
-ACF(3) = -2
-ACF(4) = -3
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0011000101010
-HEX format: 062A
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 1
-ACF(3) = -6
-ACF(4) = 5
 ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
+ACF(6) = 3
+ACF(7) = -2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0011011001010
-HEX format: 06CA
+0000101100110
+HEX format: 0166
 Size of sequence: 13
-ACF(1) = -4
+ACF(1) = 0
 ACF(2) = -3
 ACF(3) = 2
 ACF(4) = 1
-ACF(5) = -4
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000100101110
+HEX format: 012E
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000101101110
+HEX format: 016E
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110101110
+HEX format: 01AE
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011000001010
+HEX format: 060A
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0011001011010
-HEX format: 065A
+0011001111010
+HEX format: 067A
 Size of sequence: 13
-ACF(1) = -4
+ACF(1) = 0
 ACF(2) = -3
-ACF(3) = 2
-ACF(4) = -3
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0011110101010
-HEX format: 07AA
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -6
+ACF(3) = -2
 ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
 ACF(8) = -1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 0100100111000
 HEX format: 0938
@@ -270,157 +504,697 @@ ACF(12) = 1
 MAX ACF(phase) = 1
 Protection rate: 22.2789
 ===========SUB_ACF_TEST===========
-0101010000000
-HEX format: 0A80
+0100001001100
+HEX format: 084C
 Size of sequence: 13
 ACF(1) = 0
-ACF(2) = 9
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100000101100
+HEX format: 082C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100001101100
+HEX format: 086C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100100011100
+HEX format: 091C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000001100
+HEX format: 0A0C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101001111100
+HEX format: 0A7C
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110010100000
+HEX format: 0CA0
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110101100000
+HEX format: 0D60
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000101000
+HEX format: 0C28
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110001101000
+HEX format: 0C68
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110011101000
+HEX format: 0CE8
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110110001000
+HEX format: 0D88
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110110111000
+HEX format: 0DB8
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100000110010
+HEX format: 0832
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100001110010
+HEX format: 0872
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100011110010
+HEX format: 08F2
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100111100010
+HEX format: 09E2
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100111111010
+HEX format: 09FA
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000100010
+HEX format: 0C22
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
 ACF(3) = 0
-ACF(4) = 5
-ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
-===========SUB_ACF_TEST===========
-0101010110000
-HEX format: 0AB0
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -4
-ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
-===========SUB_ACF_TEST===========
-0101100000000
-HEX format: 0B00
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 4
-ACF(4) = 1
+ACF(4) = 3
 ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
+ACF(6) = 3
+ACF(7) = -2
 ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111000010
+HEX format: 0DC2
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111100010
+HEX format: 0DE2
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000001010
+HEX format: 0C0A
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
 ACF(9) = 0
 ACF(10) = 1
-ACF(11) = 0
+ACF(11) = -2
 ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0101001101100
-HEX format: 0A6C
+0110011111010
+HEX format: 0CFA
 Size of sequence: 13
-ACF(1) = -4
-ACF(2) = -3
-ACF(3) = 2
-ACF(4) = 1
-ACF(5) = -4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0101010001100
-HEX format: 0A8C
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 1
-ACF(3) = -6
-ACF(4) = 5
-ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-0101010111100
-HEX format: 0ABC
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -6
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
 ACF(4) = 1
 ACF(5) = -2
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = -1
 ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
+ACF(10) = 1
+ACF(11) = -2
 ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-0101101001100
-HEX format: 0B4C
+0111000010010
+HEX format: 0E12
 Size of sequence: 13
-ACF(1) = -4
-ACF(2) = -3
-ACF(3) = 2
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
 ACF(4) = -3
 ACF(5) = 2
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = -1
 ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
+ACF(10) = 1
+ACF(11) = -2
 ACF(12) = 1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0110001100000
-HEX format: 0C60
+0111100100010
+HEX format: 0F22
 Size of sequence: 13
-ACF(1) = 4
-ACF(2) = -3
-ACF(3) = -2
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
 ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0111111001010
+HEX format: 0FCA
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
 ACF(7) = 0
 ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
 ACF(12) = 1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0110010000000
-HEX format: 0C80
+0110000101110
+HEX format: 0C2E
 Size of sequence: 13
-ACF(1) = 4
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110101111110
+HEX format: 0D7E
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000100110001
+HEX format: 0131
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110010001
+HEX format: 0191
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110110001
+HEX format: 01B1
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000010111001
+HEX format: 00B9
+Size of sequence: 13
+ACF(1) = 2
 ACF(2) = 1
-ACF(3) = 6
-ACF(4) = 5
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110001001
+HEX format: 0189
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000111001001
+HEX format: 01C9
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110101001
+HEX format: 01A9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001000101001
+HEX format: 0229
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001010001001
+HEX format: 0289
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001111011001
+HEX format: 03D9
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000001100101
+HEX format: 0065
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
@@ -428,135 +1202,315 @@ ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-0110011110000
-HEX format: 0CF0
+0000011100101
+HEX format: 00E5
 Size of sequence: 13
-ACF(1) = 4
-ACF(2) = -3
+ACF(1) = 2
+ACF(2) = 1
 ACF(3) = -2
 ACF(4) = -3
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0110100000000
-HEX format: 0D00
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 6
-ACF(4) = 1
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-0000000101001
-HEX format: 0029
-Size of sequence: 13
-ACF(1) = 2
-ACF(2) = 5
-ACF(3) = 4
-ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
-ACF(7) = 0
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
 ACF(8) = 1
 ACF(9) = 0
-ACF(10) = 1
+ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0000000011001
-HEX format: 0019
+0000110000101
+HEX format: 0185
 Size of sequence: 13
-ACF(1) = 6
+ACF(1) = 2
 ACF(2) = 1
-ACF(3) = 4
-ACF(4) = 5
+ACF(3) = -2
+ACF(4) = -3
 ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 3
 ACF(9) = 0
-ACF(10) = 1
+ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0000000100101
-HEX format: 0025
+0000010001101
+HEX format: 008D
 Size of sequence: 13
 ACF(1) = 2
-ACF(2) = 5
-ACF(3) = 6
-ACF(4) = 1
-ACF(5) = 4
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000011001101
+HEX format: 00CD
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000111001101
+HEX format: 01CD
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
-ACF(9) = 0
+ACF(9) = -2
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0000000010101
-HEX format: 0015
+0000110011101
+HEX format: 019D
 Size of sequence: 13
 ACF(1) = 2
-ACF(2) = 9
-ACF(3) = 2
-ACF(4) = 5
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
 ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
+ACF(6) = -1
+ACF(7) = -2
 ACF(8) = -1
-ACF(9) = 0
+ACF(9) = -2
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0000110010101
-HEX format: 0195
+0000111011101
+HEX format: 01DD
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001000100101
+HEX format: 0225
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001001100101
+HEX format: 0265
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100000101
+HEX format: 0305
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100100101
+HEX format: 0325
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100110101
+HEX format: 0335
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001101110101
+HEX format: 0375
 Size of sequence: 13
 ACF(1) = -2
 ACF(2) = 1
 ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001110110101
+HEX format: 03B5
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001000001101
+HEX format: 020D
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
 ACF(4) = 1
 ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -2
-Protection rate: 16.2583
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001000101101
+HEX format: 022D
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100101101
+HEX format: 032D
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 0001110101101
 HEX format: 03AD
@@ -576,77 +1530,2417 @@ ACF(12) = -1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0011000010101
-HEX format: 0615
+0001111101101
+HEX format: 03ED
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010011100001
+HEX format: 04E1
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010010110001
+HEX format: 04B1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010011110001
+HEX format: 04F1
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101100001
+HEX format: 0561
 Size of sequence: 13
 ACF(1) = -2
 ACF(2) = 1
-ACF(3) = -4
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010110000001
+HEX format: 0581
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010001101001
+HEX format: 0469
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100011001
+HEX format: 0519
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101111001
+HEX format: 0579
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010110111001
+HEX format: 05B9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011001000001
+HEX format: 0641
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010000001
+HEX format: 0681
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010100001
+HEX format: 06A1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011110010001
+HEX format: 0791
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011000001001
+HEX format: 0609
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011100001001
+HEX format: 0709
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011101001001
+HEX format: 0749
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011101101001
+HEX format: 0769
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011110001001
+HEX format: 0789
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011110101001
+HEX format: 07A9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000010100011
+HEX format: 00A3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000001010011
+HEX format: 0053
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
 ACF(4) = 1
 ACF(5) = 2
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = -1
 ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
+ACF(10) = -1
+ACF(11) = -2
 ACF(12) = -1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0011110010101
-HEX format: 0795
+0000010110011
+HEX format: 00B3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0000100100011
+HEX format: 0123
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000101100011
+HEX format: 0163
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000001101011
+HEX format: 006B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000010001011
+HEX format: 008B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000011101011
+HEX format: 00EB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000110101011
+HEX format: 01AB
 Size of sequence: 13
 ACF(1) = -2
-ACF(2) = 1
-ACF(3) = -4
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000100011011
+HEX format: 011B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0000111011011
+HEX format: 01DB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0000110111011
+HEX format: 01BB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001001000011
+HEX format: 0243
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001010000011
+HEX format: 0283
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001000001011
+HEX format: 020B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001010011011
+HEX format: 029B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100001011
+HEX format: 030B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001100101011
+HEX format: 032B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001101101011
+HEX format: 036B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0001111101011
+HEX format: 03EB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010001000011
+HEX format: 0443
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010010100011
+HEX format: 04A3
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0010100000011
+HEX format: 0503
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100010011
+HEX format: 0513
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010111110011
+HEX format: 05F3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0010011101011
+HEX format: 04EB
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011000001011
+HEX format: 060B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0011011101011
+HEX format: 06EB
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011111101011
+HEX format: 07EB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011101011011
+HEX format: 075B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0011110111011
+HEX format: 07BB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010010000111
+HEX format: 0487
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
 ACF(4) = -3
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
 ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
+ACF(10) = -1
+ACF(11) = -2
 ACF(12) = -1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0101010000011
-HEX format: 0A83
+0010100000111
+HEX format: 0507
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100100111
+HEX format: 0527
 Size of sequence: 13
 ACF(1) = -2
-ACF(2) = 5
-ACF(3) = -4
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101100111
+HEX format: 0567
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
 ACF(4) = 1
-ACF(5) = -4
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010111100111
+HEX format: 05E7
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010010001111
+HEX format: 048F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0010010101111
+HEX format: 04AF
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010101001111
+HEX format: 054F
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100011111
+HEX format: 051F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010100111111
+HEX format: 053F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0010110011111
+HEX format: 059F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010100111
+HEX format: 06A7
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011110110111
+HEX format: 07B7
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011000101111
+HEX format: 062F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010101111
+HEX format: 06AF
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011001011111
+HEX format: 065F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0011010011111
+HEX format: 069F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011010111111
+HEX format: 06BF
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011100101111
+HEX format: 072F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0011101101111
+HEX format: 076F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100010100001
+HEX format: 08A1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100000110001
+HEX format: 0831
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100101000001
+HEX format: 0941
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100110000001
+HEX format: 0981
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100111000001
+HEX format: 09C1
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100110100001
+HEX format: 09A1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100000101001
+HEX format: 0829
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100011101001
+HEX format: 08E9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101001000001
+HEX format: 0A41
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000100001
+HEX format: 0A21
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101011000001
+HEX format: 0AC1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100000001
+HEX format: 0B01
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100010001
+HEX format: 0B11
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101101110001
+HEX format: 0B71
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0101110110001
+HEX format: 0BB1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000001001
+HEX format: 0A09
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000011001
+HEX format: 0A19
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0101011111001
+HEX format: 0AF9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101110001001
+HEX format: 0B89
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101111001001
+HEX format: 0BC9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110001000001
+HEX format: 0C41
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110010100001
+HEX format: 0CA1
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0110101000001
+HEX format: 0D41
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110100010001
+HEX format: 0D11
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111110001
+HEX format: 0DF1
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0111001000001
+HEX format: 0E41
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111000001001
+HEX format: 0E09
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0111011101001
+HEX format: 0EE9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110101001
+HEX format: 0FA9
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111101011001
+HEX format: 0F59
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0111110111001
+HEX format: 0FB9
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000000101
+HEX format: 0C05
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110010000101
+HEX format: 0C85
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000010101
+HEX format: 0C15
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000110101
+HEX format: 0C35
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110011110101
+HEX format: 0CF5
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0110110000101
+HEX format: 0D85
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111000101
+HEX format: 0DC5
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000001101
+HEX format: 0C0D
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110100011101
+HEX format: 0D1D
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111000000101
+HEX format: 0E05
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111000100101
+HEX format: 0E25
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0111111100101
+HEX format: 0FE5
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111100110101
+HEX format: 0F35
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110010101
+HEX format: 0F95
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110110101
+HEX format: 0FB5
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111000101101
+HEX format: 0E2D
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
 ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111101001101
+HEX format: 0F4D
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110001101
+HEX format: 0F8D
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111111001101
+HEX format: 0FCD
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110101101
+HEX format: 0FAD
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100000100011
+HEX format: 0823
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0101010110011
-HEX format: 0AB3
+0100010000011
+HEX format: 0883
 Size of sequence: 13
-ACF(1) = -6
+ACF(1) = 2
 ACF(2) = 1
-ACF(3) = -4
-ACF(4) = 5
+ACF(3) = 0
+ACF(4) = 3
 ACF(5) = -2
-ACF(6) = 1
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100101110011
+HEX format: 0973
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000010011
+HEX format: 0A13
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -3
 ACF(7) = 0
 ACF(8) = -1
 ACF(9) = 0
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100000011
+HEX format: 0B03
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100100011
+HEX format: 0B23
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101101100011
+HEX format: 0B63
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100011011
+HEX format: 0B1B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100111011
+HEX format: 0B3B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101110011011
+HEX format: 0B9B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100010000111
+HEX format: 0887
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100010100111
+HEX format: 08A7
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 0100100000111
 HEX format: 0907
@@ -666,32 +3960,14 @@ ACF(12) = -1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0101010001111
-HEX format: 0A8F
+0100101000111
+HEX format: 0947
 Size of sequence: 13
 ACF(1) = -2
-ACF(2) = 5
-ACF(3) = -6
-ACF(4) = 1
-ACF(5) = -4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-0101010111111
-HEX format: 0ABF
-Size of sequence: 13
-ACF(1) = -2
-ACF(2) = 9
+ACF(2) = 1
 ACF(3) = -2
-ACF(4) = 5
-ACF(5) = -2
+ACF(4) = -3
+ACF(5) = 2
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = -1
@@ -699,11 +3975,749 @@ ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-0101100111111
-HEX format: 0B3F
+0100110000111
+HEX format: 0987
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100010001111
+HEX format: 088F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100011001111
+HEX format: 08CF
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100110001111
+HEX format: 098F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100110101111
+HEX format: 09AF
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100100011111
+HEX format: 091F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100110011111
+HEX format: 099F
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0100111011111
+HEX format: 09DF
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101000100111
+HEX format: 0A27
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101001100111
+HEX format: 0A67
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101101100111
+HEX format: 0B67
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101100110111
+HEX format: 0B37
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101101110111
+HEX format: 0B77
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101001001111
+HEX format: 0A4F
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0101011001111
+HEX format: 0ACF
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+0101100101111
+HEX format: 0B2F
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110010100011
+HEX format: 0CA3
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110100000011
+HEX format: 0D03
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110100100011
+HEX format: 0D23
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111000011
+HEX format: 0DC3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110110100011
+HEX format: 0DA3
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110111100011
+HEX format: 0DE3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000001011
+HEX format: 0C0B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110000101011
+HEX format: 0C2B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110011101011
+HEX format: 0CEB
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0110100111011
+HEX format: 0D3B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111011000011
+HEX format: 0EC3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111100010011
+HEX format: 0F13
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111111010011
+HEX format: 0FD3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111110110011
+HEX format: 0FB3
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111001001011
+HEX format: 0E4B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111000011011
+HEX format: 0E1B
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111001011011
+HEX format: 0E5B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111100101011
+HEX format: 0F2B
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+0111111001011
+HEX format: 0FCB
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = 3
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000110100000
+HEX format: 11A0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001110100000
+HEX format: 13A0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001101010000
+HEX format: 1350
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001000101000
+HEX format: 1228
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001010001000
+HEX format: 1288
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001100101000
+HEX format: 1328
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010011000000
+HEX format: 14C0
 Size of sequence: 13
 ACF(1) = 2
 ACF(2) = 1
@@ -720,113 +4734,23 @@ ACF(12) = -1
 MAX ACF(phase) = 2
 Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-0110010111111
-HEX format: 0CBF
+1010011100000
+HEX format: 14E0
 Size of sequence: 13
 ACF(1) = 2
 ACF(2) = 1
-ACF(3) = 4
-ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-0110100111111
-HEX format: 0D3F
-Size of sequence: 13
-ACF(1) = 2
-ACF(2) = 1
-ACF(3) = 4
+ACF(3) = -2
 ACF(4) = -3
 ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-1001010000000
-HEX format: 1280
-Size of sequence: 13
-ACF(1) = 2
-ACF(2) = 5
-ACF(3) = 4
-ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
-===========SUB_ACF_TEST===========
-1001100000000
-HEX format: 1300
-Size of sequence: 13
-ACF(1) = 6
-ACF(2) = 1
-ACF(3) = 4
-ACF(4) = 5
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-1010010000000
-HEX format: 1480
-Size of sequence: 13
-ACF(1) = 2
-ACF(2) = 5
-ACF(3) = 6
-ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
-ACF(7) = 0
+ACF(6) = -1
+ACF(7) = 2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-1010100000000
-HEX format: 1500
-Size of sequence: 13
-ACF(1) = 2
-ACF(2) = 9
-ACF(3) = 2
-ACF(4) = 5
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 1010100110000
 HEX format: 1530
@@ -846,17 +4770,17 @@ ACF(12) = -1
 MAX ACF(phase) = -2
 Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1011010111000
-HEX format: 16B8
+1010110110000
+HEX format: 15B0
 Size of sequence: 13
 ACF(1) = -2
 ACF(2) = 1
-ACF(3) = -2
+ACF(3) = 2
 ACF(4) = -3
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
@@ -864,89 +4788,1799 @@ ACF(12) = -1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1010100001100
-HEX format: 150C
+1010010001000
+HEX format: 1488
 Size of sequence: 13
 ACF(1) = -2
 ACF(2) = 1
-ACF(3) = -4
-ACF(4) = 1
+ACF(3) = 2
+ACF(4) = 3
 ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010011001000
+HEX format: 14C8
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010000011000
+HEX format: 1418
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010010011000
+HEX format: 1498
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011000100000
+HEX format: 1620
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
 ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011001100000
+HEX format: 1660
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011001110000
+HEX format: 1670
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011100100000
+HEX format: 1720
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011000001000
+HEX format: 1608
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011010001000
+HEX format: 1688
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011101111000
+HEX format: 1778
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010001100100
+HEX format: 1464
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010011000100
+HEX format: 14C4
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010111100100
+HEX format: 15E4
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1010000001100
+HEX format: 140C
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
 ACF(9) = 0
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = 2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1010100111100
-HEX format: 153C
+1011010001100
+HEX format: 168C
 Size of sequence: 13
 ACF(1) = -2
-ACF(2) = 1
-ACF(3) = -4
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011111001100
+HEX format: 17CC
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000010100010
+HEX format: 10A2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000110000010
+HEX format: 1182
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000111010010
+HEX format: 11D2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
 ACF(4) = -3
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
 ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001001010
+HEX format: 104A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001101010
+HEX format: 106A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000010001010
+HEX format: 108A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000000011010
+HEX format: 101A
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001010000010
+HEX format: 1282
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001011100010
+HEX format: 12E2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001100000010
+HEX format: 1302
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001101000010
+HEX format: 1342
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001110000010
+HEX format: 1382
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001000001010
+HEX format: 120A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001100001010
+HEX format: 130A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001111101010
+HEX format: 13EA
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001111111010
+HEX format: 13FA
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001000110
+HEX format: 1046
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000010100110
+HEX format: 10A6
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1000001010110
+HEX format: 1056
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000100000110
+HEX format: 1106
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001001110
+HEX format: 104E
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000110111110
+HEX format: 11BE
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001000001110
+HEX format: 120E
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1001011101110
+HEX format: 12EE
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001010111110
+HEX format: 12BE
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010001000010
+HEX format: 1442
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010000100010
+HEX format: 1422
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010000110010
+HEX format: 1432
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010110000010
+HEX format: 1582
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011011100010
+HEX format: 16E2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011100000010
+HEX format: 1702
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011110000010
+HEX format: 1782
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011111000010
+HEX format: 17C2
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011110100010
+HEX format: 17A2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011100010010
+HEX format: 1712
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011000001010
+HEX format: 160A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011001111010
+HEX format: 167A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011111001010
+HEX format: 17CA
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100010100000
+HEX format: 18A0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100101000000
+HEX format: 1940
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100110100000
+HEX format: 19A0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1100101010000
+HEX format: 1950
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100001001000
+HEX format: 1848
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100000101000
+HEX format: 1828
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100100101000
+HEX format: 1928
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1100110101000
+HEX format: 19A8
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100111101000
+HEX format: 19E8
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1101000100000
+HEX format: 1A20
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011000000
+HEX format: 1AC0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011100000
+HEX format: 1AE0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101010110000
+HEX format: 1AB0
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101000001000
+HEX format: 1A08
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101100101000
+HEX format: 1B28
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101101111000
+HEX format: 1B78
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100001000100
+HEX format: 1844
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100010100100
+HEX format: 18A4
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1100000010100
+HEX format: 1814
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011100100
+HEX format: 1AE4
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101100010100
+HEX format: 1B14
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101000001100
+HEX format: 1A0C
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1101011101100
+HEX format: 1AEC
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011111100
+HEX format: 1AFC
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101110101100
+HEX format: 1BAC
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110010100000
+HEX format: 1CA0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110011010000
+HEX format: 1CD0
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110101100000
+HEX format: 1D60
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110001001000
+HEX format: 1C48
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110100001000
+HEX format: 1D08
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110100101000
+HEX format: 1D28
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110101101000
+HEX format: 1D68
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110110101000
+HEX format: 1DA8
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110110111000
+HEX format: 1DB8
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111010001000
+HEX format: 1E88
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111011101000
+HEX format: 1EE8
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111010011000
+HEX format: 1E98
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111100101000
+HEX format: 1F28
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = -2
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100000100010
+HEX format: 1822
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1100000101010
-HEX format: 182A
+1100010000010
+HEX format: 1882
 Size of sequence: 13
-ACF(1) = -2
-ACF(2) = 5
-ACF(3) = -4
-ACF(4) = 1
-ACF(5) = -4
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100110000010
+HEX format: 1982
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100100001010
+HEX format: 190A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100111111010
+HEX format: 19FA
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
+MAX ACF(phase) = 2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1100110101010
-HEX format: 19AA
+1101100001010
+HEX format: 1B0A
 Size of sequence: 13
-ACF(1) = -6
+ACF(1) = -2
 ACF(2) = 1
-ACF(3) = -4
-ACF(4) = 5
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1110000010010
-HEX format: 1C12
+1110000100010
+HEX format: 1C22
 Size of sequence: 13
 ACF(1) = 2
 ACF(2) = 1
-ACF(3) = 2
-ACF(4) = -3
-ACF(5) = -2
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
-ACF(8) = -1
+ACF(8) = -3
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
@@ -954,14 +6588,212 @@ ACF(12) = -1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1111000101010
-HEX format: 1E2A
+1110010100010
+HEX format: 1CA2
 Size of sequence: 13
 ACF(1) = -2
-ACF(2) = 5
-ACF(3) = -6
+ACF(2) = 1
+ACF(3) = -2
 ACF(4) = 1
-ACF(5) = -4
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110111010010
+HEX format: 1DD2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110010001010
+HEX format: 1C8A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110011001010
+HEX format: 1CCA
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110011011010
+HEX format: 1CDA
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110110001010
+HEX format: 1D8A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111000100010
+HEX format: 1E22
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111001100010
+HEX format: 1E62
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111000110010
+HEX format: 1E32
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111010110010
+HEX format: 1EB2
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111001001010
+HEX format: 1E4A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111001101010
+HEX format: 1E6A
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
@@ -969,26 +6801,26 @@ ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1111110101010
-HEX format: 1FAA
+1111100011010
+HEX format: 1F1A
 Size of sequence: 13
-ACF(1) = -2
-ACF(2) = 9
+ACF(1) = 2
+ACF(2) = 1
 ACF(3) = -2
-ACF(4) = 5
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
 ACF(9) = 0
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = -1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 1111110011010
 HEX format: 1F9A
@@ -1008,12 +6840,264 @@ ACF(12) = -1
 MAX ACF(phase) = 2
 Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1111110100110
-HEX format: 1FA6
+1110000100110
+HEX format: 1C26
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110101100110
+HEX format: 1D66
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111010100110
+HEX format: 1EA6
+Size of sequence: 13
+ACF(1) = -2
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1111001101110
+HEX format: 1E6E
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111011001110
+HEX format: 1ECE
+Size of sequence: 13
+ACF(1) = 2
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111101001110
+HEX format: 1F4E
 Size of sequence: 13
 ACF(1) = 2
 ACF(2) = 1
-ACF(3) = 4
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = -1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1000100100001
+HEX format: 1121
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000101100001
+HEX format: 1161
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000000101001
+HEX format: 1029
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001100101
+HEX format: 1065
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000000110101
+HEX format: 1035
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000100000101
+HEX format: 1105
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000011101101
+HEX format: 10ED
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000111101101
+HEX format: 11ED
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001100000101
+HEX format: 1305
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
 ACF(4) = 1
 ACF(5) = -2
 ACF(6) = 1
@@ -1021,118 +7105,532 @@ ACF(7) = 0
 ACF(8) = -1
 ACF(9) = 0
 ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
 ===========SUB_ACF_TEST===========
-1111110010110
-HEX format: 1F96
+1001111110101
+HEX format: 13F5
 Size of sequence: 13
-ACF(1) = 2
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001000011101
+HEX format: 121D
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001000111101
+HEX format: 123D
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010000010001
+HEX format: 1411
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010110000001
+HEX format: 1581
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010111111001
+HEX format: 15F9
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011011100001
+HEX format: 16E1
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1011101100001
+HEX format: 1761
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = -2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1011101111001
+HEX format: 1779
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = -2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001010011
+HEX format: 1053
+Size of sequence: 13
+ACF(1) = 0
 ACF(2) = 1
-ACF(3) = 4
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000010110011
+HEX format: 10B3
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000001101011
+HEX format: 106B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000010001011
+HEX format: 108B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000100001011
+HEX format: 110B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000101111011
+HEX format: 117B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1000111011011
+HEX format: 11DB
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001010000011
+HEX format: 1283
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
 ACF(4) = -3
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
 ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = -1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-1001011111111
-HEX format: 12FF
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 6
-ACF(4) = 1
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
+ACF(10) = -3
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1001101111111
-HEX format: 137F
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 1
-ACF(3) = 6
-ACF(4) = 5
-ACF(5) = 0
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-1001110011111
-HEX format: 139F
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = -3
-ACF(3) = -2
-ACF(4) = 1
-ACF(5) = 4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-1010011111111
-HEX format: 14FF
-Size of sequence: 13
-ACF(1) = 4
-ACF(2) = 5
-ACF(3) = 4
-ACF(4) = 1
-ACF(5) = 2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = 1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
-===========SUB_ACF_TEST===========
-1010101111111
-HEX format: 157F
+1001101000011
+HEX format: 1343
 Size of sequence: 13
 ACF(1) = 0
-ACF(2) = 9
+ACF(2) = -3
 ACF(3) = 0
-ACF(4) = 5
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001100001011
+HEX format: 130B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1001111101011
+HEX format: 13EB
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010001000011
+HEX format: 1443
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010010000011
+HEX format: 1483
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010111110011
+HEX format: 15F3
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
 ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010000111011
+HEX format: 143B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010001111011
+HEX format: 147B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010011111011
+HEX format: 14FB
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010001101111
+HEX format: 146F
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
 ACF(9) = 0
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010010001111
+HEX format: 148F
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1010011001111
+HEX format: 14CF
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 1010110011111
 HEX format: 159F
@@ -1170,59 +7668,311 @@ ACF(12) = 1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1100001010101
-HEX format: 1855
+1100101000001
+HEX format: 1941
 Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -6
-ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = -1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
-===========SUB_ACF_TEST===========
-1100100110101
-HEX format: 1935
-Size of sequence: 13
-ACF(1) = -4
-ACF(2) = -3
-ACF(3) = 2
-ACF(4) = 1
-ACF(5) = -4
-ACF(6) = 1
-ACF(7) = 0
-ACF(8) = 1
-ACF(9) = 0
-ACF(10) = -1
-ACF(11) = 0
-ACF(12) = 1
-MAX ACF(phase) = -4
-Protection rate: 10.2377
-===========SUB_ACF_TEST===========
-1100111010101
-HEX format: 19D5
-Size of sequence: 13
-ACF(1) = -4
+ACF(1) = 0
 ACF(2) = 1
-ACF(3) = -6
-ACF(4) = 5
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100110100001
+HEX format: 19A1
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100000101001
+HEX format: 1829
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
 ACF(5) = 0
 ACF(6) = 1
 ACF(7) = 0
 ACF(8) = 1
 ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100111101001
+HEX format: 19E9
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101000100001
+HEX format: 1A21
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011000001
+HEX format: 1AC1
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101110100001
+HEX format: 1BA1
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = -2
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101101110001
+HEX format: 1B71
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101111010001
+HEX format: 1BD1
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101000011001
+HEX format: 1A19
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101011111001
+HEX format: 1AF9
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = -3
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110001001001
+HEX format: 1C49
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = -2
 ACF(10) = -1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = -6
-Protection rate: 6.71584
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110111001001
+HEX format: 1DC9
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 2
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111000101001
+HEX format: 1E29
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = -2
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111011101001
+HEX format: 1EE9
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111100101001
+HEX format: 1F29
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = -3
+ACF(5) = 2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111101011001
+HEX format: 1F59
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 2
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = -1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 1110001101101
 HEX format: 1C6D
@@ -1242,23 +7992,59 @@ ACF(12) = 1
 MAX ACF(phase) = -3
 Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
-1111001010101
-HEX format: 1E55
+1111000100101
+HEX format: 1E25
 Size of sequence: 13
-ACF(1) = -4
-ACF(2) = 5
-ACF(3) = -4
-ACF(4) = 1
-ACF(5) = -2
-ACF(6) = 1
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -3
 ACF(7) = 0
-ACF(8) = -1
+ACF(8) = -3
 ACF(9) = 0
 ACF(10) = 1
 ACF(11) = 0
 ACF(12) = 1
-MAX ACF(phase) = 5
-Protection rate: 8.29947
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111001100101
+HEX format: 1E65
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111011000101
+HEX format: 1EC5
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 0
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
 ===========SUB_ACF_TEST===========
 1111100110101
 HEX format: 1F35
@@ -1278,22 +8064,274 @@ ACF(12) = 1
 MAX ACF(phase) = 1
 Protection rate: 22.2789
 ===========SUB_ACF_TEST===========
-1111111010101
-HEX format: 1FD5
+1100000101011
+HEX format: 182B
 Size of sequence: 13
 ACF(1) = 0
-ACF(2) = 9
+ACF(2) = 3
+ACF(3) = -2
+ACF(4) = -1
+ACF(5) = -2
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = -1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100010010111
+HEX format: 1897
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
 ACF(3) = 0
-ACF(4) = 5
+ACF(4) = -1
 ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100010110111
+HEX format: 18B7
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = 2
+ACF(8) = -3
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100101110111
+HEX format: 1977
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = -2
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = -1
+ACF(9) = -2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1100110101111
+HEX format: 19AF
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 2
 ACF(6) = 1
 ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 2
+Protection rate: 16.2583
+===========SUB_ACF_TEST===========
+1100101011111
+HEX format: 195F
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
 ACF(8) = 1
 ACF(9) = 0
 ACF(10) = 1
-ACF(11) = 0
+ACF(11) = 2
 ACF(12) = 1
-MAX ACF(phase) = 9
-Protection rate: 3.19402
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101001000111
+HEX format: 1A47
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101101000111
+HEX format: 1B47
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = -2
+ACF(6) = 1
+ACF(7) = 0
+ACF(8) = -1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101010011111
+HEX format: 1A9F
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1101110101111
+HEX format: 1BAF
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1110001001011
+HEX format: 1C4B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -3
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = -3
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = -3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111101010011
+HEX format: 1F53
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 1
+ACF(5) = 0
+ACF(6) = -1
+ACF(7) = -2
+ACF(8) = 1
+ACF(9) = 0
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111001101011
+HEX format: 1E6B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = -1
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 2
+ACF(6) = 3
+ACF(7) = -2
+ACF(8) = -1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111010111011
+HEX format: 1EBB
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = 3
+ACF(5) = 0
+ACF(6) = 3
+ACF(7) = 2
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
+===========SUB_ACF_TEST===========
+1111100101011
+HEX format: 1F2B
+Size of sequence: 13
+ACF(1) = 0
+ACF(2) = 3
+ACF(3) = 0
+ACF(4) = -1
+ACF(5) = 0
+ACF(6) = -3
+ACF(7) = 0
+ACF(8) = 1
+ACF(9) = 2
+ACF(10) = 1
+ACF(11) = 2
+ACF(12) = 1
+MAX ACF(phase) = 3
+Protection rate: 12.7364
 ===========END_ACF_TEST===========
 
