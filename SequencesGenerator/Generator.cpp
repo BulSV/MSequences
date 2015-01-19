@@ -2,12 +2,17 @@
 #include <QtMath>
 #include <QDebug>
 
-Generator::Generator(const int &seqSize, const int &absScatter, bool isFiltered, QObject *parent) :
+Generator::Generator(const int &seqSize,
+                     const int &absScatter,
+                     bool isFiltered,
+                     const int &absMaxScatter,
+                     QObject *parent) :
     QObject(parent)
   , m_isFiltered(isFiltered)
 {
     setSequenceSize(seqSize);
     setAbsScatter(absScatter);
+    setAbsMaxScatter(absMaxScatter);
     fillCombinations();
 }
 
@@ -18,12 +23,30 @@ Generator::~Generator()
 
 void Generator::setAbsScatter(const int &absScatter)
 {
-    m_absScatter = qAbs(absScatter);
+    if(qAbs(absScatter)) {
+        m_absScatter = qAbs(absScatter);
+    } else {
+        m_absScatter = 1;
+    }
+}
+
+void Generator::setAbsMaxScatter(const int &absMaxScatter)
+{
+    if(qAbs(absMaxScatter)) {
+        m_absMaxScatter = absMaxScatter;
+    } else {
+        m_absMaxScatter = 1;
+    }
 }
 
 int Generator::getAbsScatter() const
 {
     return m_absScatter;
+}
+
+int Generator::getAbsMaxScatter() const
+{
+    return m_absMaxScatter;
 }
 
 void Generator::setSequenceSize(const int &seqSize)
@@ -114,13 +137,13 @@ bool Generator::filter()
 {
     int summa = 0;
 
-    for(int phase = 1; phase < m_seqSize; ++phase) {
+    for(int phase = 1; phase < ((m_seqSize & 1) ? (m_seqSize - 1)/2 : m_seqSize/2); ++phase) {
         for(int index = 0; index < m_seqSize - phase; ++index) {
             summa += m_sequence.at(index)*m_sequence.at(index + phase);
         }
-        qDebug() << "bool Generator::filter():" << (qAbs(summa) <= m_absScatter);
+        qDebug() << "bool Generator::filter():" << (qAbs(summa) <= m_absMaxScatter);
         qDebug() << "summa =" << summa;
-        if(qAbs(summa) > m_absScatter) {
+        if(qAbs(summa) > m_absMaxScatter) {
             return false;
         }
         summa = 0;
