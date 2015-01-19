@@ -1,5 +1,5 @@
 #include "Generator.h"
-
+#include <QtMath>
 #include <QDebug>
 
 Generator::Generator(const int &seqSize, const int &absScatter, QObject *parent) :
@@ -42,7 +42,7 @@ int Generator::getSequenceSize() const
 }
 
 void Generator::generate()
-{    
+{
     int phase = m_seqSize - 1;
 
     m_sequence.fill(0, m_seqSize);
@@ -55,25 +55,48 @@ void Generator::gen(int phase)
     qDebug() << "in gen(" << phase << ")";
     int summa = 0;
 
-    if(phase >= ((m_seqSize & 1) ? (m_seqSize + 1)/2 : m_seqSize/2)) {
-        for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
-            m_sequence[m_seqSize - phase - 1] = m_combs[combIndex];
-            m_sequence[phase] = m_combs[combIndex + 1];
-            qDebug() << "level:" << m_seqSize - phase;
-            qDebug() << "combinations(" << m_combs[combIndex] << "," << m_combs[combIndex + 1] << ")";
-            qDebug() << "combIndex =" << combIndex;
-            for(int index = 0; index < m_seqSize - phase; ++index) {
-                summa += m_sequence.at(index)*m_sequence.at(index + phase);
+    if(phase >= ((m_seqSize & 1) ? (m_seqSize - 1)/2 : m_seqSize/2)) {
+        if((m_seqSize & 1) && (phase == ((m_seqSize & 1) ? (m_seqSize - 1)/2 : m_seqSize/2))) {
+            for(int combIndex = 0; combIndex < 2; ++combIndex) {
+                m_sequence[phase] = qPow(-1, combIndex + 1);
+                qDebug() << "level:" << m_seqSize - phase;
+                qDebug() << "combinations(" << qPow(-1, combIndex + 1) << ")";
+                qDebug() << "combIndex =" << combIndex;
+                qDebug() << "m_sequence[" << phase << "] =" << m_sequence[phase];
+                for(int index = 0; index < m_seqSize - phase; ++index) {
+                    summa += m_sequence.at(index)*m_sequence.at(index + phase);
+                }
+                qDebug() << "summa =" << summa;
+                if(qAbs(summa) <= m_absScatter) {
+                    gen(--phase);
+                    ++phase;
+                } else {
+                    summa = 0;
+                    m_sequence[m_seqSize - phase - 1] = 0;
+                    m_sequence[phase] = 0;
+                    qDebug() << "Wrong branch!";
+                }
             }
-            qDebug() << "summa =" << summa;
-            if(qAbs(summa) <= m_absScatter) {
-                gen(--phase);
-                ++phase;
-            } else {
-                summa = 0;
-                m_sequence[m_seqSize - phase - 1] = 0;
-                m_sequence[phase] = 0;
-                qDebug() << "Wrong branch!";
+        } else {
+            for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
+                m_sequence[m_seqSize - phase - 1] = m_combs[combIndex];
+                m_sequence[phase] = m_combs[combIndex + 1];
+                qDebug() << "level:" << m_seqSize - phase;
+                qDebug() << "combinations(" << m_combs[combIndex] << "," << m_combs[combIndex + 1] << ")";
+                qDebug() << "combIndex =" << combIndex;
+                for(int index = 0; index < m_seqSize - phase; ++index) {
+                    summa += m_sequence.at(index)*m_sequence.at(index + phase);
+                }
+                qDebug() << "summa =" << summa;
+                if(qAbs(summa) <= m_absScatter) {
+                    gen(--phase);
+                    ++phase;
+                } else {
+                    summa = 0;
+                    m_sequence[m_seqSize - phase - 1] = 0;
+                    m_sequence[phase] = 0;
+                    qDebug() << "Wrong branch!";
+                }
             }
         }
     } else {
