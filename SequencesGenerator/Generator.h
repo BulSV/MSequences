@@ -9,15 +9,15 @@ class Generator : public QObject
     Q_OBJECT
 public:
     explicit Generator(const int &seqSize,
-                       const int &absScatter = 1,
+                       const int &terminalSideLobes = 1,
                        bool isFiltered = true,
-                       const int &absMaxScatter = 1,
+                       const int &closeCentralSideLobes = 1,
                        QObject *parent = 0);
     ~Generator();
-    void setAbsScatter(const int &absScatter);
-    void setAbsMaxScatter(const int &absMaxScatter);
-    int getAbsScatter() const;
-    int getAbsMaxScatter() const;
+    void setCloseCentralSideLobes(const int &closeCentralSideLobes);
+    void setTerminalSideLobes(const int &absMaxScatter);
+    int getCloseCentralSideLobes() const;
+    int getTerminalSideLobes() const;
     void setSequenceSize(const int &seqSize);
     int getSequenceSize() const;
     void generate();
@@ -27,16 +27,21 @@ signals:
 private:
     int m_combSize;
     int m_seqSize;
-    int m_absScatter;
+    int m_closeCentralSideLobes;
     bool m_isFiltered;
-    int m_absMaxScatter;
+    int m_terminalSideLobes;
     int *m_combs;
     QVector<int> m_sequence;
     QVector<QVector<int> > m_sequences;
+    QString m_progressBar;
+    int m_progress;
 
     void fillCombinations();
     void gen(int phase);
+    int phaseLimit();
+    bool isOddSeqSize();
     bool filter();
+    void progressBar();
 };
 
 #endif // GENERATOR_H

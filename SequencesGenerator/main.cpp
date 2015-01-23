@@ -9,9 +9,10 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    Generator *generator = new Generator(51, 3, true, 3);
+    Generator *generator = new Generator(18, 2, true, 2);
     ConsoleView *view = new ConsoleView(generator, "output.txt");
     generator->generate();
+    qDebug() << "END";
 
     return a.exec();
 }

@@ -25,7 +25,7 @@ CONFIG(debug, debug|release) {
 
     TARGET = SequencesGeneratorProd
 
-    DEFINES += DEBUG
+#    DEFINES += DEBUG
 }
 else {
     unix:DESTDIR = ../release/SequencesGenerator/unix
