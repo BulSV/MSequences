@@ -52,6 +52,16 @@ void Generator::setTerminalSideLobes(const int &absMaxScatter)
     }
 }
 
+void Generator::setFiltered(const bool &isFiltered)
+{
+    m_isFiltered = isFiltered;
+}
+
+bool Generator::isFiltered() const
+{
+    return m_isFiltered;
+}
+
 int Generator::getCloseCentralSideLobes() const
 {
     return m_closeCentralSideLobes;
@@ -110,7 +120,7 @@ void Generator::progressBar()
 void Generator::gen(int phase)
 {
 #ifndef DEBUG
-    progressBar();
+//    progressBar();
 #endif
 #ifdef DEBUG
     qDebug() << "in gen(" << phase << ")";

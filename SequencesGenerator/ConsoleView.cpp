@@ -42,6 +42,7 @@ void ConsoleView::setFileHandler(const QString &fileOutput)
     if(!m_file.isOpen() && !m_file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + m_file.fileName() + "\"").toStdString().c_str());
     }
+    m_file.close();
 }
 
 QString ConsoleView::fromIntToBoolString(const int &currentInt)

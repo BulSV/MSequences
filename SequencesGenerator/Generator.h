@@ -16,6 +16,8 @@ public:
     ~Generator();
     void setCloseCentralSideLobes(const int &closeCentralSideLobes);
     void setTerminalSideLobes(const int &absMaxScatter);
+    void setFiltered(const bool &isFiltered);
+    bool isFiltered() const;
     int getCloseCentralSideLobes() const;
     int getTerminalSideLobes() const;
     void setSequenceSize(const int &seqSize);
