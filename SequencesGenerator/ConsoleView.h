@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QVector>
 #include <QFile>
+#include <QMutex>
 #include "IView.h"
 #include "Generator.h"
 
@@ -18,6 +19,7 @@ public slots:
     void printToFile(const QVector<int> &currentSequence);
     void show(const QVector<int> &currentSequence);
 private:
+    mutable QMutex m_mutex;
     Generator *m_generator;
     QFile m_file;
 

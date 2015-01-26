@@ -1,5 +1,7 @@
 #include "Generator.h"
 #include <QtMath>
+#include <QFuture>
+#include <QtConcurrent/QtConcurrent>
 
 #if defined (Q_OS_UNIX)
 #include <QProcess>
@@ -22,7 +24,7 @@ Generator::Generator(const int &seqSize,
     setSequenceSize(seqSize);
     setCloseCentralSideLobes(closeCentralSideLobes);
     setTerminalSideLobes(terminalSideLobes);
-    fillCombinations();
+    fillCombinations();    
 }
 
 Generator::~Generator()
@@ -88,13 +90,28 @@ int Generator::getSequenceSize() const
     return m_seqSize;
 }
 
+QVector<bool> Generator::m_wasShown;
+
 void Generator::generate()
 {
     int phase = m_seqSize - 1;
+//    Generator::m_wasShown.fill(false, 4);
 
     m_sequence.fill(0, m_seqSize);
+    for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
+        m_sequence[m_seqSize - phase - 1] = m_combs[combIndex];
+        m_sequence[phase] = m_combs[combIndex + 1];
+        m_tempSequences.append(m_sequence);
+    }
 
-   gen(phase);
+    QVector<QFuture<void> > fs;
+    for(int i = 0; i < m_combSize/2; ++i) {
+        fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i]/*, i*/));
+    }
+
+    for(int i = 0; i < m_combSize/2; ++i) {
+        fs[i].waitForFinished();
+    }
 }
 
 void Generator::progressBar()
@@ -117,8 +134,13 @@ void Generator::progressBar()
     qDebug() << "Total found:" << m_sequences.size();
 }
 
-void Generator::gen(int phase)
+
+void Generator::gen(int phase, QVector<int> &seq)
 {
+//    if(i < 4 && !m_wasShown.at(i)) {
+//        qDebug() << "Thread:" << QThread::currentThreadId();
+//        m_wasShown[i] = true;
+//    }
 #ifndef DEBUG
 //    progressBar();
 #endif
@@ -127,10 +149,10 @@ void Generator::gen(int phase)
 #endif
     int summa = 0;
 
-    if(phase >= phaseLimit() && phase < m_seqSize) {
+    if(phase >= phaseLimit() && phase < m_seqSize - 1) {
         if(isOddSeqSize() && (phase == phaseLimit())) {
             for(int combIndex = 0; combIndex < 2; ++combIndex) {
-                m_sequence[phase] = qPow(-1, combIndex + 1);
+                seq[phase] = qPow(-1, combIndex + 1);
 #ifdef DEBUG
                 qDebug() << "level:" << m_seqSize - phase;
                 qDebug() << "combinations(" << qPow(-1, combIndex + 1) << ")";
@@ -138,13 +160,13 @@ void Generator::gen(int phase)
                 qDebug() << "m_sequence[" << phase << "] =" << m_sequence[phase];
 #endif
                 for(int index = 0; index < m_seqSize - phase; ++index) {
-                    summa += m_sequence.at(index)*m_sequence.at(index + phase);
+                    summa += seq.at(index)*seq.at(index + phase);
                 }
 #ifdef DEBUG
                 qDebug() << "summa =" << summa;
 #endif
                 if(qAbs(summa) <= m_terminalSideLobes) {
-                    gen(phase - 1);
+                    gen(phase - 1, seq);
                 } else {
                     m_sequence[phase] = 0;
 #ifdef DEBUG
@@ -155,24 +177,24 @@ void Generator::gen(int phase)
             }
         } else {
             for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
-                m_sequence[m_seqSize - phase - 1] = m_combs[combIndex];
-                m_sequence[phase] = m_combs[combIndex + 1];
+                seq[m_seqSize - phase - 1] = m_combs[combIndex];
+                seq[phase] = m_combs[combIndex + 1];
 #ifdef DEBUG
                 qDebug() << "level:" << m_seqSize - phase;
                 qDebug() << "combinations(" << m_combs[combIndex] << "," << m_combs[combIndex + 1] << ")";
                 qDebug() << "combIndex =" << combIndex;
 #endif
                 for(int index = 0; index < m_seqSize - phase; ++index) {
-                    summa += m_sequence.at(index)*m_sequence.at(index + phase);
+                    summa += seq.at(index)*seq.at(index + phase);
                 }
 #ifdef DEBUG
                 qDebug() << "summa =" << summa;
 #endif
                 if(qAbs(summa) <= m_terminalSideLobes) {
-                    gen(phase - 1);
+                    gen(phase - 1, seq);
                 } else {
-                    m_sequence[m_seqSize - phase - 1] = 0;
-                    m_sequence[phase] = 0;
+                    seq[m_seqSize - phase - 1] = 0;
+                    seq[phase] = 0;
 #ifdef DEBUG
                     qDebug() << "Wrong branch!";
 #endif
@@ -180,12 +202,13 @@ void Generator::gen(int phase)
                 summa = 0;
             }
         }
-    } else if((m_isFiltered && filter()) || !m_isFiltered) {
+    } else if((m_isFiltered && filter(seq)) || !m_isFiltered) {
 #ifdef DEBUG
             qDebug() << "emit sequenceGenerated(" << m_sequence << ")";
 #endif
-            emit sequenceGenerated(m_sequence);
-            m_sequences.append(m_sequence);
+            QMutexLocker locker(&m_mutex); // ? need or not
+            emit sequenceGenerated(seq);
+            m_sequences.append(seq);
     }
 }
 
@@ -199,13 +222,13 @@ bool Generator::isOddSeqSize()
     return (m_seqSize & 1);
 }
 
-bool Generator::filter()
+bool Generator::filter(const QVector<int> &seq)
 {
     int summa = 0;
 
     for(int phase = 1; phase < ((m_seqSize & 1) ? (m_seqSize - 1)/2 : m_seqSize/2); ++phase) {
         for(int index = 0; index < m_seqSize - phase; ++index) {
-            summa += m_sequence.at(index)*m_sequence.at(index + phase);
+            summa += seq.at(index)*seq.at(index + phase);
         }
 #ifdef DEBUG
         qDebug() << "[!]*****bool Generator::filter():" << (qAbs(summa) <= m_closeCentralSideLobes);

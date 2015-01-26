@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QVector>
+#include <QMutex>
 
 class Generator : public QObject
 {
@@ -34,16 +35,20 @@ private:
     int m_terminalSideLobes;
     int *m_combs;
     QVector<int> m_sequence;
+    QVector<QVector<int> > m_tempSequences;
     QVector<QVector<int> > m_sequences;
     QString m_progressBar;
     int m_progress;
+    QMutex m_mutex;
 
     void fillCombinations();
-    void gen(int phase);
+    void gen(int phase, QVector<int> &seq/*, int i = 0*/);
     int phaseLimit();
     bool isOddSeqSize();
-    bool filter();
+    bool filter(const QVector<int> &seq);
     void progressBar();
+
+    static QVector<bool> m_wasShown;
 };
 
 #endif // GENERATOR_H

@@ -32,10 +32,11 @@ void resultsOutput(QTextStream &fout, Generator *generator, QFile &file)
     file.close();
 
     generator->generate();
+    qApp->processEvents(); // for synchronizing outputs of sequences, cout and fout
 
     if(!file.isOpen() && !file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + file.fileName() + "\"").toStdString().c_str());
-    }
+    }    
     cout << "Total generated sequences: " << generator->getSequences().size() << "\n";
     cout << "Generation is over!";
     fout << "Total generated sequences: " << generator->getSequences().size() << "\n";
@@ -47,11 +48,13 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
+    qRegisterMetaType<QVector<int> >("QVector<int>");
+
     QFile file("output.txt");
     QTextStream fout(&file);
 
-    Generator *generator = new Generator(51, 3, true, 1);
-    ConsoleView *view = new ConsoleView(generator, file.fileName());
+    Generator *generator = new Generator(51, 4, true, 1);
+    ConsoleView *view = new ConsoleView(generator, file.fileName());    
 
     resultsOutput(fout, generator, file);
 

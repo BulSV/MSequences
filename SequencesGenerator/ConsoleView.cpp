@@ -12,6 +12,8 @@ ConsoleView::ConsoleView(Generator *generator, const QString &fileOutput, QObjec
 
 void ConsoleView::printToFile(const QVector<int> &currentSequence)
 {
+    QMutexLocker locker(&m_mutex);
+
     if(!m_file.isOpen() && !m_file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + m_file.fileName() + "\"").toStdString().c_str());
     }
@@ -28,6 +30,8 @@ void ConsoleView::printToFile(const QVector<int> &currentSequence)
 
 void ConsoleView::show(const QVector<int> &currentSequence)
 {
+    QMutexLocker locker(&m_mutex);
+
     QTextStream out(stdout);
 
     for(int i = 0; i < currentSequence.size(); ++i) {
