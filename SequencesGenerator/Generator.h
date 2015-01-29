@@ -29,11 +29,13 @@ signals:
     void sequenceGenerated(QVector<int>);
 private:
     int m_combSize;
+    int m_combSizeSimplified;
     int m_seqSize;
     int m_closeCentralSideLobes;
     bool m_isFiltered;
     int m_terminalSideLobes;
     int *m_combs;
+    int *m_combsSimplified;
     QVector<int> m_sequence;
     QVector<QVector<int> > m_tempSequences;
     QVector<QVector<int> > m_sequences;
@@ -42,7 +44,7 @@ private:
     QMutex m_mutex;
 
     void fillCombinations();
-    void gen(int phase, QVector<int> &seq/*, int i = 0*/);
+    void gen(int phase, QVector<int> &seq, bool isSimplified/*, int i = 0*/);
     int phaseLimit();
     bool isOddSeqSize();
     bool filter(const QVector<int> &seq);
