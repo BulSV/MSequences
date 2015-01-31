@@ -36,7 +36,7 @@ void resultsOutput(QTextStream &fout, Generator *generator, QFile &file)
 
     if(!file.isOpen() && !file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + file.fileName() + "\"").toStdString().c_str());
-    }    
+    }
     cout << "Total generated sequences: " << generator->getSequences().size() << "\n";
     cout << "Generation is over!";
     fout << "Total generated sequences: " << generator->getSequences().size() << "\n";
@@ -53,10 +53,22 @@ int main(int argc, char *argv[])
     QFile file("output.txt");
     QTextStream fout(&file);
 
-    Generator *generator = new Generator(51, 4, true, 1);
-    ConsoleView *view = new ConsoleView(generator, file.fileName());    
+    Generator *generator = new Generator(13, 1, true, 1);
+    ConsoleView *view = new ConsoleView(generator, file.fileName());
 
     resultsOutput(fout, generator, file);
+
+    QVector<QVector<int> > combs;
+    qDebug();
+    for(int i = 0; i < generator->getSequences().size(); ++i) {
+        qDebug() << "\nFor:";
+        view->show(generator->getSequences().at(i));
+        qDebug() << "combinations are:";
+        combs = Generator::combinations(generator->getSequences().at(i));        
+        for(int j = 0; j < combs.size(); ++j) {
+            view->show(combs.at(j));
+        }
+    }
 
     return a.exec();
 }

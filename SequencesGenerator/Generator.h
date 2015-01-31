@@ -25,6 +25,8 @@ public:
     int getSequenceSize() const;
     void generate();
     QVector<QVector<int> > getSequences();
+
+    static QVector<QVector<int> > combinations(const QVector<int> &seq);
 signals:
     void sequenceGenerated(QVector<int>);
 private:
@@ -36,7 +38,6 @@ private:
     int m_terminalSideLobes;
     int *m_combs;
     int *m_combsSimplified;
-    QVector<int> m_sequence;
     QVector<QVector<int> > m_tempSequences;
     QVector<QVector<int> > m_sequences;
     QString m_progressBar;
@@ -44,13 +45,14 @@ private:
     QMutex m_mutex;
 
     void fillCombinations();
-    void gen(int phase, QVector<int> &seq, bool isSimplified/*, int i = 0*/);
+    void gen(int phase, QVector<int> &seq, bool isSimplified);
     int phaseLimit();
     bool isOddSeqSize();
     bool filter(const QVector<int> &seq);
-    void progressBar();
 
-    static QVector<bool> m_wasShown;
+    static QVector<int> mirrorSeq(const QVector<int> &seq);
+    static QVector<int> reverseSeq(const QVector<int> &seq);
+    static QVector<int> phaseOffsetSeq(const QVector<int> &seq);
 };
 
 #endif // GENERATOR_H

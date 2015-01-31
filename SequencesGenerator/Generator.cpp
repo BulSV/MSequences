@@ -3,13 +3,9 @@
 #include <QFuture>
 #include <QtConcurrent/QtConcurrent>
 
-#if defined (Q_OS_UNIX)
-#include <QProcess>
-#endif
-
-//#ifdef DEBUG
+#ifdef DEBUG
 #include <QDebug>
-//#endif
+#endif
 
 Generator::Generator(const int &seqSize,
                      const int &terminalSideLobes,
@@ -91,66 +87,39 @@ int Generator::getSequenceSize() const
     return m_seqSize;
 }
 
-QVector<bool> Generator::m_wasShown;
-
 void Generator::generate()
 {
     int phase = m_seqSize - 1;
-//    Generator::m_wasShown.fill(false, 4);
+    QVector<int> sequence;
 
-    m_sequence.fill(0, m_seqSize);
-    for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
-        m_sequence[m_seqSize - phase - 1] = m_combs[combIndex];
-        m_sequence[phase] = m_combs[combIndex + 1];
-        m_tempSequences.append(m_sequence);
+    sequence.fill(0, m_seqSize);
+    sequence[m_seqSize - phase - 1] = -1;
+    sequence[phase] = -1;
+    --phase;
+    for(int combIndex = 0; combIndex < m_combSizeSimplified; combIndex += 2) {
+        sequence[m_seqSize - phase - 1] = m_combs[combIndex];
+        sequence[phase] = m_combs[combIndex + 1];
+        m_tempSequences.append(sequence);
     }
 
     QVector<QFuture<void> > fs;
-    for(int i = 0; i < m_combSize/2; ++i) {
-        fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i], true/*, i*/));
+    for(int i = 0; i < m_combSizeSimplified/2; ++i) {
+        fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i], true));
     }
 
-    for(int i = 0; i < m_combSize/2; ++i) {
+    for(int i = 0; i < m_combSizeSimplified/2; ++i) {
         fs[i].waitForFinished();
     }
 }
 
-void Generator::progressBar()
+void Generator::gen(int phase, QVector<int> &seq, bool isSimplified)
 {
-#if defined (Q_OS_UNIX)
-    QProcess::execute("clear");
-#elif defined (Q_OS_WIN)
-    system("cls");
-#endif
-    ++m_progress;
-    if(!(m_progress % 50)) {
-        m_progressBar.remove(m_progressBar.size() - 2, 2);
-        m_progressBar.append("=>]");
-    }
-    if(m_progressBar.size() == 50){
-        m_progressBar = "[ ]";
-        m_progress = 1;
-    }
-    qDebug() << m_progressBar.toStdString().c_str();
-    qDebug() << "Total found:" << m_sequences.size();
-}
-
-
-void Generator::gen(int phase, QVector<int> &seq, bool isSimplified/*, int i*/)
-{
-    //    if(i < 4 && !m_wasShown.at(i)) {
-    //        qDebug() << "Thread:" << QThread::currentThreadId();
-    //        m_wasShown[i] = true;
-    //    }
-#ifndef DEBUG
-    //    progressBar();
-#endif
 #ifdef DEBUG
     qDebug() << "in gen(" << phase << ")";
 #endif
     int summa = 0;
 
-    if(phase >= phaseLimit() && phase < m_seqSize - 1) {
+    if(phase >= phaseLimit() && phase < m_seqSize - 2) {
         if(isOddSeqSize() && (phase == phaseLimit())) {
             for(int combIndex = 0; combIndex < 2; ++combIndex) {
                 seq[phase] = qPow(-1, combIndex + 1);
@@ -158,7 +127,7 @@ void Generator::gen(int phase, QVector<int> &seq, bool isSimplified/*, int i*/)
                 qDebug() << "level:" << m_seqSize - phase;
                 qDebug() << "combinations(" << qPow(-1, combIndex + 1) << ")";
                 qDebug() << "combIndex =" << combIndex;
-                qDebug() << "m_sequence[" << phase << "] =" << m_sequence[phase];
+                qDebug() << "m_sequence[" << phase << "] =" << seq[phase];
 #endif
                 for(int index = 0; index < m_seqSize - phase; ++index) {
                     summa += seq.at(index)*seq.at(index + phase);
@@ -169,20 +138,20 @@ void Generator::gen(int phase, QVector<int> &seq, bool isSimplified/*, int i*/)
                 if(qAbs(summa) <= m_terminalSideLobes) {
                     gen(phase - 1, seq, isSimplified);
                 } else {
-                    m_sequence[phase] = 0;
+                    seq[phase] = 0;
 #ifdef DEBUG
                     qDebug() << "Wrong branch!";
 #endif
                 }
                 summa = 0;
             }
-        } else if(isSimplified && !(seq.at(m_seqSize - phase)^seq.at(phase + 1))) {
+        } else if(isSimplified && !((seq.at(m_seqSize - phase - 2))^(seq.at(phase + 1)))) {
             for(int combIndex = 0; combIndex < m_combSizeSimplified; combIndex += 2) {
-                seq[m_seqSize - phase - 1] = m_combs[combIndex];
-                seq[phase] = m_combs[combIndex + 1];
+                seq[m_seqSize - phase - 1] = m_combsSimplified[combIndex];
+                seq[phase] = m_combsSimplified[combIndex + 1];
 #ifdef DEBUG
                 qDebug() << "level:" << m_seqSize - phase;
-                qDebug() << "combinations(" << m_combs[combIndex] << "," << m_combs[combIndex + 1] << ")";
+                qDebug() << "combinations(" << m_combsSimplified[combIndex] << "," << m_combsSimplified[combIndex + 1] << ")";
                 qDebug() << "combIndex =" << combIndex;
 #endif
                 for(int index = 0; index < m_seqSize - phase; ++index) {
@@ -232,7 +201,7 @@ void Generator::gen(int phase, QVector<int> &seq, bool isSimplified/*, int i*/)
         }
     } else if((m_isFiltered && filter(seq)) || !m_isFiltered) {
 #ifdef DEBUG
-        qDebug() << "emit sequenceGenerated(" << m_sequence << ")";
+        qDebug() << "emit sequenceGenerated(" << seq << ")";
 #endif
         QMutexLocker locker(&m_mutex); // ? need or not
         emit sequenceGenerated(seq);
@@ -272,9 +241,61 @@ bool Generator::filter(const QVector<int> &seq)
     return true;
 }
 
+QVector<int> Generator::mirrorSeq(const QVector<int> &seq)
+{
+    QVector<int> res;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        seq.at(i) == 1 ? res.append(-1) : res.append(1);
+    }
+
+    return res;
+}
+
+QVector<int> Generator::reverseSeq(const QVector<int> &seq)
+{
+    QVector<int> res;
+
+    for(int i = seq.size() - 1; i > -1; --i) {
+        res.append(seq.at(i));
+    }
+
+    return res;
+}
+
+QVector<int> Generator::phaseOffsetSeq(const QVector<int> &seq)
+{
+    QVector<int> res;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        if(i % 2) {
+            res.append(-seq.at(i));
+        } else {
+            res.append(seq.at(i));
+        }
+    }
+
+    return res;
+}
+
 QVector<QVector<int> > Generator::getSequences()
 {
     return m_sequences;
+}
+
+QVector<QVector<int> > Generator::combinations(const QVector<int> &seq)
+{
+    QVector<QVector<int> > seqs;
+
+    seqs.append(mirrorSeq(seq));
+    seqs.append(reverseSeq(seq));
+    seqs.append(reverseSeq(mirrorSeq(seq)));
+    seqs.append(phaseOffsetSeq(seq));
+    seqs.append(phaseOffsetSeq(mirrorSeq(seq)));
+    seqs.append(phaseOffsetSeq(reverseSeq(seq)));
+    seqs.append(phaseOffsetSeq(reverseSeq(mirrorSeq(seq))));
+
+    return seqs;
 }
 
 void Generator::fillCombinations()
