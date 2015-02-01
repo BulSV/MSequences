@@ -6,9 +6,10 @@
 #include "Generator.h"
 #include "ConsoleView.h"
 
-void resultsOutput(QTextStream &fout, Generator *generator, QFile &file)
+void resultsOutput(Generator *generator, QFile &file)
 {
     QTextStream cout(stdout);
+    QTextStream fout(&file);
 
     if(!file.isOpen() && !file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + file.fileName() + "\"").toStdString().c_str());
@@ -50,13 +51,12 @@ int main(int argc, char *argv[])
 
     qRegisterMetaType<QVector<int> >("QVector<int>");
 
-    QFile file("output.txt");
-    QTextStream fout(&file);
+    QFile file("output.txt");    
 
     Generator *generator = new Generator(17, 2, true, 2);
     ConsoleView *view = new ConsoleView(generator, file.fileName());
 
-    resultsOutput(fout, generator, file);
+    resultsOutput(generator, file);
 
     QVector<QVector<int> > combs;
     qDebug();
