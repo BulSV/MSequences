@@ -31,13 +31,15 @@ signals:
     void sequenceGenerated(QVector<int>);
 private:
     int m_combSize;
-    int m_combSizeSimplified;
+    int m_combEvenSizeSimplified;
+    int m_combOddSizeSimplified;
     int m_seqSize;
     int m_closeCentralSideLobes;
     bool m_isFiltered;
     int m_terminalSideLobes;
     int *m_combs;
-    int *m_combsSimplified;
+    int *m_combsEvenSimplified;
+    int *m_combsOddSimplified;
     QVector<QVector<int> > m_tempSequences;
     QVector<QVector<int> > m_sequences;
     QString m_progressBar;

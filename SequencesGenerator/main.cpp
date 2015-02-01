@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     QFile file("output.txt");
     QTextStream fout(&file);
 
-    Generator *generator = new Generator(13, 1, true, 1);
+    Generator *generator = new Generator(17, 2, true, 2);
     ConsoleView *view = new ConsoleView(generator, file.fileName());
 
     resultsOutput(fout, generator, file);
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     for(int i = 0; i < generator->getSequences().size(); ++i) {
         qDebug() << "\nFor:";
         view->show(generator->getSequences().at(i));
-        qDebug() << "combinations are:";
+        qDebug() << "Additional combinations are:";
         combs = Generator::combinations(generator->getSequences().at(i));        
         for(int j = 0; j < combs.size(); ++j) {
             view->show(combs.at(j));

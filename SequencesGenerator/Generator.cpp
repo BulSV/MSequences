@@ -26,7 +26,8 @@ Generator::Generator(const int &seqSize,
 Generator::~Generator()
 {
     delete[] m_combs;
-    delete[] m_combsSimplified;
+    delete[] m_combsEvenSimplified;
+    delete[] m_combsOddSimplified;
 }
 
 void Generator::setCloseCentralSideLobes(const int &closeCentralSideLobes)
@@ -91,118 +92,119 @@ void Generator::generate()
 {
     int phase = m_seqSize - 1;
     QVector<int> sequence;
+    QVector<QFuture<void> > fs;
 
     sequence.fill(0, m_seqSize);
-    sequence[m_seqSize - phase - 1] = -1;
-    sequence[phase] = -1;
-    --phase;
-    for(int combIndex = 0; combIndex < m_combSizeSimplified; combIndex += 2) {
-        sequence[m_seqSize - phase - 1] = m_combs[combIndex];
-        sequence[phase] = m_combs[combIndex + 1];
-        m_tempSequences.append(sequence);
-    }
+    if(!isOddSeqSize()) {
+        sequence[m_seqSize - phase - 1] = -1;
+        sequence[phase] = -1;
+        --phase;
+        for(int combIndex = 0; combIndex < m_combEvenSizeSimplified; combIndex += 2) {
+            sequence[m_seqSize - phase - 1] = m_combsEvenSimplified[combIndex];
+            sequence[phase] = m_combsEvenSimplified[combIndex + 1];
+            m_tempSequences.append(sequence);
+        }
 
-    QVector<QFuture<void> > fs;
-    for(int i = 0; i < m_combSizeSimplified/2; ++i) {
-        fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i], true));
-    }
+        for(int i = 0; i < m_combEvenSizeSimplified/2; ++i) {
+            fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i], true));
+        }
 
-    for(int i = 0; i < m_combSizeSimplified/2; ++i) {
-        fs[i].waitForFinished();
+        for(int i = 0; i < m_combEvenSizeSimplified/2; ++i) {
+            fs[i].waitForFinished();
+        }
+    } else {
+        for(int combIndex = 0; combIndex < m_combOddSizeSimplified; combIndex += 2) {
+            sequence[m_seqSize - phase - 1] = m_combsOddSimplified[combIndex];
+            sequence[phase] = m_combsOddSimplified[combIndex + 1];
+            m_tempSequences.append(sequence);
+        }
+
+        for(int i = 0; i < m_combOddSizeSimplified/2; ++i) {
+            fs.append(QtConcurrent::run(this, &Generator::gen, phase - 1, m_tempSequences[i], true));
+        }
+
+        for(int i = 0; i < m_combOddSizeSimplified/2; ++i) {
+            fs[i].waitForFinished();
+        }
     }
 }
 
 void Generator::gen(int phase, QVector<int> &seq, bool isSimplified)
 {
-#ifdef DEBUG
-    qDebug() << "in gen(" << phase << ")";
-#endif
     int summa = 0;
 
-    if(phase >= phaseLimit() && phase < m_seqSize - 2) {
+    if(phase >= phaseLimit()
+            && ((!isOddSeqSize() && phase < m_seqSize - 2)
+                || (isOddSeqSize() && phase < m_seqSize - 1))) {
         if(isOddSeqSize() && (phase == phaseLimit())) {
             for(int combIndex = 0; combIndex < 2; ++combIndex) {
                 seq[phase] = qPow(-1, combIndex + 1);
-#ifdef DEBUG
-                qDebug() << "level:" << m_seqSize - phase;
-                qDebug() << "combinations(" << qPow(-1, combIndex + 1) << ")";
-                qDebug() << "combIndex =" << combIndex;
-                qDebug() << "m_sequence[" << phase << "] =" << seq[phase];
-#endif
+
                 for(int index = 0; index < m_seqSize - phase; ++index) {
                     summa += seq.at(index)*seq.at(index + phase);
                 }
-#ifdef DEBUG
-                qDebug() << "summa =" << summa;
-#endif
+
                 if(qAbs(summa) <= m_terminalSideLobes) {
                     gen(phase - 1, seq, isSimplified);
                 } else {
                     seq[phase] = 0;
-#ifdef DEBUG
-                    qDebug() << "Wrong branch!";
-#endif
                 }
                 summa = 0;
             }
-        } else if(isSimplified && !((seq.at(m_seqSize - phase - 2))^(seq.at(phase + 1)))) {
-            for(int combIndex = 0; combIndex < m_combSizeSimplified; combIndex += 2) {
-                seq[m_seqSize - phase - 1] = m_combsSimplified[combIndex];
-                seq[phase] = m_combsSimplified[combIndex + 1];
-#ifdef DEBUG
-                qDebug() << "level:" << m_seqSize - phase;
-                qDebug() << "combinations(" << m_combsSimplified[combIndex] << "," << m_combsSimplified[combIndex + 1] << ")";
-                qDebug() << "combIndex =" << combIndex;
-#endif
-                for(int index = 0; index < m_seqSize - phase; ++index) {
-                    summa += seq.at(index)*seq.at(index + phase);
+        } else if(isSimplified && !isOddSeqSize() && !((seq.at(m_seqSize - phase - 2))^(seq.at(phase + 1)))) {
+                for(int combIndex = 0; combIndex < m_combEvenSizeSimplified; combIndex += 2) {
+                    seq[m_seqSize - phase - 1] = m_combsEvenSimplified[combIndex];
+                    seq[phase] = m_combsEvenSimplified[combIndex + 1];
+
+                    for(int index = 0; index < m_seqSize - phase; ++index) {
+                        summa += seq.at(index)*seq.at(index + phase);
+                    }
+
+                    if(qAbs(summa) <= m_terminalSideLobes) {
+                        gen(phase - 1, seq, isSimplified);
+                    } else {
+                        seq[m_seqSize - phase - 1] = 0;
+                        seq[phase] = 0;
+                    }
+                    summa = 0;
                 }
-#ifdef DEBUG
-                qDebug() << "summa =" << summa;
-#endif
-                if(qAbs(summa) <= m_terminalSideLobes) {
-                    gen(phase - 1, seq, isSimplified);
-                } else {
-                    seq[m_seqSize - phase - 1] = 0;
-                    seq[phase] = 0;
-#ifdef DEBUG
-                    qDebug() << "Wrong branch!";
-#endif
+            } else if(isSimplified && isOddSeqSize() && !((seq.at(m_seqSize - phase - 1))^(seq.at(phase)))) {
+                for(int combIndex = 0; combIndex < m_combOddSizeSimplified; combIndex += 2) {
+                    seq[m_seqSize - phase - 1] = m_combsOddSimplified[combIndex];
+                    seq[phase] = m_combsOddSimplified[combIndex + 1];
+
+                    for(int index = 0; index < m_seqSize - phase; ++index) {
+                        summa += seq.at(index)*seq.at(index + phase);
+                    }
+
+                    if(qAbs(summa) <= m_terminalSideLobes) {
+                        gen(phase - 1, seq, isSimplified);
+                    } else {
+                        seq[m_seqSize - phase - 1] = 0;
+                        seq[phase] = 0;
+                    }
+                    summa = 0;
                 }
-                summa = 0;
-            }
-        } else {
+            } else {
             isSimplified = false;
             for(int combIndex = 0; combIndex < m_combSize; combIndex += 2) {
                 seq[m_seqSize - phase - 1] = m_combs[combIndex];
                 seq[phase] = m_combs[combIndex + 1];
-#ifdef DEBUG
-                qDebug() << "level:" << m_seqSize - phase;
-                qDebug() << "combinations(" << m_combs[combIndex] << "," << m_combs[combIndex + 1] << ")";
-                qDebug() << "combIndex =" << combIndex;
-#endif
+
                 for(int index = 0; index < m_seqSize - phase; ++index) {
                     summa += seq.at(index)*seq.at(index + phase);
                 }
-#ifdef DEBUG
-                qDebug() << "summa =" << summa;
-#endif
+
                 if(qAbs(summa) <= m_terminalSideLobes) {
                     gen(phase - 1, seq, isSimplified);
                 } else {
                     seq[m_seqSize - phase - 1] = 0;
                     seq[phase] = 0;
-#ifdef DEBUG
-                    qDebug() << "Wrong branch!";
-#endif
                 }
                 summa = 0;
             }
         }
     } else if((m_isFiltered && filter(seq)) || !m_isFiltered) {
-#ifdef DEBUG
-        qDebug() << "emit sequenceGenerated(" << seq << ")";
-#endif
         QMutexLocker locker(&m_mutex); // ? need or not
         emit sequenceGenerated(seq);
         m_sequences.append(seq);
@@ -301,17 +303,24 @@ QVector<QVector<int> > Generator::combinations(const QVector<int> &seq)
 void Generator::fillCombinations()
 {
     int v[] = {-1, -1, -1, 1, 1, -1, 1, 1};
-    int vSimple[] = {-1, -1, -1, 1, 1, 1};
+    int vEvenSimple[] = {-1, -1, -1, 1, 1, 1};
+    int vOddSimple[] = {-1, -1, -1, 1, 1, -1};
     m_combSize = 8;
-    m_combSizeSimplified = 6;
+    m_combEvenSizeSimplified = 6;
+    m_combOddSizeSimplified = 6;
     m_combs = new int[m_combSize];
-    m_combsSimplified = new int[m_combSizeSimplified];
+    m_combsEvenSimplified = new int[m_combEvenSizeSimplified];
+    m_combsOddSimplified = new int[m_combOddSizeSimplified];
 
     for(int i = 0; i < m_combSize; ++i) {
         m_combs[i] = v[i];
     }
 
-    for(int i = 0; i < m_combSizeSimplified; ++i) {
-        m_combsSimplified[i] = vSimple[i];
+    for(int i = 0; i < m_combEvenSizeSimplified; ++i) {
+        m_combsEvenSimplified[i] = vEvenSimple[i];
+    }
+
+    for(int i = 0; i < m_combOddSizeSimplified; ++i) {
+        m_combsOddSimplified[i] = vOddSimple[i];
     }
 }
