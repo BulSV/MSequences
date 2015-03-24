@@ -14,9 +14,9 @@ void resultsOutput(Generator *generator, QFile &file)
     if(!file.isOpen() && !file.open(QIODevice::Append | QIODevice::WriteOnly | QIODevice::Text)) {
         qErrnoWarning(QString("ERROR!\nCan't create file: \"" + file.fileName() + "\"").toStdString().c_str());
     }
-    cout << "Starting to generate a sequences with the following parameters:\n";
+    cout << "Starting to generate sequences with the following parameters:\n";
     cout << "\tSize: " << generator->getSequenceSize() << "\n";
-    fout << "Starting to generate a sequences with the following parameters:\n";
+    fout << "Starting to generate sequences with the following parameters:\n";
     fout << "\tSize: " << generator->getSequenceSize() << "\n";
     if(generator->isFiltered()) {
         cout << "\tClose-central side lobes within: |" << generator->getCloseCentralSideLobes() << "|\n";
@@ -26,9 +26,16 @@ void resultsOutput(Generator *generator, QFile &file)
         fout << "\tClose-central side lobes within: NOT LIMITED\n";
     }
     cout << "\tTerminal side lobes within: |" << generator->getTerminalSideLobes() << "|\n";
+    fout << "\tTerminal side lobes within: |" << generator->getTerminalSideLobes() << "|\n";
+    if(generator->isBalanced()) {
+        cout << "\tBalanced within: " << generator->disbalanse() << "\n";
+        fout << "\tBalanced within: " << generator->disbalanse() << "\n";
+    } else {
+        cout << "\tBalanced within: NOT BALANCED\n";
+        fout << "\tBalanced within: NOT BALANCED\n";
+    }
     cout << "Generated sequences:\n";
     cout.flush();
-    fout << "\tTerminal side lobes within: |" << generator->getTerminalSideLobes() << "|\n";
     fout << "Generated sequences:\n";
     file.close();
 
@@ -51,9 +58,9 @@ int main(int argc, char *argv[])
 
     qRegisterMetaType<QVector<int> >("QVector<int>");
 
-    QFile file("output.txt");    
+    QFile file("output.txt");
 
-    Generator *generator = new Generator(17, 2, true, 2);
+    Generator *generator = new Generator(36, 3, true, 3, true, 0);
     ConsoleView *view = new ConsoleView(generator, file.fileName());
 
     resultsOutput(generator, file);
@@ -64,7 +71,7 @@ int main(int argc, char *argv[])
         qDebug() << "\nFor:";
         view->show(generator->getSequences().at(i));
         qDebug() << "Additional combinations are:";
-        combs = Generator::combinations(generator->getSequences().at(i));        
+        combs = Generator::combinations(generator->getSequences().at(i));
         for(int j = 0; j < combs.size(); ++j) {
             view->show(combs.at(j));
         }

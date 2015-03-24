@@ -530,6 +530,46 @@ float ProtectRate(const float &ACF_0, const float &ACF_max)
     return (20.0*qLn(qAbs(ACF_0/ACF_max)))/qLn(10.0);
 }
 
+int disbalance(const QVector<bool> &seq)
+{
+    int numZerros = 0;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        if(!seq.at(i)) {
+            ++numZerros;
+        }
+    }
+
+    return qAbs(2*numZerros - seq.size());
+}
+
+// root-mean-square - средне-квадратичное отклонение
+double RMS(const QVector<int> &seq) {
+    double rms = 0.0;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        rms += qPow(seq.at(i), 2);
+    }
+
+    rms = qSqrt( rms / seq.size() );
+
+    return rms;
+}
+
+// merit-factor
+double MF(const QVector<int> &seq) {
+    double mf = 0.0;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        mf += qPow(seq.at(i), 2);
+    }
+
+    mf *= 2;
+    mf = qPow(seq.size() + 1, 2) / mf;
+
+    return mf;
+}
+
 void ACFSmax()
 {
     QFile resultsOutputFile("ACFOutput.txt");
@@ -560,8 +600,10 @@ void ACFSmax()
             printToFile(resultsOutputFile, vec);
 
             qDebug() << "HEX format:" << fromBinToHex(vec);
+            qDebug() << "Disbalance:" << disbalance(vec);
             qDebug() << "Size of sequence:" << vec.size();
             out << "HEX format: " << fromBinToHex(vec) << "\n";
+            out << "Disbalance: " << disbalance(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
 
             QVector<int> acfs_phases;
@@ -576,8 +618,12 @@ void ACFSmax()
             int ACF_max = ACFmax(acfs_phases);
             qDebug() << "MAX ACF(phase) = " << ACF_max;
             qDebug() << "Protection rate:" << ProtectRate(vec.size(), ACF_max);
+            qDebug() << "Root-mean-square:" << RMS(acfs_phases);
+            qDebug() << "Merit-factor:" << MF(acfs_phases);
             out << "MAX ACF(phase) = " << ACF_max << "\n";
             out << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
+            out << "Root-mean-square: " << RMS(acfs_phases) << "\n";
+            out << "Merit-factor: " << MF(acfs_phases) << "\n";
 
             vec.clear();
         }
@@ -833,17 +879,17 @@ QVector<float> sequencesNoiseAdder(const QVector<float> &seq,
                                    const QVector<bool> &noiseSeq,
                                    const float &noiseAtten)
 {
-    QVector<float> resultSeq;    
+    QVector<float> resultSeq;
 
     if(noiseSeq.size() == seq.size()) {
-        for(int i = 0; i < seq.size(); ++i) {           
+        for(int i = 0; i < seq.size(); ++i) {
             resultSeq.push_back(seq.at(i)
                                 + fromBoolToInt(noiseSeq.at(i))
                                 *static_cast <float> (rand()*fromBoolToInt(fromIntToBool(rand()%2)))
                                 / (static_cast <float> (RAND_MAX/noiseAtten))
                                 );
         }
-    }    
+    }
 
     return resultSeq;
 }

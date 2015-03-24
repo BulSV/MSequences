@@ -11,15 +11,19 @@ Generator::Generator(const int &seqSize,
                      const int &terminalSideLobes,
                      bool isFiltered,
                      const int &closeCentralSideLobes,
+                     bool isBalanced,
+                     const int &disbalance,
                      QObject *parent) :
     QObject(parent)
   , m_isFiltered(isFiltered)
   , m_progressBar("[ ]")
   , m_progress(0)
+  , m_isBalanced(isBalanced)
 {
     setSequenceSize(seqSize);
     setCloseCentralSideLobes(closeCentralSideLobes);
     setTerminalSideLobes(terminalSideLobes);
+    setDisbalance(disbalance);
     fillCombinations();
 }
 
@@ -60,6 +64,30 @@ void Generator::setFiltered(const bool &isFiltered)
 bool Generator::isFiltered() const
 {
     return m_isFiltered;
+}
+
+void Generator::setBalanced(const bool &isBalanced)
+{
+    m_isBalanced = isBalanced;
+}
+
+bool Generator::isBalanced() const
+{
+    return m_isBalanced;
+}
+
+void Generator::setDisbalance(const int &disbalance)
+{
+    if(disbalance >= 0) {
+        m_disbalance = disbalance;
+    } else {
+        m_disbalance = 0;
+    }
+}
+
+int Generator::disbalanse() const
+{
+    return m_disbalance;
 }
 
 int Generator::getCloseCentralSideLobes() const
@@ -205,9 +233,11 @@ void Generator::gen(int phase, QVector<int> &seq, bool isSimplified)
             }
         }
     } else if((m_isFiltered && filter(seq)) || !m_isFiltered) {
-        QMutexLocker locker(&m_mutex); // ? need or not
-        emit sequenceGenerated(seq);
-        m_sequences.append(seq);
+        if( (m_isBalanced && balance(seq)) || !m_isBalanced) {
+            QMutexLocker locker(&m_mutex); // ? need or not
+            emit sequenceGenerated(seq);
+            m_sequences.append(seq);
+        }
     }
 }
 
@@ -241,6 +271,23 @@ bool Generator::filter(const QVector<int> &seq)
     }
 
     return true;
+}
+
+bool Generator::balance(const QVector<int> &seq)
+{
+    int numZerros = 0;
+
+    for(int i = 0; i < seq.size(); ++i) {
+        if(seq.at(i) == -1) {
+            ++numZerros;
+        }
+    }
+
+    if(qAbs(2*numZerros - seq.size()) <= m_disbalance) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 QVector<int> Generator::mirrorSeq(const QVector<int> &seq)
@@ -280,7 +327,7 @@ QVector<int> Generator::phaseOffsetSeq(const QVector<int> &seq)
     return res;
 }
 
-QVector<QVector<int> > Generator::getSequences()
+QVector<QVector<int> > Generator::getSequences() const
 {
     return m_sequences;
 }

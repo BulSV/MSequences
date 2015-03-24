@@ -13,18 +13,24 @@ public:
                        const int &terminalSideLobes = 1,
                        bool isFiltered = true,
                        const int &closeCentralSideLobes = 1,
+                       bool balance = true,
+                       const int &disbalance = 1,
                        QObject *parent = 0);
     ~Generator();
     void setCloseCentralSideLobes(const int &closeCentralSideLobes);
     void setTerminalSideLobes(const int &absMaxScatter);
     void setFiltered(const bool &isFiltered);
     bool isFiltered() const;
+    void setBalanced( const bool &balance);
+    bool isBalanced() const;
+    void setDisbalance(const int &disbalance);
+    int disbalanse() const;
     int getCloseCentralSideLobes() const;
     int getTerminalSideLobes() const;
     void setSequenceSize(const int &seqSize);
     int getSequenceSize() const;
     void generate();
-    QVector<QVector<int> > getSequences();
+    QVector<QVector<int> > getSequences() const;
 
     static QVector<QVector<int> > combinations(const QVector<int> &seq);
 signals:
@@ -45,12 +51,15 @@ private:
     QString m_progressBar;
     int m_progress;
     QMutex m_mutex;
+    bool m_isBalanced;
+    int m_disbalance;
 
     void fillCombinations();
     void gen(int phase, QVector<int> &seq, bool isSimplified);
     int phaseLimit();
     bool isOddSeqSize();
     bool filter(const QVector<int> &seq);
+    bool balance(const QVector<int> &seq);
 
     static QVector<int> mirrorSeq(const QVector<int> &seq);
     static QVector<int> reverseSeq(const QVector<int> &seq);
