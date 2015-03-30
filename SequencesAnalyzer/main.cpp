@@ -356,7 +356,7 @@ int ACFminOfmax(const QVector<int> &acfs_maxs)
     return result;
 }
 
-bool sequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
+bool sequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec, const int &size)
 {
     for(int i = 0; i < ba.size(); ++i) {
         if(ba.at(i) != '\n' && ((ba.at(i) >= '0' && ba.at(i) <= '9') || (ba.at(i) >= 'A' && ba.at(i) <= 'F'))) {
@@ -467,6 +467,13 @@ bool sequenceReaderHEX(const QByteArray &ba, QVector<bool> &vec)
         }
     }
 
+    if(vec.size() < size || vec.size() - 3 > size) {
+        qDebug() << "\nError! The sequence" << ba << "has incorrectly size set!\n";
+        return false;
+    } else if(vec.size() > size) {
+        vec.remove(0, vec.size() - size);
+    }
+
     return true;
 }
 
@@ -510,7 +517,14 @@ bool sequenceReader(QFile &file, QVector<bool> &vec, int &pos)
         sequenceReaderBIN(ba, vec);
     } else if(ba.contains("HEX")) {
         ba.remove(0, 3);
-        sequenceReaderHEX(ba, vec);
+        QByteArray size;
+        if(ba.contains("SIZE") && ba.indexOf("SIZE") + 4 < ba.size()) {
+            size = ba.mid(ba.indexOf("SIZE") + 4);
+            ba.remove(ba.indexOf("SIZE"), 4 + size.size());
+            sequenceReaderHEX(ba, vec, size.toInt());
+        } else {
+            qDebug() << "\nError! The sequence" << ba << "has no size set!\n";
+        }
     } else if(!ba.isEmpty()){
         qDebug() << "\nError! The sequence" << ba << "is not valid!";
         qDebug() << "For HEX-format sequence write in file at the begin of line: HEX";
@@ -794,7 +808,14 @@ bool attenSequenceReader(QFile &file,
         sequenceReaderBIN(ba, seq);
     } else if(ba.contains("HEX")) {
         ba.remove(0, 3);
-        sequenceReaderHEX(ba, seq);
+        QByteArray size;
+        if(ba.contains("SIZE") && ba.indexOf("SIZE") + 4 < ba.size()) {
+            size = ba.mid(ba.indexOf("SIZE") + 4);
+            ba.remove(ba.indexOf("SIZE"), 4 + size.size());
+            sequenceReaderHEX(ba, seq, size.toInt());
+        } else {
+            qDebug() << "\nError! The sequence" << ba << "has no size set!\n";
+        }
     } else if(ba.contains("AT1")) {
         ba.remove(0, 3);
         atten1 = ba.toFloat();
