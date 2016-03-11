@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 
     QFile file("output.txt");
 
-    Generator *generator = new Generator(36, 3, true, 3, true, 0);
+    Generator *generator = new Generator(28, 3, true, 3, true, 2);
     ConsoleView *view = new ConsoleView(generator, file.fileName());
 
     resultsOutput(generator, file);

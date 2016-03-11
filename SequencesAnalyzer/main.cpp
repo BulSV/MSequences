@@ -593,7 +593,7 @@ void ACFSmax()
 
     QTextStream out(&resultsOutputFile);
 
-    qDebug() << "==========START_ACF_TEST==========";
+//    qDebug() << "==========START_ACF_TEST==========";
     out << "==========START_ACF_TEST==========\n";
 
     QVector<bool> vec;
@@ -607,15 +607,15 @@ void ACFSmax()
     while(sequenceReader(file, vec, pos)) {
         if(!vec.isEmpty()) {
 
-            qDebug() << "===========SUB_ACF_TEST===========";
+//            qDebug() << "===========SUB_ACF_TEST===========";
             out << "===========SUB_ACF_TEST===========\n";
 
-            print(vec);
+//            print(vec);
             printToFile(resultsOutputFile, vec);
 
-            qDebug() << "HEX format:" << fromBinToHex(vec);
-            qDebug() << "Disbalance:" << disbalance(vec);
-            qDebug() << "Size of sequence:" << vec.size();
+//            qDebug() << "HEX format:" << fromBinToHex(vec);
+//            qDebug() << "Disbalance:" << disbalance(vec);
+//            qDebug() << "Size of sequence:" << vec.size();
             out << "HEX format: " << fromBinToHex(vec) << "\n";
             out << "Disbalance: " << disbalance(vec) << "\n";
             out << "Size of sequence: " << vec.size() << "\n";
@@ -625,15 +625,15 @@ void ACFSmax()
             for(int i = 1; i < vec.size(); ++i) {
                 acfs_phases.push_back(ACFphase(vec, i));
 
-                qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
+//                qDebug() << "ACF(" << i << ") =" << acfs_phases.at(i - 1);
                 out << "ACF(" << i << ") = " << acfs_phases.at(i - 1) << "\n";
             }
 
             int ACF_max = ACFmax(acfs_phases);
-            qDebug() << "MAX ACF(phase) = " << ACF_max;
-            qDebug() << "Protection rate:" << ProtectRate(vec.size(), ACF_max);
-            qDebug() << "Root-mean-square:" << RMS(acfs_phases);
-            qDebug() << "Merit-factor:" << MF(acfs_phases);
+//            qDebug() << "MAX ACF(phase) = " << ACF_max;
+//            qDebug() << "Protection rate:" << ProtectRate(vec.size(), ACF_max);
+//            qDebug() << "Root-mean-square:" << RMS(acfs_phases);
+//            qDebug() << "Merit-factor:" << MF(acfs_phases);
             out << "MAX ACF(phase) = " << ACF_max << "\n";
             out << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
             out << "Root-mean-square: " << RMS(acfs_phases) << "\n";
@@ -643,7 +643,7 @@ void ACFSmax()
         }
     }
 
-    qDebug() << "===========END_ACF_TEST===========\n";
+//    qDebug() << "===========END_ACF_TEST===========\n";
     out << "===========END_ACF_TEST===========\n\n";
 
     file.close();
@@ -682,11 +682,11 @@ int CCFmax(const QVector<int> &ccfs_phases)
 
 void SequenceProperties(const QVector<bool> &vec, QTextStream &out, QFile &resultsOutputFile)
 {
-    print(vec);
+//    print(vec);
     printToFile(resultsOutputFile, vec);
 
-    qDebug() << "HEX format:" << fromBinToHex(vec);
-    qDebug() << "Size of sequence:" << vec.size();
+//    qDebug() << "HEX format:" << fromBinToHex(vec);
+//    qDebug() << "Size of sequence:" << vec.size();
     out << "HEX format: " << fromBinToHex(vec) << "\n";
     out << "Size of sequence: " << vec.size() << "\n";
 }
@@ -700,7 +700,7 @@ void CCFSmax()
 
     QTextStream out(&resultsOutputFile);
 
-    qDebug() << "==========START_CCF_TEST==========";
+//    qDebug() << "==========START_CCF_TEST==========";
     out << "==========START_CCF_TEST==========\n";
 
     QVector<bool> vec;
@@ -737,7 +737,7 @@ void CCFSmax()
     int bigSeqSize = 0;
 
     for(; it1 != vec1.end(); ++it1, ++it2) {
-        qDebug() << "===========SUB_CCF_TEST===========";
+//        qDebug() << "===========SUB_CCF_TEST===========";
         out << "===========SUB_CCF_TEST===========\n";
         SequenceProperties(*it1, out, resultsOutputFile);
         SequenceProperties(*it2, out, resultsOutputFile);
@@ -753,7 +753,7 @@ void CCFSmax()
         for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {
             ccfs_phases.push_back(CCFphase(*it1, *it2, i));
 
-            qDebug() << "CCF(" << i << ") =" << ccfs_phases.last();
+//            qDebug() << "CCF(" << i << ") =" << ccfs_phases.last();
             out << "CCF(" << i << ") = " << ccfs_phases.last() << "\n";
         }
 
@@ -763,13 +763,13 @@ void CCFSmax()
         int CCF_0 = 0;
         (*it1).size() > (*it2).size() ? CCF_0 = (*it2).size() : CCF_0 = (*it1).size();
 
-        qDebug() << "MAX CCF(phase) = " << CCF_max;
-        qDebug() << "Protection rate:" << ProtectRate(CCF_0, CCF_max);
+//        qDebug() << "MAX CCF(phase) = " << CCF_max;
+//        qDebug() << "Protection rate:" << ProtectRate(CCF_0, CCF_max);
         out << "MAX CCF(phase) = " << CCF_max << "\n";
         out << "Protection rate: " << ProtectRate(CCF_0, CCF_max) << "\n";
     }
 
-    qDebug() << "===========END_CCF_TEST===========\n";
+//    qDebug() << "===========END_CCF_TEST===========\n";
     out << "===========END_CCF_TEST===========\n\n";
 
     file.close();
@@ -952,16 +952,16 @@ void attenSequenceProperties(const QVector<bool> seq,
                              QFile &resultsOutputFile)
 {
     // To console
-    print(seq);
-    qDebug() << "HEX format:" << fromBinToHex(seq);
-    qDebug() << "Size of sequence:" << seq.size();
-    qDebug() << "Attenuation of 1st sequence:" << atten1;
-    qDebug() << "Attenuation of 2nd sequence:" << atten2;
-    qDebug() << "Offset from 1st to 2st sequence:" << offsetFrom1to2;
-    qDebug() << "Generated noise sequence:" << seqToStr(noiseSeq);
-    qDebug() << "HEX format:" << fromBinToHex(noiseSeq);
-    qDebug() << "Size of sequence:" << noiseSeq.size();
-    qDebug() << "Attenuation of noise sequence:" << atten;
+//    print(seq);
+//    qDebug() << "HEX format:" << fromBinToHex(seq);
+//    qDebug() << "Size of sequence:" << seq.size();
+//    qDebug() << "Attenuation of 1st sequence:" << atten1;
+//    qDebug() << "Attenuation of 2nd sequence:" << atten2;
+//    qDebug() << "Offset from 1st to 2st sequence:" << offsetFrom1to2;
+//    qDebug() << "Generated noise sequence:" << seqToStr(noiseSeq);
+//    qDebug() << "HEX format:" << fromBinToHex(noiseSeq);
+//    qDebug() << "Size of sequence:" << noiseSeq.size();
+//    qDebug() << "Attenuation of noise sequence:" << atten;
     // To file
     printToFile(resultsOutputFile, seq);
     out << "HEX format: " << fromBinToHex(seq) << "\n";
@@ -984,7 +984,7 @@ void attenACFSmax()
 
     QTextStream out(&resultsOutputFile);
 
-    qDebug() << "==========START_ATTENUATED_ACF_TEST==========";
+//    qDebug() << "==========START_ATTENUATED_ACF_TEST==========";
     out << "==========START_ATTENUATED_ACF_TEST==========\n";
 
     QVector<bool> tempSeq;
@@ -1064,7 +1064,7 @@ void attenACFSmax()
         ++itOffsetsFrom1to2,
         ++itAttenNoiseSeqs,
         ++itAttenFactorsNoise) {
-        qDebug() << "===========SUB_ATTENUATED_ACF_TEST===========";
+//        qDebug() << "===========SUB_ATTENUATED_ACF_TEST===========";
         out << "===========SUB_ATTENUATED_ACF_TEST===========\n";
         attenSequenceProperties(*itOriginSeqs,
                                 *itAttenFactors1,
@@ -1086,7 +1086,7 @@ void attenACFSmax()
         for(int i = 1 - smallSeqSize; i <  bigSeqSize; ++i) {
             atten_acfs_phases.push_back(attenACFphase(*itOriginSeqs, *itAttenSeqs, i));
 
-            qDebug() << "Attenuated ACF(" << i << ") =" << atten_acfs_phases.last();
+//            qDebug() << "Attenuated ACF(" << i << ") =" << atten_acfs_phases.last();
             out << "Attenuated ACF(" << i << ") = " << atten_acfs_phases.last() << "\n";
         }
 
@@ -1096,13 +1096,13 @@ void attenACFSmax()
         float attenACF_0 = 0.0;
         (*itOriginSeqs).size() > (*itAttenSeqs).size() ? attenACF_0 = (*itAttenSeqs).size() : attenACF_0 = (*itOriginSeqs).size();
 
-        qDebug() << "MAX Attenuated ACF(phase) = " << atten_ACF_max;
-        qDebug() << "Protection rate:" << ProtectRate(attenACF_0, atten_ACF_max);
+//        qDebug() << "MAX Attenuated ACF(phase) = " << atten_ACF_max;
+//        qDebug() << "Protection rate:" << ProtectRate(attenACF_0, atten_ACF_max);
         out << "MAX Attenuated ACF(phase) = " << atten_ACF_max << "\n";
         out << "Protection rate: " << ProtectRate(attenACF_0, atten_ACF_max) << "\n";
     }
 
-    qDebug() << "===========END_ATTENUATED_ACF_TEST===========\n";
+//    qDebug() << "===========END_ATTENUATED_ACF_TEST===========\n";
     out << "===========END_ATTENUATED_ACF_TEST===========\n\n";
 
     file.close();
