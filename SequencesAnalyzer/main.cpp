@@ -6,6 +6,7 @@
 #include <QtMath>
 #include <cstdlib>
 #include <time.h>
+#include <QDir>
 
 
 void print(const QVector<bool> &result)
@@ -602,72 +603,93 @@ double MF(const QVector<int> &seq) {
 
 void ACFSmax()
 {
-    QFile resultsOutputFile("ACFOutput.txt");
-    if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        qErrnoWarning("ERROR!\nCan't create file: \"ACFOutput.txt\"");
+    if (!QDir("output").exists()) {
+        qWarning("Cannot find the output directory");
+        QDir().mkdir("output");
     }
-
-    QString resultsString;
-    QTextStream out(&resultsString);
-    QTextStream outF(&resultsOutputFile);
-
-    QVector<bool> vec;
-    int pos = 0;
-    QFile file("ACFInput.txt");
-
-    if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qErrnoWarning("ERROR!\nCan't open file: \"ACFInput.txt\"");
+    QDir dirIn("input");
+    if (!dirIn.exists()) {
+        qWarning("Cannot find the input directory");
+        dirIn.mkdir("input");
     }
+    dirIn.setFilter(QDir::Files | QDir::Hidden | QDir::NoSymLinks);
+    dirIn.setSorting(QDir::Name);
+    QString fileName;
+    QFileInfoList list = dirIn.entryInfoList();
+    for (int i = 0; i < list.size(); ++i) {
+        QFileInfo fileInfo = list.at(i);
+        fileName = fileInfo.absoluteFilePath();
 
-    int found = 0;
-    while(sequenceReader(file, vec, pos)) {
-        if(!vec.isEmpty()) {
-
-            out << "ACF_TEST\n";
-
-//            printToFile(resultsOutputFile, vec);
-            out << printToString(vec);
-
-            out << "HEX format: " << fromBinToHex(vec) << "\n";
-            out << "Disbalance: " << disbalance(vec) << "\n";
-            out << "Size of sequence: " << vec.size() << "\n";
-
-            QVector<int> acfs_phases;
-
-            for(int i = 1; i < vec.size(); ++i) {
-                acfs_phases.push_back(ACFphase(vec, i));
-
-                out << "ACF(" << i << ") = " << acfs_phases.at(i - 1) << "\n";
-            }
-
-            int ACF_max = ACFmax(acfs_phases);
-            out << "MAX ACF(phase) = " << ACF_max << "\n";
-            out << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
-            out << "Root-mean-square: " << RMS(acfs_phases) << "\n";
-            out << "Merit-factor: " << MF(acfs_phases) << "\n";
-
-            if(qAbs(ACF_max) <= 32 && RMS(acfs_phases) <= 12.5) {
-                acfs_phases.clear();
-                for(int i = 1; i < 17; ++i) {
-                    acfs_phases.push_back(ACFphase(vec, i));
-                }
-                ACF_max = ACFmax(acfs_phases);
-                outF << resultsString;
-                outF << "Window 33:\n";
-                outF << "MAX ACF(phase) = " << ACF_max << "\n";
-                outF << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
-                outF << "Root-mean-square: " << RMS(acfs_phases) << "\n";
-                outF << "Merit-factor: " << MF(acfs_phases) << "\n";
-                ++found;
-            }
-            resultsString.clear();
-            vec.clear();
+        QFile resultsOutputFile(/*qApp->applicationDirPath() + "/*/"output/"
+                                + fileInfo.fileName().left(fileInfo.fileName().size() - 4)
+                                + "_filtered" + fileName.right(4));
+        qDebug() << resultsOutputFile.fileName();
+        if(!resultsOutputFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            qErrnoWarning("ERROR!\nCan't create output file");
         }
-    }    
 
-    qDebug() << "TOTAL FOUND:" << found;
-    file.close();
-    resultsOutputFile.close();
+        QString resultsString;
+        QTextStream out(&resultsString);
+        QTextStream outF(&resultsOutputFile);
+
+        QVector<bool> vec;
+        int pos = 0;
+        QFile file(fileName);
+
+        if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            qErrnoWarning("ERROR!\nCan't open input file");
+        }
+
+        int found = 0;
+        while(sequenceReader(file, vec, pos)) {
+            if(!vec.isEmpty()) {
+
+                out << "ACF_TEST\n";
+
+                //            printToFile(resultsOutputFile, vec);
+                out << printToString(vec);
+
+                out << "HEX format: " << fromBinToHex(vec) << "\n";
+                out << "Disbalance: " << disbalance(vec) << "\n";
+                out << "Size of sequence: " << vec.size() << "\n";
+
+                QVector<int> acfs_phases;
+
+                for(int i = 1; i < vec.size(); ++i) {
+                    acfs_phases.push_back(ACFphase(vec, i));
+
+                    out << "ACF(" << i << ") = " << acfs_phases.at(i - 1) << "\n";
+                }
+
+                int ACF_max = ACFmax(acfs_phases);
+                out << "MAX ACF(phase) = " << ACF_max << "\n";
+                out << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
+                out << "Root-mean-square: " << RMS(acfs_phases) << "\n";
+                out << "Merit-factor: " << MF(acfs_phases) << "\n";
+
+                if(qAbs(ACF_max) <= 32 && RMS(acfs_phases) <= 12.5) {
+                    acfs_phases.clear();
+                    for(int i = 1; i < 17; ++i) {
+                        acfs_phases.push_back(ACFphase(vec, i));
+                    }
+                    ACF_max = ACFmax(acfs_phases);
+                    outF << resultsString;
+                    outF << "Window 33:\n";
+                    outF << "MAX ACF(phase) = " << ACF_max << "\n";
+                    outF << "Protection rate: " << ProtectRate(vec.size(), ACF_max) << "\n";
+                    outF << "Root-mean-square: " << RMS(acfs_phases) << "\n";
+                    outF << "Merit-factor: " << MF(acfs_phases) << "\n";
+                    ++found;
+                }
+                resultsString.clear();
+                vec.clear();
+            }
+        }
+
+        qDebug() << "TOTAL FOUND:" << found;
+        file.close();
+        resultsOutputFile.close();
+    }
 }
 
 int CCFphase(const QVector<bool> &sequence1, const QVector<bool> &sequence2, const int &phase)
